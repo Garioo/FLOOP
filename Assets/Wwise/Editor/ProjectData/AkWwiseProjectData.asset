@@ -66,8 +66,22 @@ MonoBehaviour:
     ParentPath: SoundBanks/Default Work Unit
     guid: a9b84978ea955443b2084dde8e9f2fc6
     GuidInternal: 
-    m_lastTime: -8584604277534328784
-    List: []
+    m_lastTime: -8584599935547417626
+    List:
+    - name: Main
+      guid: beb407a1988c8749b42d8cadce960a7b
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a9b84978ea955443b2084dde8e9f2fc6
+      - ElementName: Main
+        ObjectType: 7
+        guid: beb407a1988c8749b42d8cadce960a7b
+      Path: SoundBanks/Default Work Unit/Main
   EventWwu:
   - PhysicalPath: Events/Default Work Unit.wwu
     PathAndIcons:
@@ -80,8 +94,25 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 7e9b391fb2ac8d4cb284d6b301d048ed
     GuidInternal: 
-    m_lastTime: -8584604277534350273
-    List: []
+    m_lastTime: -8584599946670611588
+    List:
+    - name: Play_AllLoops
+      guid: 87b7639b488c6440a1826fd1a05aed13
+      id: 2262267240
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7e9b391fb2ac8d4cb284d6b301d048ed
+      - ElementName: Play_AllLoops
+        ObjectType: 3
+        guid: 87b7639b488c6440a1826fd1a05aed13
+      Path: Events/Default Work Unit/Play_AllLoops
+      maxAttenuation: 0
+      maxDuration: 87.23255
+      minDuration: 87.23255
   RtpcWwu:
   - PhysicalPath: Game Parameters/Default Work Unit.wwu
     PathAndIcons:
@@ -94,8 +125,64 @@ MonoBehaviour:
     ParentPath: Game Parameters/Default Work Unit
     guid: 5c4d9252d284c34497eee673bb61bca1
     GuidInternal: 
-    m_lastTime: -8584604277534348418
-    List: []
+    m_lastTime: -8584599914628495312
+    List:
+    - name: Volume_Beat
+      guid: 6848d32d38d18b42a15d1a45972d3f24
+      id: 2323823550
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5c4d9252d284c34497eee673bb61bca1
+      - ElementName: Volume_Beat
+        ObjectType: 13
+        guid: 6848d32d38d18b42a15d1a45972d3f24
+      Path: Game Parameters/Default Work Unit/Volume_Beat
+    - name: Volume_Guitar
+      guid: 81bff1530ae44240a7d53141fcefad07
+      id: 1830359252
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5c4d9252d284c34497eee673bb61bca1
+      - ElementName: Volume_Guitar
+        ObjectType: 13
+        guid: 81bff1530ae44240a7d53141fcefad07
+      Path: Game Parameters/Default Work Unit/Volume_Guitar
+    - name: Volume_Loop
+      guid: 960655f70423244fbdaa7d00f3f2faa5
+      id: 1896328112
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5c4d9252d284c34497eee673bb61bca1
+      - ElementName: Volume_Loop
+        ObjectType: 13
+        guid: 960655f70423244fbdaa7d00f3f2faa5
+      Path: Game Parameters/Default Work Unit/Volume_Loop
+    - name: Volume_Rhodes
+      guid: a4bc8156b9cf0c41a3f3747f69896d64
+      id: 2045120833
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5c4d9252d284c34497eee673bb61bca1
+      - ElementName: Volume_Rhodes
+        ObjectType: 13
+        guid: a4bc8156b9cf0c41a3f3747f69896d64
+      Path: Game Parameters/Default Work Unit/Volume_Rhodes
   StateWwu:
   - PhysicalPath: States/Default Work Unit.wwu
     PathAndIcons:
@@ -136,10 +223,10 @@ MonoBehaviour:
     ParentPath: Triggers/Default Work Unit
     guid: cdc13e1168cb3c4d95a0f4cdb418d527
     GuidInternal: 
-    m_lastTime: -8584604277534315452
+    m_lastTime: -8584599939255623838
     List: []
-  ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 08000000
+  ExpandedFileSystemItemIds: 0100000005000000060000000700000008000000090000000d0000000e000000190000001a000000
+  ExpandedWaapiItemIds: 0100000005000000060000000700000008000000090000000d0000000e000000140000001500000018000000190000001a00000081000000
   AutoSyncSelection: 1
   autoPopulateEnabled: 1
   currentDataSource: 0
