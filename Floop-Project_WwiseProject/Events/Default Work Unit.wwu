@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{1F399B7E-ACB2-4C8D-B284-D6B301D048ED}" SchemaVersion="123">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{1F399B7E-ACB2-4C8D-B284-D6B301D048ED}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{1F399B7E-ACB2-4C8D-B284-D6B301D048ED}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_AllLoops" ID="{9B63B787-8C48-4064-A182-6FD1A05AED13}">
+					<ChildrenList>
+						<Action Name="" ID="{7C1E61CA-C022-46C0-B042-00509193A2A3}" ShortID="972808529">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Beat" ID="{110D43B7-A78D-4B86-9D1D-7051C9F276F9}" WorkUnitID="{CCC9ABFA-23EB-485F-AA71-5E46AC6E8C49}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CE61318E-BDB6-40B5-90C1-C83EC3F284E0}" ShortID="493695030">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Guitar" ID="{CDE80A9A-216D-48A5-AB44-2EBEC69E8013}" WorkUnitID="{CCC9ABFA-23EB-485F-AA71-5E46AC6E8C49}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AFDFF566-8C8A-4FC8-9622-D6AA93E521F6}" ShortID="1046675801">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Loop" ID="{313DF2C8-BB79-4FA4-9DA4-F0606CFB841F}" WorkUnitID="{CCC9ABFA-23EB-485F-AA71-5E46AC6E8C49}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{44E3DFF4-8E6F-4970-9690-F59AFBE05C52}" ShortID="23877066">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Rhodes" ID="{ACE4CB5B-208C-469F-A2AA-0F2F383E6F42}" WorkUnitID="{CCC9ABFA-23EB-485F-AA71-5E46AC6E8C49}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>
