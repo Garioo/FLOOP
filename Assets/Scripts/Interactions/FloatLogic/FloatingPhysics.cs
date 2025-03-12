@@ -20,14 +20,14 @@ public class FloatingPhysics : MonoBehaviour
         if (Physics.Raycast(transform.position, Vector3.up, out hitUp, Mathf.Infinity))
         {
             waterHeight = hitUp.point.y;
-            print("Water height above: " + waterHeight);
+          
         }
 
         RaycastHit hitDown;
         if (Physics.Raycast(transform.position, Vector3.down, out hitDown, Mathf.Infinity))
         {
             waterHeight = hitDown.point.y;
-            print("Water height below: " + waterHeight);
+           
         }
 
         if (transform.position.y < waterHeight) // Adjust based on water level
