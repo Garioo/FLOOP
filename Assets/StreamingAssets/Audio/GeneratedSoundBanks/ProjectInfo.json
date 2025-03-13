@@ -3,10 +3,17 @@
   "Project": {
    "Name": "Floop-Project_WwiseProject",
    "GUID": "{02D5F42A-4063-441C-8F8A-41ACE5B8FFE9}",
-   "Generator": "2024.1.2.8726"
+   "Generator": "2024.1.3.8749"
   },
   "CacheRoot": "../../../../Floop-Project_WwiseProject/.cache",
   "Platforms": [
+   {
+    "Name": "Android",
+    "GUID": "{21D02B8C-AE99-4C9C-AA56-65B780D0420B}",
+    "BasePlatform": "Android",
+    "BasePlatformGUID": "{A2D401DE-B8B6-4FEB-8142-137C34D507CA}",
+    "Path": "../../../../Floop-Project_WwiseProject/GeneratedSoundBanks/Android"
+   },
    {
     "Name": "Mac",
     "GUID": "{E385C1B2-0BFC-435D-B36D-120655BF13F3}",
@@ -31,6 +38,6 @@
     "UseAsStandIn": "true"
    }
   ],
-  "FileHash": "{8464B25E-0E4B-483A-9822-5363F063A717}"
+  "FileHash": "{645EE865-29E7-A3F8-8137-F2FBAE103714}"
  }
 }

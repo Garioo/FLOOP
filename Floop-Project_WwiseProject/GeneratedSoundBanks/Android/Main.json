@@ -1,0 +1,106 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Android",
+  "BasePlatform": "Android",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3161908922",
+    "Type": "User",
+    "GUID": "{A107B4BE-8C98-4987-B42D-8CADCE960A7B}",
+    "Language": "SFX",
+    "Hash": "{ABF7F7A7-DE4E-2133-7BC7-D2B1CD1F05F0}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
+    "ShortName": "Main",
+    "Path": "Main.bnk",
+    "Media": [
+     {
+      "Id": "131677047",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "KS_Chilled Roads_Guitar.wav",
+      "CachePath": "5B/{5BEBA30D-2806-6F6B-2DFC-185906110E50}.wem"
+     },
+     {
+      "Id": "372437476",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "KS_Chilled Roads_Beat.wav",
+      "CachePath": "F3/{F3DDA102-D09D-6D1F-CE57-291227C9F0EE}.wem"
+     },
+     {
+      "Id": "818377342",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "KS_Chilled Roads_Rhodes.wav",
+      "CachePath": "78/{781947EE-D9C6-B549-4937-0CD310DEC556}.wem"
+     },
+     {
+      "Id": "901117554",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "KS_Chilled Roads_DirtyLoop.wav",
+      "CachePath": "11/{11FF0381-DE43-3A0C-F927-FA608F24B0BB}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2262267240",
+      "Name": "Play_AllLoops",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_AllLoops",
+      "GUID": "{9B63B787-8C48-4064-A182-6FD1A05AED13}",
+      "DurationType": "OneShot",
+      "DurationMin": "87.23255",
+      "DurationMax": "87.23255",
+      "MediaRefs": [
+       {
+        "Id": "131677047"
+       },
+       {
+        "Id": "372437476"
+       },
+       {
+        "Id": "818377342"
+       },
+       {
+        "Id": "901117554"
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "1830359252",
+      "Name": "Volume_Guitar",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Volume_Guitar",
+      "GUID": "{53F1BF81-E40A-4042-A7D5-3141FCEFAD07}"
+     },
+     {
+      "Id": "1896328112",
+      "Name": "Volume_Loop",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Volume_Loop",
+      "GUID": "{F7550696-2304-4F24-BDAA-7D00F3F2FAA5}"
+     },
+     {
+      "Id": "2045120833",
+      "Name": "Volume_Rhodes",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Volume_Rhodes",
+      "GUID": "{5681BCA4-CFB9-410C-A3F3-747F69896D64}"
+     },
+     {
+      "Id": "2323823550",
+      "Name": "Volume_Beat",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Volume_Beat",
+      "GUID": "{2DD34868-D138-428B-A15D-1A45972D3F24}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{56C75725-233B-6869-F52B-953B9446A1E9}"
+ }
+}
