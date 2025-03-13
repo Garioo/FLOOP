@@ -1,0 +1,19 @@
+# ninja log v5
+12	1822	1741858337845943235	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	9630a007c34a12a9
+11	1830	1741858337855484277	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	dfc0acb9ae550271
+12	1825	1741858337849553807	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	3629a67b3183c4d4
+11	1868	1741858337896944152	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	44cf335fd99b7842
+14	1882	1741858337912012384	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	30a3f0d6677c3e38
+12	2075	1741858338105666200	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	8d2004ed5da0781
+13	1844	1741858337872582830	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	8e832af6428265ef
+10	2226	1741858338255648157	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	898aad1385c2659e
+2226	2530	1741858338560436778	/Users/mariusqvarnstrom/Documents/GitHub/FLOOP/Floop-Project/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/g5s552i4/obj/arm64-v8a/libgame.so	f6c1a096a6dfb5c3
+5	1324	1741862380935738759	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	3629a67b3183c4d4
+6	1326	1741862380932225116	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	9630a007c34a12a9
+3	1333	1741862380943164089	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	dfc0acb9ae550271
+6	1335	1741862380949976416	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	8e832af6428265ef
+4	1358	1741862380972278281	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	44cf335fd99b7842
+8	1367	1741862380982254625	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	30a3f0d6677c3e38
+5	1542	1741862381156517735	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	8d2004ed5da0781
+3	1601	1741862381215480040	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	898aad1385c2659e
+1601	1834	1741862381449109082	/Users/mariusqvarnstrom/Documents/GitHub/FLOOP/Floop-Project/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/g5s552i4/obj/arm64-v8a/libgame.so	f6c1a096a6dfb5c3

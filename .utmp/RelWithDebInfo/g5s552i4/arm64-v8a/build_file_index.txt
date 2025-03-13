@@ -1,0 +1,2 @@
+/Users/mariusqvarnstrom/Documents/GitHub/FLOOP/Floop-Project/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/CMakeLists.txt
+/Users/mariusqvarnstrom/Documents/GitHub/FLOOP/Floop-Project/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/CMakeLists.txt

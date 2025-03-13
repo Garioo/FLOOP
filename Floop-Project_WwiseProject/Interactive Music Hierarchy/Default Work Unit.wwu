@@ -238,7 +238,7 @@
 																					</Point>
 																					<Point>
 																						<XPos>54.29966</XPos>
-																						<YPos>-0</YPos>
+																						<YPos>0</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>
@@ -323,7 +323,6 @@
 										<PropertyList>
 											<Property Name="PlaySegmentAt" Type="int16" Value="2"/>
 										</PropertyList>
-										<ReferenceList/>
 									</MusicStinger>
 								</Local>
 							</Reference>
