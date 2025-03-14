@@ -2,14 +2,14 @@ using UnityEngine;
 
 public abstract class ObjectBehaviorParrent : MonoBehaviour
 {
-    public float Volume;
+    public abstract float Volume { get; set; }
+
     private Vector3 targetPosition;
 
-    public abstract void PlayOn(); // Denne her skal kaldes når objektet er nede i vandet!
-    public void PlayOff() // Denne her skal kaldes når objektet er oppe af vandet!
-    {
-        Volume = 0;
-    }
+    public abstract void PlayOn();
+  
+  
+
 
     // Method to set the target position
     public void StorePosition(Vector3 position)
