@@ -1,10 +1,10 @@
 # ninja log v5
-2	1002	1741870711980053911	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	9630a007c34a12a9
-1	1012	1741870711988975133	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	3629a67b3183c4d4
-0	1021	1741870712000333745	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	dfc0acb9ae550271
-2	1022	1741870712001644794	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	8e832af6428265ef
-1	1079	1741870712061198036	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	44cf335fd99b7842
-2	1092	1741870712074391825	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	30a3f0d6677c3e38
-1	1237	1741870712219162507	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	8d2004ed5da0781
-0	1311	1741870712293045545	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	898aad1385c2659e
 1311	1427	1741870712409224260	/Users/mariusqvarnstrom/Documents/GitHub/FLOOP/Floop-Project/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/g5s552i4/obj/arm64-v8a/libgame.so	f6c1a096a6dfb5c3
+0	1311	1741870712293045545	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	898aad1385c2659e
+1	1237	1741870712219162507	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	8d2004ed5da0781
+2	1092	1741870712074391825	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	30a3f0d6677c3e38
+1	1079	1741870712061198036	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	44cf335fd99b7842
+2	1022	1741870712001644794	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	8e832af6428265ef
+0	1021	1741870712000333745	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	dfc0acb9ae550271
+1	1012	1741870711988975133	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	3629a67b3183c4d4
+2	1002	1741870711980053911	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	9630a007c34a12a9
