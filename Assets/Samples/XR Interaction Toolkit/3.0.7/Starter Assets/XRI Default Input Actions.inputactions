@@ -2348,7 +2348,7 @@
                     "name": "",
                     "id": "ed7061e7-4d52-43c3-b473-316a8094d339",
                     "path": "<XRController>{RightHand}/{Primary2DAxis}",
-                    "interactions": "",
+                    "interactions": "Sector(directions=-1,sweepBehavior=1)",
                     "processors": "",
                     "groups": "",
                     "action": "MoveObject",

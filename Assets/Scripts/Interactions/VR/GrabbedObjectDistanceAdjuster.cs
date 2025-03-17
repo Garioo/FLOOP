@@ -2,84 +2,86 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Oculus.Interaction;
 
-public class GrabbedObjectDistanceAdjuster : MonoBehaviour
+public class GrabbableWithDistance : MonoBehaviour
 {
     [Header("Input Action")]
-    [Tooltip("Input action for the right thumbstick (Vector2), e.g. bound to <XRController>{RightHand}/primary2DAxis.")]
+    [Tooltip("Input action for the right thumbstick (Vector2), e.g. <XRController>{RightHand}/primary2DAxis")]
     [SerializeField]
-    private InputActionProperty rightThumbstickAction;
+    private InputActionProperty thumbstickAction;
 
     [Header("Distance Settings")]
-    [Tooltip("Speed at which the object's local Z is adjusted.")]
+    [Tooltip("Speed at which the grabbed object moves.")]
     [SerializeField]
-    private float distanceAdjustSpeed = 1.0f;
-    [Tooltip("Minimum allowed local Z value.")]
+    private float moveSpeed = 1.0f;
+    [Tooltip("Minimum allowed distance from the grab point.")]
     [SerializeField]
-    private float minLocalZ = 0.3f;
-    [Tooltip("Maximum allowed local Z value.")]
+    private float minDistance = 0.3f;
+    [Tooltip("Maximum allowed distance from the grab point.")]
     [SerializeField]
-    private float maxLocalZ = 3.0f;
+    private float maxDistance = 3.0f;
 
-    // Flag set when this object is grabbed.
+    [Header("Attach Transform")]
+    [Tooltip("The transform where the object should be held when grabbed.")]
+    [SerializeField]
+    private Transform attachTransform;
+
     private bool isGrabbed = false;
-    // Store the original parent so we can restore it on release.
-    private Transform originalParent;
+    private float currentOffset = 1.0f;
 
     private void OnEnable()
     {
-        rightThumbstickAction.action.Enable();
+        thumbstickAction.action.Enable();
     }
 
     private void OnDisable()
     {
-        rightThumbstickAction.action.Disable();
+        thumbstickAction.action.Disable();
     }
 
     /// <summary>
-    /// Call this method (for example, from your grab event callback) when the object is grabbed.
-    /// Pass in the interactor’s attach transform.
+    /// Called when the object is grabbed. Parent it to the attachTransform.
     /// </summary>
-    /// <param name="interactorAttachTransform">The attach transform of the interactor (e.g. a child GameObject on your controller).</param>
-    public void OnGrabbed(Transform interactorAttachTransform)
+    public void OnGrabbed(Transform newAttachTransform)
     {
         if (!isGrabbed)
         {
             isGrabbed = true;
-            // Save the original parent.
-            originalParent = transform.parent;
-            // Parent the object to the interactor's attach transform.
-            transform.SetParent(interactorAttachTransform, true);
-            Debug.Log("Object grabbed. Now parented to interactor attach transform.");
+            attachTransform = newAttachTransform;
+            transform.SetParent(attachTransform, true);
+            currentOffset = Vector3.Distance(attachTransform.position, transform.position);
+            Debug.Log("Object grabbed: " + gameObject.name);
         }
     }
 
     /// <summary>
-    /// Call this method (for example, from your release event callback) when the object is released.
+    /// Called when the object is released. Restore the original parent.
     /// </summary>
     public void OnReleased()
     {
         if (isGrabbed)
         {
             isGrabbed = false;
-            // Restore the original parent.
-            transform.SetParent(originalParent, true);
-            Debug.Log("Object released. Parent restored.");
+            transform.SetParent(null, true);
+            Debug.Log("Object released: " + gameObject.name);
         }
     }
 
     private void Update()
     {
-        if (isGrabbed)
+        if (isGrabbed && attachTransform != null)
         {
-            // Read the right thumbstick input.
-            Vector2 thumbInput = rightThumbstickAction.action.ReadValue<Vector2>();
+            // Read the thumbstick input (y-axis for forward/back movement).
+            Vector2 thumbInput = thumbstickAction.action.ReadValue<Vector2>();
             if (Mathf.Abs(thumbInput.y) > 0.1f)
             {
-                // Adjust local position along Z.
-                Vector3 localPos = transform.localPosition;
-                float newZ = Mathf.Clamp(localPos.z + thumbInput.y * distanceAdjustSpeed * Time.deltaTime, minLocalZ, maxLocalZ);
-                transform.localPosition = new Vector3(localPos.x, localPos.y, newZ);
-                Debug.Log("Adjusted grabbed object's local Z to: " + newZ);
+                // Adjust the distance
+                currentOffset += thumbInput.y * moveSpeed * Time.deltaTime;
+                currentOffset = Mathf.Clamp(currentOffset, minDistance, maxDistance);
+
+                // Move the object along the attachTransform's forward direction
+                transform.position = attachTransform.position + attachTransform.forward * currentOffset;
+                
+                Debug.Log("Moved " + gameObject.name + " to " + transform.position);
             }
         }
     }
