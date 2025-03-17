@@ -4,8 +4,7 @@ using UnityEngine;
 public class FloopBehavior : ObjectBehaviorParrent
 {
     [SerializeField] private AK.Wwise.Event floopSound;
-    public bool isGrabbed = false;
-
+   // public bool isGrabbed = false;
     private float volume;
 
     public override float Volume
@@ -16,7 +15,7 @@ public class FloopBehavior : ObjectBehaviorParrent
 
     void Update()
     {
-        if (isGrabbed)
+        if (Input.GetKeyDown(KeyCode.V))
         {
             StorePosition(transform.position);
         }
@@ -24,6 +23,11 @@ public class FloopBehavior : ObjectBehaviorParrent
         if (Input.GetKeyDown(KeyCode.Space))
         {
             PlayOn();
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ReturnObject();
         }
     }
 
