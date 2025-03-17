@@ -13,6 +13,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         if (other.gameObject.tag == "Floob")
         {
             AddFloob(other.gameObject);
+
         }
     }
 
