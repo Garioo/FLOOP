@@ -6,9 +6,10 @@ public abstract class ObjectBehaviorParrent : MonoBehaviour
 
     private Vector3 targetPosition;
 
+    public bool isPlaying = false;
+
     public abstract void PlayOn();
-  
-  
+
 
 
     // Method to set the target position
@@ -23,7 +24,7 @@ public abstract class ObjectBehaviorParrent : MonoBehaviour
         // Calculate the direction to the target position
         Vector3 direction = (targetPosition - transform.position).normalized;
 
-     
+
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb != null)
         {
@@ -32,7 +33,7 @@ public abstract class ObjectBehaviorParrent : MonoBehaviour
             rb.AddForce(direction * jumpForce, ForceMode.Impulse);
         }
     }
-   
+
     // Helper method to calculate the jump force
     private float CalculateJumpForce(Vector3 startPosition, Vector3 endPosition)
     {

@@ -265,6 +265,7 @@ GameObject:
   - component: {fileID: 23744645}
   - component: {fileID: 23744650}
   - component: {fileID: 23744651}
+  - component: {fileID: 23744652}
   m_Layer: 0
   m_Name: SphereFloat
   m_TagString: Untagged
@@ -441,6 +442,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {fileID: 772278931}
+--- !u!114 &23744652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23744643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df0d72f112aa53408c029d25153b127, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floopSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!4 &100129833 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8338988566280778637, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
@@ -2062,6 +2079,7 @@ GameObject:
   - component: {fileID: 1288995766}
   - component: {fileID: 1288995769}
   - component: {fileID: 1288995770}
+  - component: {fileID: 1288995771}
   m_Layer: 0
   m_Name: Plane
   m_TagString: WaterSurface
@@ -2172,6 +2190,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floobCounter: 0
   maxFloob: 7
+--- !u!114 &1288995771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288995764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9f9681fd391a3b4694ace95e1ead47c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floobCounter: 0
+  maxFloob: 0
 --- !u!4 &1310115618 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dfbbd58d5e8a2684b8b70537b6ea5cb5, type: 3}

@@ -1,37 +1,52 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class ObjectManager : MonoBehaviour
 {
-    [SerializeField] private int floobCounter;
-    [SerializeField] private int maxFloob;
+    [SerializeField] private int floopCounter;
+    [SerializeField] private int maxFloop;
 
-
-
-    private void OnCollisionEnter(Collision other) // Floob ryger, i vandet!
+    private void OnTriggerEnter(Collider other)// Floop ryger, i vandet!
     {
-        if (other.gameObject.tag == "Floob")
+        if (other.gameObject.CompareTag("Floop"))
         {
+            Debug.Log("Floop collided with water");
             AddFloob(other.gameObject);
-
         }
     }
 
-    public void AddFloob(GameObject floobObject) // floob tilføjes til floobCounter
+    public void AddFloob(GameObject floopObject) // floob tilføjes til floobCounter
     {
-        if (floobCounter < maxFloob)
+        ObjectBehaviorParrent objectBehavior = floopObject.GetComponent<ObjectBehaviorParrent>();
+        if (objectBehavior != null)
         {
-            ObjectBehaviorParrent objectBehavior = floobObject.GetComponent<ObjectBehaviorParrent>();
-            objectBehavior.PlayOn();
-            floobCounter++;
+            if (objectBehavior.isPlaying == false)
+            {
+                if (floopCounter < maxFloop)
+                {
+                    objectBehavior.isPlaying = true;
+                    objectBehavior.PlayOn();
+                    floopCounter++;
+                    Debug.Log("Floop Counter: " + floopCounter);
+                }
+                else
+                {
+                    Debug.Log("Floop Counter is full");
+                    objectBehavior.ReturnObject(); // floop returneres til target position
+                }
+            }
         }
         else
         {
-            ObjectBehaviorParrent objectBehavior = floobObject.GetComponent<ObjectBehaviorParrent>(); // floop returneres til target position
-            if (objectBehavior != null)
-            {
-                objectBehavior.ReturnObject();
-            }
+            Debug.LogError("ObjectBehaviorParrent component not found on the floobObject.");
         }
+    }
+
+    public void RemoveFloop(GameObject floopObject)
+    {
+        ObjectBehaviorParrent objectBehavior = floopObject.GetComponent<ObjectBehaviorParrent>();
+        objectBehavior.isPlaying = false;
+        floopCounter--;
+        Debug.Log("Floop Counter: " + floopCounter);
     }
 }
