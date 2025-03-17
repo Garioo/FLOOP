@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 630a8bac58834419fbc0b3494ecc868f, type: 3}
+  m_Name: D9650275-A8BB-4F10-A6A9-517F8C07DC34
+  m_EditorClassIdentifier: 
+  objectName: RTPC_Beat
+  id: 1442171239
+  guid: D9650275-A8BB-4F10-A6A9-517F8C07DC34
+  IsInUserDefinedSoundBank: 1
+  IsAutoBankLoaded: 0

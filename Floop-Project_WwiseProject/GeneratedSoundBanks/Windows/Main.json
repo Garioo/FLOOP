@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{A107B4BE-8C98-4987-B42D-8CADCE960A7B}",
     "Language": "SFX",
-    "Hash": "{ABF7F7A7-DE4E-2133-7BC7-D2B1CD1F05F0}",
+    "Hash": "{22AC17F6-01FB-B978-1ACB-8D27589A4A84}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -55,8 +55,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Play_AllLoops",
       "GUID": "{9B63B787-8C48-4064-A182-6FD1A05AED13}",
       "DurationType": "OneShot",
-      "DurationMin": "87.23255",
-      "DurationMax": "87.23255",
+      "DurationMin": "54.418816",
+      "DurationMax": "54.418816",
       "MediaRefs": [
        {
         "Id": "131677047"
@@ -71,6 +71,16 @@
         "Id": "901117554"
        }
       ]
+     },
+     {
+      "Id": "1442171239",
+      "Name": "RTPC_Beat",
+      "ObjectPath": "\\Events\\Default Work Unit\\RTPC_Beat",
+      "GUID": "{D9650275-A8BB-4F10-A6A9-517F8C07DC34}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ],
     "GameParameters": [
@@ -101,6 +111,6 @@
     ]
    }
   ],
-  "FileHash": "{8AE21247-C989-B189-4EE4-12F38C146394}"
+  "FileHash": "{41ED3D9F-5DDF-3012-57CF-19A8B05EFD69}"
  }
 }

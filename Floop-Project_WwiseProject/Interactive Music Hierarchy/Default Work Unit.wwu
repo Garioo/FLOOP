@@ -133,7 +133,7 @@
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
-						<Property Name="EndPosition" Type="Real64" Value="89481.8482186896"/>
+						<Property Name="EndPosition" Type="Real64" Value="105226.719290021"/>
 						<Property Name="Tempo" Type="Real64" Value="81"/>
 					</PropertyList>
 					<ReferenceList>
@@ -183,7 +183,6 @@
 																	<PropertyList>
 																		<Property Name="EndTrimOffset" Type="Real64" Value="54299.6575342466"/>
 																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																		<Property Name="PlayAt" Type="Real64" Value="32651.9646420686"/>
 																	</PropertyList>
 																	<AudioSourceRef Name="KS_Chilled Roads_Beat" ID="{62F4FFFD-0705-4D22-888A-3F73E316F1C9}"/>
 																	<PropertyCurveList>
@@ -263,7 +262,7 @@
 								<Local>
 									<MusicCue Name="Entry Cue" ID="{5CBCD779-9F99-4B15-9790-0581394531E8}">
 										<PropertyList>
-											<Property Name="TimeMs" Type="Real64" Value="33374.8863684613"/>
+											<Property Name="TimeMs" Type="Real64" Value="27.0057809095379"/>
 										</PropertyList>
 									</MusicCue>
 								</Local>
@@ -273,7 +272,7 @@
 									<MusicCue Name="Exit Cue" ID="{70EB7FC7-1355-4235-B966-874C79711418}">
 										<PropertyList>
 											<Property Name="CueType" Type="int16" Value="1"/>
-											<Property Name="TimeMs" Type="Real64" Value="87232.5549847147"/>
+											<Property Name="TimeMs" Type="Real64" Value="53884.6743971632"/>
 										</PropertyList>
 									</MusicCue>
 								</Local>

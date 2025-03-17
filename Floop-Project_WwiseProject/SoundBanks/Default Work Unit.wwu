@@ -6,6 +6,7 @@
 				<SoundBank Name="Main" ID="{A107B4BE-8C98-4987-B42D-8CADCE960A7B}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_AllLoops" ID="{9B63B787-8C48-4064-A182-6FD1A05AED13}" WorkUnitID="{1F399B7E-ACB2-4C8D-B284-D6B301D048ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="RTPC_Beat" ID="{D9650275-A8BB-4F10-A6A9-517F8C07DC34}" WorkUnitID="{1F399B7E-ACB2-4C8D-B284-D6B301D048ED}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

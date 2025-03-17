@@ -20,7 +20,7 @@
 				</GameParameter>
 				<GameParameter Name="Volume_Rhodes" ID="{5681BCA4-CFB9-410C-A3F3-747F69896D64}">
 					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="100"/>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
 					</PropertyList>
 				</GameParameter>
 			</ChildrenList>

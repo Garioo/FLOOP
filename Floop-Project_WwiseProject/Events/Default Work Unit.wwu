@@ -35,6 +35,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="RTPC_Beat" ID="{D9650275-A8BB-4F10-A6A9-517F8C07DC34}">
+					<ChildrenList>
+						<Action Name="" ID="{A8D5C918-BF08-475A-AC8A-86A22CEFE072}" ShortID="911891262">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Volume_Beat" ID="{2DD34868-D138-428B-A15D-1A45972D3F24}" WorkUnitID="{52924D5C-84D2-44C3-97EE-E673BB61BCA1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

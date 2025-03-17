@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	1442171239	RTPC_Beat			\Default Work Unit\RTPC_Beat	
 	2262267240	Play_AllLoops			\Default Work Unit\Play_AllLoops	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
@@ -8,8 +9,8 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	2323823550	Volume_Beat			\Default Work Unit\Volume_Beat	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	131677047	KS_Chilled Roads_Guitar	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\5B\{5BEBA30D-2806-6F6B-2DFC-185906110E50}.wem		\Interactive Music Hierarchy\Default Work Unit\Guitar\KS_Chilled Roads_Guitar		10362976
-	372437476	KS_Chilled Roads_Beat	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\F3\{F3DDA102-D09D-6D1F-CE57-291227C9F0EE}.wem		\Interactive Music Hierarchy\Default Work Unit\Beat\KS_Chilled Roads_Beat		13301856
-	818377342	KS_Chilled Roads_Rhodes	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\78\{781947EE-D9C6-B549-4937-0CD310DEC556}.wem		\Interactive Music Hierarchy\Default Work Unit\Rhodes\KS_Chilled Roads_Rhodes		10532960
-	901117554	KS_Chilled Roads_DirtyLoop	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\11\{11FF0381-DE43-3A0C-F927-FA608F24B0BB}.wem		\Interactive Music Hierarchy\Default Work Unit\Loop\KS_Chilled Roads_DirtyLoop		10362976
+	131677047	KS_Chilled Roads_Guitar	E:\Github\FLOOP\Floop-Project_WwiseProject\.cache\5B\{5BEBA30D-2806-6F6B-2DFC-185906110E50}.wem		\Interactive Music Hierarchy\Default Work Unit\Guitar\KS_Chilled Roads_Guitar		10362976
+	372437476	KS_Chilled Roads_Beat	E:\Github\FLOOP\Floop-Project_WwiseProject\.cache\F3\{F3DDA102-D09D-6D1F-CE57-291227C9F0EE}.wem		\Interactive Music Hierarchy\Default Work Unit\Beat\KS_Chilled Roads_Beat		13301856
+	818377342	KS_Chilled Roads_Rhodes	E:\Github\FLOOP\Floop-Project_WwiseProject\.cache\78\{781947EE-D9C6-B549-4937-0CD310DEC556}.wem		\Interactive Music Hierarchy\Default Work Unit\Rhodes\KS_Chilled Roads_Rhodes		10532960
+	901117554	KS_Chilled Roads_DirtyLoop	E:\Github\FLOOP\Floop-Project_WwiseProject\.cache\11\{11FF0381-DE43-3A0C-F927-FA608F24B0BB}.wem		\Interactive Music Hierarchy\Default Work Unit\Loop\KS_Chilled Roads_DirtyLoop		10362976
 
