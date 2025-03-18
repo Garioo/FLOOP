@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Anchor
+  - WaterSurface
+  - CinemachineTarget
+  - TeleportTrigger
   layers:
   - Default
   - TransparentFX

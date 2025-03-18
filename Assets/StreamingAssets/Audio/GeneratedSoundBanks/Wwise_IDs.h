@@ -11,6 +11,25 @@
 
 namespace AK
 {
+    namespace EVENTS
+    {
+        static const AkUniqueID PLAY_ALLLOOPS = 2262267240U;
+    } // namespace EVENTS
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID VOLUME_BEAT = 2323823550U;
+        static const AkUniqueID VOLUME_GUITAR = 1830359252U;
+        static const AkUniqueID VOLUME_LOOP = 1896328112U;
+        static const AkUniqueID VOLUME_RHODES = 2045120833U;
+    } // namespace GAME_PARAMETERS
+
+    namespace BANKS
+    {
+        static const AkUniqueID INIT = 1355168291U;
+        static const AkUniqueID MAIN = 3161908922U;
+    } // namespace BANKS
+
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
