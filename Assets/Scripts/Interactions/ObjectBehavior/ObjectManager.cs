@@ -38,7 +38,7 @@ public class ObjectManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("ObjectBehaviorParrent component not found on the floobObject.");
+            Debug.LogError("ObjectBehaviorParrent component not found on the floobObject.  Brug FloopBehavior scripted!!!!");
         }
     }
 
@@ -46,6 +46,7 @@ public class ObjectManager : MonoBehaviour
     {
         ObjectBehaviorParrent objectBehavior = floopObject.GetComponent<ObjectBehaviorParrent>();
         objectBehavior.isPlaying = false;
+        objectBehavior.PlayOff();
         floopCounter--;
         Debug.Log("Floop Counter: " + floopCounter);
     }

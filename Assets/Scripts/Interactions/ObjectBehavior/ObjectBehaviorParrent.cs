@@ -2,14 +2,14 @@ using UnityEngine;
 
 public abstract class ObjectBehaviorParrent : MonoBehaviour
 {
-    public abstract float Volume { get; set; }
+
 
     private Vector3 targetPosition;
 
     public bool isPlaying = false;
 
     public abstract void PlayOn();
-
+    public abstract void PlayOff();
 
 
     // Method to set the target position
@@ -18,30 +18,68 @@ public abstract class ObjectBehaviorParrent : MonoBehaviour
         targetPosition = position;
     }
 
-    // Method to return the object to the target position
-    public void ReturnObject() // Denne her skal kaldes når objektet er OOB!
+    public void ReturnObject()
     {
-        // Calculate the direction to the target position
-        Vector3 direction = (targetPosition - transform.position).normalized;
 
+        Vector3 direction = (targetPosition - transform.position).normalized;
 
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb != null)
         {
-            // Calculate the jump force
-            float jumpForce = CalculateJumpForce(transform.position, targetPosition);
-            rb.AddForce(direction * jumpForce, ForceMode.Impulse);
+            float angleDegrees = 45f;
+
+            Vector3 launchVelocity = CalculateBallisticVelocity(
+                startPosition: transform.position,
+                endPosition: targetPosition,
+                angleDegrees: angleDegrees
+            );
+
+            rb.AddForce(launchVelocity * 2, ForceMode.Impulse);
+            
         }
     }
 
-    // Helper method to calculate the jump force
-    private float CalculateJumpForce(Vector3 startPosition, Vector3 endPosition)
+    private Vector3 CalculateBallisticVelocity(Vector3 startPosition, Vector3 endPosition, float angleDegrees)
     {
-        // Calculate the distance to the target position
-        float distance = Vector3.Distance(startPosition, endPosition);
+        
+        float g = Mathf.Abs(Physics.gravity.y);
+       
+        Vector3 planarStart = new Vector3(startPosition.x, 0, startPosition.z);
+        Vector3 planarEnd = new Vector3(endPosition.x, 0, endPosition.z);
+        float distance = Vector3.Distance(planarStart, planarEnd);
 
-        // Calculate the jump force based on the distance (this is a simple example, you may need to adjust it)
-        float jumpForce = Mathf.Sqrt(distance) * 10f; // Adjust the multiplier as needed
-        return jumpForce;
+        float yOffset = endPosition.y - startPosition.y;
+
+      
+        float angleRad = angleDegrees * Mathf.Deg2Rad;
+    
+        float distanceTimesTan = distance * Mathf.Tan(angleRad);
+        float cosAngleSq = Mathf.Pow(Mathf.Cos(angleRad), 2);
+
+        float denominator = 2f * cosAngleSq * (distanceTimesTan + yOffset);
+        float velocitySquare = (g * distance * distance) / denominator;
+
+        if (velocitySquare <= 0f)
+        {
+      
+            velocitySquare = 0f;
+        }
+        float initialVelocity = Mathf.Sqrt(velocitySquare);
+   
+        float vY = initialVelocity * Mathf.Sin(angleRad);  // Up/down
+        float vXz = initialVelocity * Mathf.Cos(angleRad); // In the plane
+
+      
+        float angleToTarget = Mathf.Atan2(
+            endPosition.z - startPosition.z,
+            endPosition.x - startPosition.x
+        );
+        
+        Quaternion horizRotation = Quaternion.Euler(0, Mathf.Rad2Deg * angleToTarget, 0);
+        Vector3 launchVelocity = horizRotation * new Vector3(vXz, 0f, 0f);
+        launchVelocity.y = vY;
+
+        return launchVelocity;
     }
+
 }

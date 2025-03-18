@@ -1,29 +1,31 @@
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class FloopBehavior : ObjectBehaviorParrent
 {
     [SerializeField] private AK.Wwise.Event floopSound;
-    private float volume;
-    [SerializeField] private GameObject gameObject;
-    public AK.Wwise.RTPC FloopVolumeParameter;
-    public override float Volume
-    {
-        get { return volume; }
-        set { volume = value; }
-    }
-
-
+    [SerializeField] private float volume;
+  
+    
     public override void PlayOn()
     {
         if  (isPlaying)
         {
-            volume = 100;
-            FloopVolumeParameter.SetGlobalValue(volume);
             Debug.Log("Trying to play" + floopSound);
+
+            AkSoundEngine.SetRTPCValue("Beat", volume, gameObject);
         }
     }
+
+    public override void PlayOff()
+    {
+        if (!isPlaying)
+        {
+            Debug.Log("Trying to stop" + floopSound);
+            AkSoundEngine.SetRTPCValue("Beat", 0, gameObject);
+        }
+    }
+
 
     public void Awake()
     {
