@@ -1,16 +1,27 @@
 Event	ID	Name			Wwise Object Path	Notes
-	1442171239	RTPC_Beat			\Default Work Unit\RTPC_Beat	
 	2262267240	Play_AllLoops			\Default Work Unit\Play_AllLoops	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
-	1830359252	Volume_Guitar			\Default Work Unit\Volume_Guitar	
-	1896328112	Volume_Loop			\Default Work Unit\Volume_Loop	
-	2045120833	Volume_Rhodes			\Default Work Unit\Volume_Rhodes	
-	2323823550	Volume_Beat			\Default Work Unit\Volume_Beat	
+	595039813	Organ_Volume			\Default Work Unit\Marimba_Shuffle_RTPC\Organ_Volume	
+	806281178	Strings_Volume			\Default Work Unit\Marimba_Shuffle_RTPC\Strings_Volume	
+	2001784154	Drum_Volume			\Default Work Unit\Marimba_Shuffle_RTPC\Drum_Volume	
+	2512063722	Drum2_Volume			\Default Work Unit\Marimba_Shuffle_RTPC\Drum2_Volume	
+	2909751391	Choir_Volume			\Default Work Unit\Marimba_Shuffle_RTPC\Choir_Volume	
+	3123229146	Flute_Volume			\Default Work Unit\Marimba_Shuffle_RTPC\Flute_Volume	
+	3305412081	Piano_Volume			\Default Work Unit\Marimba_Shuffle_RTPC\Piano_Volume	
+	3582539958	Keys_Volume			\Default Work Unit\Marimba_Shuffle_RTPC\Keys_Volume	
+	3895114124	Guitar_Volume			\Default Work Unit\Marimba_Shuffle_RTPC\Guitar_Volume	
+	4181822845	Bass_Volume			\Default Work Unit\Marimba_Shuffle_RTPC\Bass_Volume	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	131677047	KS_Chilled Roads_Guitar	E:\Github\FLOOP\Floop-Project_WwiseProject\.cache\5B\{5BEBA30D-2806-6F6B-2DFC-185906110E50}.wem		\Interactive Music Hierarchy\Default Work Unit\Guitar\KS_Chilled Roads_Guitar		10362976
-	372437476	KS_Chilled Roads_Beat	E:\Github\FLOOP\Floop-Project_WwiseProject\.cache\F3\{F3DDA102-D09D-6D1F-CE57-291227C9F0EE}.wem		\Interactive Music Hierarchy\Default Work Unit\Beat\KS_Chilled Roads_Beat		13301856
-	818377342	KS_Chilled Roads_Rhodes	E:\Github\FLOOP\Floop-Project_WwiseProject\.cache\78\{781947EE-D9C6-B549-4937-0CD310DEC556}.wem		\Interactive Music Hierarchy\Default Work Unit\Rhodes\KS_Chilled Roads_Rhodes		10532960
-	901117554	KS_Chilled Roads_DirtyLoop	E:\Github\FLOOP\Floop-Project_WwiseProject\.cache\11\{11FF0381-DE43-3A0C-F927-FA608F24B0BB}.wem		\Interactive Music Hierarchy\Default Work Unit\Loop\KS_Chilled Roads_DirtyLoop		10362976
+	134075064	4 - Organ	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\D4\{D4849CC2-B3EC-D34B-12C3-AC10FA6A4FAD}.wem		\Interactive Music Hierarchy\Instruments\Melody 1\Marimba Shuffle\4 - Organ		4545716
+	288265239	3 - Drum2	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\04\{043CC456-BA0B-13BC-F61E-5BB30E5679C0}.wem		\Interactive Music Hierarchy\Instruments\Melody 1\Marimba Shuffle\3 - Drum2		4802320
+	412913142	7 - Guitar	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\1F\{1F15FD0D-7656-7757-90A4-BED61C95C283}.wem		\Interactive Music Hierarchy\Instruments\Melody 1\Marimba Shuffle\7 - Guitar		4615844
+	439121340	8 - Choir	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\07\{076D85A2-3C4C-0314-854C-CA081E4B7248}.wem		\Interactive Music Hierarchy\Instruments\Melody 1\Marimba Shuffle\8 - Choir		4596568
+	553901115	2 - Drum	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\97\{971186CF-7EE6-4253-E341-0F8DD470FC73}.wem		\Interactive Music Hierarchy\Instruments\Melody 1\Marimba Shuffle\2 - Drum		5327408
+	649551334	5 - Bass	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\06\{068F2F77-84AC-810F-8104-EF8170AE27A7}.wem		\Interactive Music Hierarchy\Instruments\Melody 1\Marimba Shuffle\5 - Bass		4549076
+	736135616	9 - Keys	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\0B\{0B1D0574-D460-2A83-4EED-B9144C4B2BAC}.wem		\Interactive Music Hierarchy\Instruments\Melody 1\Marimba Shuffle\9 - Keys		4952508
+	764985191	10 - Flute	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\B0\{B0789FB9-910D-ACBB-1203-495898696B47}.wem		\Interactive Music Hierarchy\Instruments\Melody 1\Marimba Shuffle\10 - Flute		4596568
+	954328041	6 - Strings	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\AC\{AC4EDB87-B63F-6FCD-6252-4A20D8096BEC}.wem		\Interactive Music Hierarchy\Instruments\Melody 1\Marimba Shuffle\6 - Strings		4798168
+	1070597832	1 - Piano	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\46\{465E3458-A68E-AEF5-3273-248EDAE019FB}.wem		\Interactive Music Hierarchy\Instruments\Melody 1\Marimba Shuffle\1 - Piano		4797368
 

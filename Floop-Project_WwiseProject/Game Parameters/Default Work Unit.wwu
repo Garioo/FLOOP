@@ -3,26 +3,60 @@
 	<GameParameters>
 		<WorkUnit Name="Default Work Unit" ID="{52924D5C-84D2-44C3-97EE-E673BB61BCA1}" PersistMode="Standalone">
 			<ChildrenList>
-				<GameParameter Name="Volume_Beat" ID="{2DD34868-D138-428B-A15D-1A45972D3F24}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="0"/>
-					</PropertyList>
-				</GameParameter>
-				<GameParameter Name="Volume_Loop" ID="{F7550696-2304-4F24-BDAA-7D00F3F2FAA5}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="0"/>
-					</PropertyList>
-				</GameParameter>
-				<GameParameter Name="Volume_Guitar" ID="{53F1BF81-E40A-4042-A7D5-3141FCEFAD07}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="0"/>
-					</PropertyList>
-				</GameParameter>
-				<GameParameter Name="Volume_Rhodes" ID="{5681BCA4-CFB9-410C-A3F3-747F69896D64}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="0"/>
-					</PropertyList>
-				</GameParameter>
+				<Folder Name="Marimba_Shuffle_RTPC" ID="{1D8E19B8-63A6-4CB8-A9AE-7C49EC97A147}" ShortID="640370975">
+					<ChildrenList>
+						<GameParameter Name="Piano_Volume" ID="{24B8DC5B-9E1B-47A4-B4F5-32A147EEF634}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Drum_Volume" ID="{FD0E59DC-72DD-4272-B505-BE5CCD26A643}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Drum2_Volume" ID="{FFA2C5E5-4A3C-458D-B257-F7F4AEFA5AF9}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Organ_Volume" ID="{04810945-483C-416B-B3B2-966082E28B46}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Bass_Volume" ID="{075D32A4-0DB7-42DA-A39E-CEE16D3797EB}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Strings_Volume" ID="{1CA843ED-C9C2-4384-83EF-CDD63F5DD4B3}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Guitar_Volume" ID="{EB107D43-BCF7-4EBC-A250-CB708025F1B6}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Choir_Volume" ID="{702170B0-1A68-465E-B48B-C26CEF1396DE}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Keys_Volume" ID="{CEF9FC06-A50C-4FB4-80B9-340B91F2B409}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Flute_Volume" ID="{5F56B9F1-0A8E-4CD1-9D9D-B24A6459AACE}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

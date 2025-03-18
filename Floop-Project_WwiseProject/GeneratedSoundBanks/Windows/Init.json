@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{2351DEDA-D296-8821-F106-61878CD0334C}",
+    "Hash": "{1AEEDDC2-F565-F13C-716B-E554EC52636D}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -44,32 +44,68 @@
     ],
     "GameParameters": [
      {
-      "Id": "1830359252",
-      "Name": "Volume_Guitar",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Volume_Guitar",
-      "GUID": "{53F1BF81-E40A-4042-A7D5-3141FCEFAD07}"
+      "Id": "595039813",
+      "Name": "Organ_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Organ_Volume",
+      "GUID": "{04810945-483C-416B-B3B2-966082E28B46}"
      },
      {
-      "Id": "1896328112",
-      "Name": "Volume_Loop",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Volume_Loop",
-      "GUID": "{F7550696-2304-4F24-BDAA-7D00F3F2FAA5}"
+      "Id": "806281178",
+      "Name": "Strings_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Strings_Volume",
+      "GUID": "{1CA843ED-C9C2-4384-83EF-CDD63F5DD4B3}"
      },
      {
-      "Id": "2045120833",
-      "Name": "Volume_Rhodes",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Volume_Rhodes",
-      "GUID": "{5681BCA4-CFB9-410C-A3F3-747F69896D64}"
+      "Id": "2001784154",
+      "Name": "Drum_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Drum_Volume",
+      "GUID": "{FD0E59DC-72DD-4272-B505-BE5CCD26A643}"
      },
      {
-      "Id": "2323823550",
-      "Name": "Volume_Beat",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Volume_Beat",
-      "GUID": "{2DD34868-D138-428B-A15D-1A45972D3F24}"
+      "Id": "2512063722",
+      "Name": "Drum2_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Drum2_Volume",
+      "GUID": "{FFA2C5E5-4A3C-458D-B257-F7F4AEFA5AF9}"
+     },
+     {
+      "Id": "2909751391",
+      "Name": "Choir_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Choir_Volume",
+      "GUID": "{702170B0-1A68-465E-B48B-C26CEF1396DE}"
+     },
+     {
+      "Id": "3123229146",
+      "Name": "Flute_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Flute_Volume",
+      "GUID": "{5F56B9F1-0A8E-4CD1-9D9D-B24A6459AACE}"
+     },
+     {
+      "Id": "3305412081",
+      "Name": "Piano_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Piano_Volume",
+      "GUID": "{24B8DC5B-9E1B-47A4-B4F5-32A147EEF634}"
+     },
+     {
+      "Id": "3582539958",
+      "Name": "Keys_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Keys_Volume",
+      "GUID": "{CEF9FC06-A50C-4FB4-80B9-340B91F2B409}"
+     },
+     {
+      "Id": "3895114124",
+      "Name": "Guitar_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Guitar_Volume",
+      "GUID": "{EB107D43-BCF7-4EBC-A250-CB708025F1B6}"
+     },
+     {
+      "Id": "4181822845",
+      "Name": "Bass_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Bass_Volume",
+      "GUID": "{075D32A4-0DB7-42DA-A39E-CEE16D3797EB}"
      }
     ]
    }
   ],
-  "FileHash": "{09711CA2-BDD3-F385-CE87-CE095D4E4E7C}"
+  "FileHash": "{52E8EE3A-8A7C-1F8E-B66A-39C6A6FB3506}"
  }
 }

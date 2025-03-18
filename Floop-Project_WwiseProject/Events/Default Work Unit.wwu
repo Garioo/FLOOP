@@ -8,42 +8,7 @@
 						<Action Name="" ID="{7C1E61CA-C022-46C0-B042-00509193A2A3}" ShortID="972808529">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Beat" ID="{110D43B7-A78D-4B86-9D1D-7051C9F276F9}" WorkUnitID="{CCC9ABFA-23EB-485F-AA71-5E46AC6E8C49}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{CE61318E-BDB6-40B5-90C1-C83EC3F284E0}" ShortID="493695030">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Guitar" ID="{CDE80A9A-216D-48A5-AB44-2EBEC69E8013}" WorkUnitID="{CCC9ABFA-23EB-485F-AA71-5E46AC6E8C49}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{AFDFF566-8C8A-4FC8-9622-D6AA93E521F6}" ShortID="1046675801">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Loop" ID="{313DF2C8-BB79-4FA4-9DA4-F0606CFB841F}" WorkUnitID="{CCC9ABFA-23EB-485F-AA71-5E46AC6E8C49}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{44E3DFF4-8E6F-4970-9690-F59AFBE05C52}" ShortID="23877066">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Rhodes" ID="{ACE4CB5B-208C-469F-A2AA-0F2F383E6F42}" WorkUnitID="{CCC9ABFA-23EB-485F-AA71-5E46AC6E8C49}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="RTPC_Beat" ID="{D9650275-A8BB-4F10-A6A9-517F8C07DC34}">
-					<ChildrenList>
-						<Action Name="" ID="{A8D5C918-BF08-475A-AC8A-86A22CEFE072}" ShortID="911891262">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Volume_Beat" ID="{2DD34868-D138-428B-A15D-1A45972D3F24}" WorkUnitID="{52924D5C-84D2-44C3-97EE-E673BB61BCA1}"/>
+									<ObjectRef Name="Melody 1" ID="{EB75F318-9119-4DAF-8F71-BB59DC3003A8}" WorkUnitID="{B26EB749-0698-4ED0-96E9-C20E1BBDEA2C}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

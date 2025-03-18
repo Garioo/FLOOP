@@ -14,15 +14,20 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_ALLLOOPS = 2262267240U;
-        static const AkUniqueID RTPC_BEAT = 1442171239U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
     {
-        static const AkUniqueID VOLUME_BEAT = 2323823550U;
-        static const AkUniqueID VOLUME_GUITAR = 1830359252U;
-        static const AkUniqueID VOLUME_LOOP = 1896328112U;
-        static const AkUniqueID VOLUME_RHODES = 2045120833U;
+        static const AkUniqueID BASS_VOLUME = 4181822845U;
+        static const AkUniqueID CHOIR_VOLUME = 2909751391U;
+        static const AkUniqueID DRUM2_VOLUME = 2512063722U;
+        static const AkUniqueID DRUM_VOLUME = 2001784154U;
+        static const AkUniqueID FLUTE_VOLUME = 3123229146U;
+        static const AkUniqueID GUITAR_VOLUME = 3895114124U;
+        static const AkUniqueID KEYS_VOLUME = 3582539958U;
+        static const AkUniqueID ORGAN_VOLUME = 595039813U;
+        static const AkUniqueID PIANO_VOLUME = 3305412081U;
+        static const AkUniqueID STRINGS_VOLUME = 806281178U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
