@@ -55,7 +55,7 @@ public class LeafSpawner : MonoBehaviour
             Vector3 targetPosition = waypoint.position + new Vector3(Random.Range(-driftAmount, driftAmount), 0, Random.Range(-driftAmount, driftAmount));
 
             float journey = 0;
-            float duration = Random.Range(5f, 10f); // Time to reach waypoint
+            float duration = Random.Range(7f, 10f); // Time to reach waypoint
 
             while (journey < duration)
             {
@@ -64,7 +64,7 @@ public class LeafSpawner : MonoBehaviour
                 journey += Time.deltaTime;
                 float progress = journey / duration;
                 leaf.transform.position = Vector3.Lerp(startPosition, targetPosition, progress);
-                leaf.transform.Rotate(Vector3.up * Random.Range(-100f, 100f) * Time.deltaTime); // Adds slight rotation
+                leaf.transform.position += Vector3.up * Mathf.Sin(Time.time * floatSpeed) * 0.01f;
                 yield return null;
             }
         }
