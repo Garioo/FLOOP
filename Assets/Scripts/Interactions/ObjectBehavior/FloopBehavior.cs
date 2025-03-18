@@ -4,25 +4,28 @@ using UnityEngine;
 public class FloopBehavior : ObjectBehaviorParrent
 {
     [SerializeField] private AK.Wwise.Event floopSound;
-    private float volume;
+    [SerializeField] private float volume;
   
     
-    public override float Volume
-    {
-        get { return volume; }
-        set { volume = value; }
-    }
-
-
     public override void PlayOn()
     {
         if  (isPlaying)
         {
             Debug.Log("Trying to play" + floopSound);
 
-            AkSoundEngine.SetRTPCValue("Beat", Volume, gameObject);
+            AkSoundEngine.SetRTPCValue("Beat", volume, gameObject);
         }
     }
+
+    public override void PlayOff()
+    {
+        if (!isPlaying)
+        {
+            Debug.Log("Trying to stop" + floopSound);
+            AkSoundEngine.SetRTPCValue("Beat", 0, gameObject);
+        }
+    }
+
 
     public void Awake()
     {
