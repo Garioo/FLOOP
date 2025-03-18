@@ -1293,15 +1293,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlaying: 0
-  floopSound:
+  VolumeParameter:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 0393c6bcde5ff406a9c4c1411a97a5b1, type: 2}
-  gameObject: {fileID: 922709799}
-  FloopVolumeParameter:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 73a257308592d714a89bcf93f8aca911, type: 2}
+    WwiseObjectReference: {fileID: 0}
+  volume: 0
 --- !u!1001 &680334130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1696,6 +1692,29 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ca479f2a2c0b474e86278e659560442, type: 3}
+--- !u!1 &714776673 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6923018253085978711, guid: 6821e1b7f44d8c44b8a2ba02f37309d5, type: 3}
+  m_PrefabInstance: {fileID: 1720509381}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &714776678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714776673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df0d72f112aa53408c029d25153b127, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlaying: 0
+  VolumeParameter:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d596106047bba4ef2bbb651c4e2fcefd, type: 2}
+  volume: 100
 --- !u!1001 &719763418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2241,7 +2260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 922709800}
   - component: {fileID: 922709802}
-  - component: {fileID: 922709801}
+  - component: {fileID: 922709803}
   m_Layer: 0
   m_Name: Wwise
   m_TagString: Untagged
@@ -2266,35 +2285,6 @@ Transform:
   - {fileID: 2121703289}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &922709801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922709799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ae59079b4cfd4a4c915325f5e126d83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 0393c6bcde5ff406a9c4c1411a97a5b1, type: 2}
-  useCallbacks: 0
-  stopSoundOnDestroy: 1
-  Callbacks: []
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
 --- !u!114 &922709802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2319,6 +2309,39 @@ MonoBehaviour:
   scalingFactor: 1
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &922709803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922709799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ae59079b4cfd4a4c915325f5e126d83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0393c6bcde5ff406a9c4c1411a97a5b1, type: 2}
+  useCallbacks: 1
+  stopSoundOnDestroy: 1
+  Callbacks:
+  - Flags:
+      value: 512
+    FunctionName: OnMusicBar
+    GameObject: {fileID: 2045378537}
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
 --- !u!4 &937886489 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8859339169051939592, guid: fb63c43860a5e524e8552641f08029ec, type: 3}
@@ -2614,7 +2637,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1084091470699946726, guid: 6821e1b7f44d8c44b8a2ba02f37309d5, type: 3}
   m_PrefabInstance: {fileID: 1720509381}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1095981515
+--- !u!114 &1095981516
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2623,19 +2646,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1095981511}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2df0d72f112aa53408c029d25153b127, type: 3}
+  m_Script: {fileID: 11500000, guid: cfc7a64eda9b04a039e5528c4fb8e968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlaying: 0
-  floopSound:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 0393c6bcde5ff406a9c4c1411a97a5b1, type: 2}
-  gameObject: {fileID: 922709799}
-  FloopVolumeParameter:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: d8cfd71914301904da255398e3a94744, type: 2}
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  usePositionOffsetData: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  scalingFactor: 1
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1001 &1097053195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4222,7 +4247,10 @@ PrefabInstance:
       addedObject: {fileID: 1967327711}
     - targetCorrespondingSourceObject: {fileID: 1084091470699946726, guid: 6821e1b7f44d8c44b8a2ba02f37309d5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1095981515}
+      addedObject: {fileID: 1095981516}
+    - targetCorrespondingSourceObject: {fileID: 6923018253085978711, guid: 6821e1b7f44d8c44b8a2ba02f37309d5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 714776678}
   m_SourcePrefab: {fileID: 100100000, guid: 6821e1b7f44d8c44b8a2ba02f37309d5, type: 3}
 --- !u!1001 &1752692396
 PrefabInstance:
@@ -4802,15 +4830,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlaying: 0
-  floopSound:
+  VolumeParameter:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 0393c6bcde5ff406a9c4c1411a97a5b1, type: 2}
-  gameObject: {fileID: 922709799}
-  FloopVolumeParameter:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: c39a487eec50dab47903b3bc85372408, type: 2}
+    WwiseObjectReference: {fileID: 0}
+  volume: 0
 --- !u!4 &1991668798 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4416964799918394109, guid: 3722d0137bc1fd148b8d9fe7204a27c4, type: 3}
@@ -4888,6 +4912,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2045378539}
   - component: {fileID: 2045378538}
+  - component: {fileID: 2045378540}
   m_Layer: 0
   m_Name: XR Manager
   m_TagString: Untagged
@@ -4924,6 +4949,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2045378540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045378537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 968f9868cc7b74c298a8892cc79172df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2061022230 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4708539587910738765, guid: a0897e4e948ffd641abe594c4a358a59, type: 3}

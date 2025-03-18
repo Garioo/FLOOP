@@ -1,19 +1,19 @@
-using Unity.VisualScripting;
 using UnityEngine;
+using AK.Wwise;
 
 public class FloopBehavior : ObjectBehaviorParrent
 {
-    [SerializeField] private AK.Wwise.Event floopSound;
-    [SerializeField] private float volume;
-  
-    
+    [Header("Wwise RTPC Settings")]
+    [SerializeField] private AK.Wwise.RTPC VolumeParameter;  // Assign RTPC in Inspector
+    [SerializeField] private float volume; // Volume to set when activated
+    [SerializeField] private GameObject MusicListener;
+
     public override void PlayOn()
     {
-        if  (isPlaying)
+        if (isPlaying)
         {
-            Debug.Log("Trying to play" + floopSound);
-
-            AkSoundEngine.SetRTPCValue("Beat", volume, gameObject);
+            Debug.Log("Requesting RTPC change for next bar: " + VolumeParameter.Name + " = " + volume);
+            SoundManager.Instance.RequestRTPCChange(VolumeParameter, gameObject, volume);
         }
     }
 
@@ -21,15 +21,14 @@ public class FloopBehavior : ObjectBehaviorParrent
     {
         if (!isPlaying)
         {
-            Debug.Log("Trying to stop" + floopSound);
-            AkSoundEngine.SetRTPCValue("Beat", 0, gameObject);
+            Debug.Log("Requesting RTPC reset for next bar: " + VolumeParameter.Name);
+            SoundManager.Instance.RequestRTPCChange(VolumeParameter, gameObject, 0f);
         }
     }
 
-
-    public void Awake()
+    private void Awake()
     {
         StorePosition(transform.position);
-        Debug.Log(transform.position);
+        Debug.Log("Stored position: " + transform.position);
     }
 }
