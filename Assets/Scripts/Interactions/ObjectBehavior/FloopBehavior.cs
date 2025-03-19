@@ -5,11 +5,23 @@ public class FloopBehavior : ObjectBehaviorParrent
 {
     [Header("Wwise RTPC Settings")]
     [SerializeField] private AK.Wwise.RTPC VolumeParameter;  
-    [SerializeField] private float volume; // Target RTPC value
+    private float volume = 100; // Target RTPC value
     [SerializeField] private GameObject MusicListener;
 
     private bool rtpcChangePending = false;
     private float pendingValue = 0f; // Stores the next RTPC value
+
+    private ObjectManager objectManager;
+
+     private void Awake()
+    {
+        // Find the ObjectManager in the scene
+        objectManager = FindObjectOfType<ObjectManager>();
+        if (objectManager == null)
+        {
+            Debug.LogError("[FloopBehavior] ObjectManager instance is not available in the scene!");
+        }
+    }
 
     private void Start()
     {
@@ -22,18 +34,28 @@ public class FloopBehavior : ObjectBehaviorParrent
         if (isPlaying)
         {
             Debug.Log($"[FloopBehavior] Requested RTPC Change: {VolumeParameter.Name} -> {volume}");
-            pendingValue = volume;
+            volume = 100f;
             rtpcChangePending = true;
         }
     }
 
     public override void PlayOff()
     {
-        if (!isPlaying)
+        if (isPlaying)
         {
             Debug.Log($"[FloopBehavior] Requested RTPC Reset: {VolumeParameter.Name}");
-            pendingValue = 0;
+            volume = 0f;
             rtpcChangePending = true;
+
+            // Call RemoveFloop from ObjectManager
+            if (objectManager != null)
+            {
+                objectManager.RemoveFloop(gameObject);
+            }
+            else
+            {
+                Debug.LogError("[FloopBehavior] ObjectManager instance is not available!");
+            }
         }
     }
 

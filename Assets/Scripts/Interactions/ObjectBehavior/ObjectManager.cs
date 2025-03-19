@@ -15,7 +15,7 @@ public class ObjectManager : MonoBehaviour
         }
     }
 
-    public void AddFloob(GameObject floopObject) // floob tilføjes til floobCounter
+    public void AddFloob(GameObject floopObject) // floob tilfï¿½jes til floobCounter
     {
         ObjectBehaviorParrent objectBehavior = floopObject.GetComponent<ObjectBehaviorParrent>();
         if (objectBehavior != null)
@@ -46,7 +46,6 @@ public class ObjectManager : MonoBehaviour
     {
         ObjectBehaviorParrent objectBehavior = floopObject.GetComponent<ObjectBehaviorParrent>();
         objectBehavior.isPlaying = false;
-        objectBehavior.PlayOff();
         floopCounter--;
         Debug.Log("Floop Counter: " + floopCounter);
     }
