@@ -6,14 +6,8 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance { get; private set; }
 
-    private struct RTPCRequest
-    {
-        public RTPC rtpc;
-        public GameObject target;
-        public float value;
-    }
-
-    private List<RTPCRequest> pendingRTPCChanges = new List<RTPCRequest>();
+    private List<FloopBehavior> floopBehaviors = new List<FloopBehavior>();
+    private bool musicStarted = false;
 
     private void Awake()
     {
@@ -28,25 +22,48 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void RequestRTPCChange(RTPC rtpc, GameObject target, float value)
+    private void Start()
+{
+    // Start music only once
+    if (!musicStarted)
     {
-        if (rtpc == null || target == null) return;
-
-        Debug.Log("Queued RTPC Change for next bar: " + rtpc.Name + " = " + value);
-        pendingRTPCChanges.Add(new RTPCRequest { rtpc = rtpc, target = target, value = value });
+        Debug.Log("[SoundManager] Playing Music Event...");
+        AkSoundEngine.PostEvent("Play_AllLoops", gameObject);
+        musicStarted = true;
     }
 
-    //**Callback function for MusicSyncBar**
-    public void OnMusicBar()
+    // Manually Register the MusicSyncBar Callback
+    Debug.Log("[SoundManager] Registering MusicSyncBar Callback...");
+    uint playingID = AkSoundEngine.PostEvent("Play_AllLoops", gameObject, (uint)AkCallbackType.AK_MusicSyncBar, OnMusicBar, null);
+
+    if (playingID == AkSoundEngine.AK_INVALID_PLAYING_ID)
     {
-        Debug.Log("Bar Hit! Applying RTPC Changes...");
+        Debug.LogError("[SoundManager] ❌ Failed to register MusicSyncBar callback. Event might not be playing.");
+    }
+    else
+    {
+        Debug.Log($"[SoundManager] ✅ Successfully registered MusicSyncBar callback. Playing ID: {playingID}");
+    }
+}
 
-        foreach (var request in pendingRTPCChanges)
+    public void RegisterFloopBehavior(FloopBehavior floop)
+    {
+        if (!floopBehaviors.Contains(floop))
         {
-            request.rtpc.SetValue(request.target, request.value);
-            Debug.Log("Applying RTPC: " + request.rtpc.Name + " to " + request.value);
+            floopBehaviors.Add(floop);
         }
+    }
 
-        pendingRTPCChanges.Clear(); // Reset requests after applying
+    private void OnMusicBar(object in_cookie, AkCallbackType in_type, AkCallbackInfo in_info)
+    {
+        if (in_type == AkCallbackType.AK_MusicSyncBar)
+        {
+            Debug.Log("[SoundManager] 🎵 Bar Hit! Updating RTPCs for all registered FloopBehaviors...");
+
+            foreach (var floop in floopBehaviors)
+            {
+                floop.ApplyRTPCChange();
+            }
+        }
     }
 }
