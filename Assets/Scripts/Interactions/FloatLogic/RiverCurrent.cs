@@ -10,6 +10,10 @@ public class RiverCurrent : MonoBehaviour
     private int currentWaypointIndex = 0;
     public bool isInWater = false;
 
+    //REPELFORCE
+    public float repelForce = 5f;
+    public float repelDistance = 2f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -59,6 +63,24 @@ public class RiverCurrent : MonoBehaviour
                 currentWaypointIndex = 0; // Loop or remove object
             }
         }
+
+
+        //REPELFORCE
+        GameObject[] floopObjects = GameObject.FindGameObjectsWithTag("Floop");
+
+        foreach (GameObject floop in floopObjects)
+        {
+            float distance = Vector3.Distance(transform.position, floop.transform.position);
+            if (distance < repelDistance && distance > 0.1f)
+            {
+                Vector3 repelDirection = (transform.position - floop.transform.position).normalized;
+                float forceAmount = repelForce * (1 - (distance / repelDistance)); // Mindre kraft, jo længere v?k
+                rb.AddForce(repelDirection * forceAmount, ForceMode.Force);
+            }
+        }
+
+        // Dæmp farten for at forhindre uendelig acceleration
+        rb.linearVelocity *= 0.95f;
     }
 }
 
