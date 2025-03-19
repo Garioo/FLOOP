@@ -22,6 +22,8 @@ public class InstancedIndirectGrassRenderer : MonoBehaviour
     //=====================================================
     [HideInInspector]   
     public static InstancedIndirectGrassRenderer instance;// global ref to this script
+    public List<Matrix4x4> allGrassMatrices = new List<Matrix4x4>();
+
 
     private int cellCountX = -1;
     private int cellCountZ = -1;
