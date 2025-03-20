@@ -21,48 +21,88 @@ public abstract class ObjectBehaviorParrent : MonoBehaviour
 
     // -----------------------------
     // 3) ReturnObject method
+    //    - Finds a ballistic velocity by scanning angles
     // -----------------------------
     public void ReturnObject()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb != null)
         {
-            // EXAMPLE: Use a 45� launch angle. Adjust as needed
-            float launchAngle = 45f;
+            // We'll scan angles from 10° to 80° in increments of 1°
+            float minAngleDeg = 10f;
+            float maxAngleDeg = 80f;
+            float angleStep = 1f;
+            float gravity = 9.81f;
 
-            // Calculate the velocity vector needed
+            // Calculate the velocity vector by scanning possible angles
             Vector3 launchVelocity = CalculateBallisticVelocity(
-                startPos: transform.position,
-                targetPos: targetPosition,
-                launchAngleDeg: launchAngle,
-                gravity: 9.81f
+                transform.position,   // start position
+                targetPosition,       // target position
+                minAngleDeg,
+                maxAngleDeg,
+                angleStep,
+                gravity
             );
+
+            Debug.Log("Launch velocity: " + launchVelocity);
+            Debug.Log("Target position: " + targetPosition);
+            Debug.Log("Start position: " + transform.position);
 
             if (launchVelocity != Vector3.zero)
             {
                 // Option A: Directly set velocity
-                rb.linearVelocity = launchVelocity;
+                // rb.velocity = launchVelocity;
 
                 // Option B: Use impulse force instead
-                // float mass = rb.mass;
-                // rb.AddForce(launchVelocity * mass, ForceMode.Impulse);
+                float mass = rb.mass;
+                rb.AddForce(launchVelocity * mass, ForceMode.Impulse);
             }
             else
             {
-                Debug.LogWarning("No valid ballistic solution with that angle.");
+                Debug.LogWarning("No valid ballistic solution found in angle range.");
             }
         }
     }
 
     // -----------------------------
-    // 4) Helper method:
-    //    Calculate ballistic velocity
+    // 4) Method to scan angles
+    //    until a valid solution is found.
     // -----------------------------
     private Vector3 CalculateBallisticVelocity(
         Vector3 startPos,
         Vector3 targetPos,
-        float launchAngleDeg,
+        float minAngleDeg,
+        float maxAngleDeg,
+        float angleStep,
         float gravity = 9.81f)
+    {
+        // Loop over angles from minAngleDeg to maxAngleDeg
+        for (float angle = minAngleDeg; angle <= maxAngleDeg; angle += angleStep)
+        {
+            // Try a single-angle solution
+            Vector3 candidate = CalculateSingleAngleVelocity(startPos, targetPos, angle, gravity);
+
+            // If it's valid (non-zero), return immediately
+            if (candidate != Vector3.zero)
+            {
+                Debug.Log($"Found valid angle: {angle}° -> velocity = {candidate}");
+                return candidate;
+            }
+        }
+
+        // If no angle worked, return zero
+        return Vector3.zero;
+    }
+
+    // -----------------------------
+    // 5) Helper method to compute
+    //    ballistic velocity for a single angle
+    // -----------------------------
+    private Vector3 CalculateSingleAngleVelocity(
+        Vector3 startPos,
+        Vector3 targetPos,
+        float launchAngleDeg,
+        float gravity)
     {
         // Convert angle to radians
         float theta = launchAngleDeg * Mathf.Deg2Rad;
@@ -76,46 +116,36 @@ public abstract class ObjectBehaviorParrent : MonoBehaviour
         // Vertical difference
         float deltaY = targetPos.y - startPos.y;
 
-        // Edge case: if horizontally negligible, can't really do ballistic
-        if (horizontalDist < 0.01f)
-        {
-            // For example, could return straight up or zero
-            return Vector3.zero;
-        }
+        // Edge case: if horizontally negligible, can't do ballistic
+        if (horizontalDist < 0.01f) return Vector3.zero;
 
-        // We use the formula:
-        // v^2 = g * R^2 / (2 * cos^2(theta) * (R * tan(theta) - deltaY))
+        // Denominator in the standard ballistic formula
+        //  v^2 = g*R^2 / [ 2*cos^2(theta)*(R*tan(theta) - deltaY ) ]
         float denom = horizontalDist * Mathf.Tan(theta) - deltaY;
         if (denom <= 0f)
         {
-            // No solution if the angle is too shallow to reach that height
+            // No solution if angle is too shallow to get that high
             return Vector3.zero;
         }
 
-        float numerator = gravity * (horizontalDist * horizontalDist);
+        float numerator = gravity * horizontalDist * horizontalDist;
         float denominator = 2f * Mathf.Cos(theta) * Mathf.Cos(theta) * denom;
+        if (denominator <= 0f) return Vector3.zero;
+
         float vSquared = numerator / denominator;
+        if (vSquared <= 0f) return Vector3.zero;
 
-        // If we get a negative or NaN, no valid solution
-        if (vSquared <= 0f)
-        {
-            return Vector3.zero;
-        }
-
-        // Final launch speed
         float v = Mathf.Sqrt(vSquared);
 
-        // Direction in the x-z plane
+        // Determine direction in the x-z plane
         Vector3 dir = new Vector3(
             targetPos.x - startPos.x,
             0f,
             targetPos.z - startPos.z
         ).normalized;
 
-        // Decompose velocity into horizontal & vertical
+        // Decompose velocity into horizontal & vertical components
         float vHorizontal = v * Mathf.Cos(theta);
-
-        // Build the 3D velocity (Unity y-axis is up)
         Vector3 launchVelocity = dir * vHorizontal;
         launchVelocity.y = v * Mathf.Sin(theta);
 
