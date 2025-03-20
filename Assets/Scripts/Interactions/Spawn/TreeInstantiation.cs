@@ -38,7 +38,7 @@ public class InstantiateUniqueFloopPrefabs : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         // Check if the prefab already exists in the scene
-        if (GameObject.Find(prefab.name) == null)
+        if (GameObject.Find(prefab.name + "Copy") == null)
         {
             SpawnPrefab(prefab);
         }
@@ -52,10 +52,14 @@ public class InstantiateUniqueFloopPrefabs : MonoBehaviour
     {
         Vector3 spawnPosition = GetRandomPointInBox(spawnArea);
         GameObject newObj = Instantiate(prefab, spawnPosition, Quaternion.identity);
-        newObj.name = prefab.name; // Rename to avoid conflicts
+
+        if (!newObj.activeSelf)
+            newObj.SetActive(true);
+
+        newObj.name = prefab.name + "Copy"; // Rename to avoid conflicts
 
         // Disable gravity initially
-        Rigidbody rb = newObj.GetComponent<Rigidbody>();
+        Rigidbody rb = newObj.GetComponentInChildren<Rigidbody>();
         if (rb != null)
         {
             rb.useGravity = false;
