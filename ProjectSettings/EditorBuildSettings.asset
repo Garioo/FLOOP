@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 55daccc09a3b69647bbab145b54a3ab3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Wwise.unity
     guid: b336bd366112e482e9207facef235e25
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SimonsScener/SimonsFloatingTest.unity
     guid: f1c8369d549154f45b55fe5b11943aa4
   m_configObjects:
