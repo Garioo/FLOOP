@@ -30,7 +30,7 @@ public abstract class ObjectBehaviorParrent : MonoBehaviour
         {
             // We'll scan angles from 10° to 80° in increments of 1°
             float minAngleDeg = 10f;
-            float maxAngleDeg = 80f;
+            float maxAngleDeg = 70f;
             float angleStep = 1f;
             float gravity = 9.81f;
 
@@ -51,11 +51,11 @@ public abstract class ObjectBehaviorParrent : MonoBehaviour
             if (launchVelocity != Vector3.zero)
             {
                 // Option A: Directly set velocity
-                // rb.velocity = launchVelocity;
+                 rb.linearVelocity = launchVelocity;
 
                 // Option B: Use impulse force instead
-                float mass = rb.mass;
-                rb.AddForce(launchVelocity * mass, ForceMode.Impulse);
+                //float mass = rb.mass;
+                //rb.AddForce(launchVelocity * mass, ForceMode.Impulse);
             }
             else
             {
@@ -77,17 +77,14 @@ public abstract class ObjectBehaviorParrent : MonoBehaviour
         float gravity = 9.81f)
     {
         // Loop over angles from minAngleDeg to maxAngleDeg
-        for (float angle = minAngleDeg; angle <= maxAngleDeg; angle += angleStep)
+        for (float angle = maxAngleDeg; angle >= minAngleDeg; angle -= angleStep)
         {
             // Try a single-angle solution
             Vector3 candidate = CalculateSingleAngleVelocity(startPos, targetPos, angle, gravity);
 
             // If it's valid (non-zero), return immediately
-            if (candidate != Vector3.zero)
-            {
-                Debug.Log($"Found valid angle: {angle}° -> velocity = {candidate}");
-                return candidate;
-            }
+            if (candidate != Vector3.zero) return candidate;
+            
         }
 
         // If no angle worked, return zero
