@@ -1,0 +1,206 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Android",
+  "BasePlatform": "Android",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3161908922",
+    "Type": "User",
+    "GUID": "{A107B4BE-8C98-4987-B42D-8CADCE960A7B}",
+    "Language": "SFX",
+    "Hash": "{1F1E938B-0704-36AF-5579-4420A958D961}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
+    "ShortName": "Main",
+    "Path": "Main.bnk",
+    "Media": [
+     {
+      "Id": "134075064",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "4 - Organ.wav",
+      "CachePath": "D4/{D4849CC2-B3EC-D34B-12C3-AC10FA6A4FAD}.wem"
+     },
+     {
+      "Id": "288265239",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "3 - Drum2.wav",
+      "CachePath": "04/{043CC456-BA0B-13BC-F61E-5BB30E5679C0}.wem"
+     },
+     {
+      "Id": "412913142",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "7 - Guitar.wav",
+      "CachePath": "1F/{1F15FD0D-7656-7757-90A4-BED61C95C283}.wem"
+     },
+     {
+      "Id": "439121340",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "8 - Choir.wav",
+      "CachePath": "07/{076D85A2-3C4C-0314-854C-CA081E4B7248}.wem"
+     },
+     {
+      "Id": "553901115",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "2 - Drum.wav",
+      "CachePath": "97/{971186CF-7EE6-4253-E341-0F8DD470FC73}.wem"
+     },
+     {
+      "Id": "649551334",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "5 - Bass.wav",
+      "CachePath": "06/{068F2F77-84AC-810F-8104-EF8170AE27A7}.wem"
+     },
+     {
+      "Id": "736135616",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "9 - Keys.wav",
+      "CachePath": "0B/{0B1D0574-D460-2A83-4EED-B9144C4B2BAC}.wem"
+     },
+     {
+      "Id": "764985191",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "10 - Flute.wav",
+      "CachePath": "B0/{B0789FB9-910D-ACBB-1203-495898696B47}.wem"
+     },
+     {
+      "Id": "954328041",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "6 - Strings.wav",
+      "CachePath": "AC/{AC4EDB87-B63F-6FCD-6252-4A20D8096BEC}.wem"
+     },
+     {
+      "Id": "1070597832",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "1 - Piano.wav",
+      "CachePath": "46/{465E3458-A68E-AEF5-3273-248EDAE019FB}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2262267240",
+      "Name": "Play_AllLoops",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_AllLoops",
+      "GUID": "{9B63B787-8C48-4064-A182-6FD1A05AED13}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "134075064"
+       },
+       {
+        "Id": "288265239"
+       },
+       {
+        "Id": "412913142"
+       },
+       {
+        "Id": "439121340"
+       },
+       {
+        "Id": "553901115"
+       },
+       {
+        "Id": "649551334"
+       },
+       {
+        "Id": "736135616"
+       },
+       {
+        "Id": "764985191"
+       },
+       {
+        "Id": "954328041"
+       },
+       {
+        "Id": "1070597832"
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "595039813",
+      "Name": "Organ_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Organ_Volume",
+      "GUID": "{04810945-483C-416B-B3B2-966082E28B46}"
+     },
+     {
+      "Id": "806281178",
+      "Name": "Strings_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Strings_Volume",
+      "GUID": "{1CA843ED-C9C2-4384-83EF-CDD63F5DD4B3}"
+     },
+     {
+      "Id": "2001784154",
+      "Name": "Drum_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Drum_Volume",
+      "GUID": "{FD0E59DC-72DD-4272-B505-BE5CCD26A643}"
+     },
+     {
+      "Id": "2512063722",
+      "Name": "Drum2_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Drum2_Volume",
+      "GUID": "{FFA2C5E5-4A3C-458D-B257-F7F4AEFA5AF9}"
+     },
+     {
+      "Id": "2909751391",
+      "Name": "Choir_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Choir_Volume",
+      "GUID": "{702170B0-1A68-465E-B48B-C26CEF1396DE}"
+     },
+     {
+      "Id": "3123229146",
+      "Name": "Flute_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Flute_Volume",
+      "GUID": "{5F56B9F1-0A8E-4CD1-9D9D-B24A6459AACE}"
+     },
+     {
+      "Id": "3305412081",
+      "Name": "Piano_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Piano_Volume",
+      "GUID": "{24B8DC5B-9E1B-47A4-B4F5-32A147EEF634}"
+     },
+     {
+      "Id": "3582539958",
+      "Name": "Keys_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Keys_Volume",
+      "GUID": "{CEF9FC06-A50C-4FB4-80B9-340B91F2B409}"
+     },
+     {
+      "Id": "3895114124",
+      "Name": "Guitar_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Guitar_Volume",
+      "GUID": "{EB107D43-BCF7-4EBC-A250-CB708025F1B6}"
+     },
+     {
+      "Id": "4181822845",
+      "Name": "Bass_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Bass_Volume",
+      "GUID": "{075D32A4-0DB7-42DA-A39E-CEE16D3797EB}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{A2E52047-1A8E-F5F5-0DD2-CB34B7CE9C20}"
+ }
+}

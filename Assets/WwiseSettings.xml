@@ -10,8 +10,8 @@
   <LoadSoundEngineInEditMode>true</LoadSoundEngineInEditMode>
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
-  <WwiseInstallationPathMac>/Applications/Audiokinetic/Wwise2024.1.2.8726/Wwise.app</WwiseInstallationPathMac>
-  <WwiseInstallationPathWindows />
+  <WwiseInstallationPathMac>/Applications/Audiokinetic/Wwise2024.1.3.8749/Wwise.app</WwiseInstallationPathMac>
+  <WwiseInstallationPathWindows>C:\Program Files (x86)\Audiokinetic\Wwise2024.1.3.8749</WwiseInstallationPathWindows>
   <WwiseProjectPath>../Floop-Project_WwiseProject/Floop-Project_WwiseProject.wproj</WwiseProjectPath>
   <UseWaapi>true</UseWaapi>
   <WaapiPort>8080</WaapiPort>
