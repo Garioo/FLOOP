@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
-  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Virtual Acoustics
       ObjectType: 5
@@ -21,13 +21,13 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 9c049b484ad5594fa50d1bb72497cd26
-    ParentPath: Virtual Acoustics/Default Work Unit
+    ParentPath: Virtual Acoustics\Default Work Unit
     guid: 9c049b484ad5594fa50d1bb72497cd26
     GuidInternal: 
-    m_lastTime: -8584598168964527338
+    m_lastTime: -8584596671389334188
     List: []
   AuxBusWwu:
-  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Master-Mixer Hierarchy
       ObjectType: 5
@@ -35,10 +35,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 739f1e68539a414395437a1e1dc9824c
-    ParentPath: Master-Mixer Hierarchy/Default Work Unit
+    ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 739f1e68539a414395437a1e1dc9824c
     GuidInternal: 
-    m_lastTime: -8584598168964903780
+    m_lastTime: -8584596671397395704
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -53,9 +53,9 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
-      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
   BankWwu:
-  - PhysicalPath: SoundBanks/Default Work Unit.wwu
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: SoundBanks
       ObjectType: 5
@@ -63,10 +63,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: a9b84978ea955443b2084dde8e9f2fc6
-    ParentPath: SoundBanks/Default Work Unit
+    ParentPath: SoundBanks\Default Work Unit
     guid: a9b84978ea955443b2084dde8e9f2fc6
     GuidInternal: 
-    m_lastTime: -8584592997789161765
+    m_lastTime: -8584592985504085791
     List:
     - name: Main
       guid: beb407a1988c8749b42d8cadce960a7b
@@ -81,9 +81,9 @@ MonoBehaviour:
       - ElementName: Main
         ObjectType: 7
         guid: beb407a1988c8749b42d8cadce960a7b
-      Path: SoundBanks/Default Work Unit/Main
+      Path: SoundBanks\Default Work Unit\Main
   EventWwu:
-  - PhysicalPath: Events/Default Work Unit.wwu
+  - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Events
       ObjectType: 5
@@ -91,10 +91,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 7e9b391fb2ac8d4cb284d6b301d048ed
-    ParentPath: Events/Default Work Unit
+    ParentPath: Events\Default Work Unit
     guid: 7e9b391fb2ac8d4cb284d6b301d048ed
     GuidInternal: 
-    m_lastTime: -8584592310249138247
+    m_lastTime: -8584592185165313668
     List:
     - name: Play_AllLoops
       guid: 87b7639b488c6440a1826fd1a05aed13
@@ -109,12 +109,12 @@ MonoBehaviour:
       - ElementName: Play_AllLoops
         ObjectType: 3
         guid: 87b7639b488c6440a1826fd1a05aed13
-      Path: Events/Default Work Unit/Play_AllLoops
+      Path: Events\Default Work Unit\Play_AllLoops
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
   RtpcWwu:
-  - PhysicalPath: Game Parameters/Default Work Unit.wwu
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Game Parameters
       ObjectType: 5
@@ -122,10 +122,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 5c4d9252d284c34497eee673bb61bca1
-    ParentPath: Game Parameters/Default Work Unit
+    ParentPath: Game Parameters\Default Work Unit
     guid: 5c4d9252d284c34497eee673bb61bca1
     GuidInternal: 
-    m_lastTime: -8584592997322442059
+    m_lastTime: -8584592185165234788
     List:
     - name: Bass_Volume
       guid: a4325d07b70dda42a39ecee16d3797eb
@@ -143,7 +143,7 @@ MonoBehaviour:
       - ElementName: Bass_Volume
         ObjectType: 13
         guid: a4325d07b70dda42a39ecee16d3797eb
-      Path: Game Parameters/Default Work Unit/Marimba_Shuffle_RTPC/Bass_Volume
+      Path: Game Parameters\Default Work Unit\Marimba_Shuffle_RTPC\Bass_Volume
     - name: Choir_Volume
       guid: b0702170681a5e46b48bc26cef1396de
       id: 2909751391
@@ -160,7 +160,7 @@ MonoBehaviour:
       - ElementName: Choir_Volume
         ObjectType: 13
         guid: b0702170681a5e46b48bc26cef1396de
-      Path: Game Parameters/Default Work Unit/Marimba_Shuffle_RTPC/Choir_Volume
+      Path: Game Parameters\Default Work Unit\Marimba_Shuffle_RTPC\Choir_Volume
     - name: Drum_Volume
       guid: dc590efddd727242b505be5ccd26a643
       id: 2001784154
@@ -177,7 +177,7 @@ MonoBehaviour:
       - ElementName: Drum_Volume
         ObjectType: 13
         guid: dc590efddd727242b505be5ccd26a643
-      Path: Game Parameters/Default Work Unit/Marimba_Shuffle_RTPC/Drum_Volume
+      Path: Game Parameters\Default Work Unit\Marimba_Shuffle_RTPC\Drum_Volume
     - name: Drum2_Volume
       guid: e5c5a2ff3c4a8d45b257f7f4aefa5af9
       id: 2512063722
@@ -194,7 +194,7 @@ MonoBehaviour:
       - ElementName: Drum2_Volume
         ObjectType: 13
         guid: e5c5a2ff3c4a8d45b257f7f4aefa5af9
-      Path: Game Parameters/Default Work Unit/Marimba_Shuffle_RTPC/Drum2_Volume
+      Path: Game Parameters\Default Work Unit\Marimba_Shuffle_RTPC\Drum2_Volume
     - name: Flute_Volume
       guid: f1b9565f8e0ad14c9d9db24a6459aace
       id: 3123229146
@@ -211,7 +211,7 @@ MonoBehaviour:
       - ElementName: Flute_Volume
         ObjectType: 13
         guid: f1b9565f8e0ad14c9d9db24a6459aace
-      Path: Game Parameters/Default Work Unit/Marimba_Shuffle_RTPC/Flute_Volume
+      Path: Game Parameters\Default Work Unit\Marimba_Shuffle_RTPC\Flute_Volume
     - name: Guitar_Volume
       guid: 437d10ebf7bcbc4ea250cb708025f1b6
       id: 3895114124
@@ -228,7 +228,7 @@ MonoBehaviour:
       - ElementName: Guitar_Volume
         ObjectType: 13
         guid: 437d10ebf7bcbc4ea250cb708025f1b6
-      Path: Game Parameters/Default Work Unit/Marimba_Shuffle_RTPC/Guitar_Volume
+      Path: Game Parameters\Default Work Unit\Marimba_Shuffle_RTPC\Guitar_Volume
     - name: Keys_Volume
       guid: 06fcf9ce0ca5b44f80b9340b91f2b409
       id: 3582539958
@@ -245,7 +245,7 @@ MonoBehaviour:
       - ElementName: Keys_Volume
         ObjectType: 13
         guid: 06fcf9ce0ca5b44f80b9340b91f2b409
-      Path: Game Parameters/Default Work Unit/Marimba_Shuffle_RTPC/Keys_Volume
+      Path: Game Parameters\Default Work Unit\Marimba_Shuffle_RTPC\Keys_Volume
     - name: Marimba_Shuffle_RTPC
       guid: b8198e1da663b84ca9ae7c49ec97a147
       id: 4012883190
@@ -259,7 +259,7 @@ MonoBehaviour:
       - ElementName: Marimba_Shuffle_RTPC
         ObjectType: 4
         guid: b8198e1da663b84ca9ae7c49ec97a147
-      Path: Game Parameters/Default Work Unit/Marimba_Shuffle_RTPC
+      Path: Game Parameters\Default Work Unit\Marimba_Shuffle_RTPC
     - name: Organ_Volume
       guid: 450981043c486b41b3b2966082e28b46
       id: 595039813
@@ -276,7 +276,7 @@ MonoBehaviour:
       - ElementName: Organ_Volume
         ObjectType: 13
         guid: 450981043c486b41b3b2966082e28b46
-      Path: Game Parameters/Default Work Unit/Marimba_Shuffle_RTPC/Organ_Volume
+      Path: Game Parameters\Default Work Unit\Marimba_Shuffle_RTPC\Organ_Volume
     - name: Piano_Volume
       guid: 5bdcb8241b9ea447b4f532a147eef634
       id: 3305412081
@@ -293,7 +293,7 @@ MonoBehaviour:
       - ElementName: Piano_Volume
         ObjectType: 13
         guid: 5bdcb8241b9ea447b4f532a147eef634
-      Path: Game Parameters/Default Work Unit/Marimba_Shuffle_RTPC/Piano_Volume
+      Path: Game Parameters\Default Work Unit\Marimba_Shuffle_RTPC\Piano_Volume
     - name: Strings_Volume
       guid: ed43a81cc2c9844383efcdd63f5dd4b3
       id: 806281178
@@ -310,9 +310,9 @@ MonoBehaviour:
       - ElementName: Strings_Volume
         ObjectType: 13
         guid: ed43a81cc2c9844383efcdd63f5dd4b3
-      Path: Game Parameters/Default Work Unit/Marimba_Shuffle_RTPC/Strings_Volume
+      Path: Game Parameters\Default Work Unit\Marimba_Shuffle_RTPC\Strings_Volume
   StateWwu:
-  - PhysicalPath: States/Default Work Unit.wwu
+  - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: States
       ObjectType: 5
@@ -320,13 +320,13 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: af366e5864ec2247b31e988bba343539
-    ParentPath: States/Default Work Unit
+    ParentPath: States\Default Work Unit
     guid: af366e5864ec2247b31e988bba343539
     GuidInternal: 
-    m_lastTime: -8584598168964930825
+    m_lastTime: -8584596671389334188
     List: []
   SwitchWwu:
-  - PhysicalPath: Switches/Default Work Unit.wwu
+  - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Switches
       ObjectType: 5
@@ -334,13 +334,13 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 57ffe5678ba1e84980ba252802b0d0e7
-    ParentPath: Switches/Default Work Unit
+    ParentPath: Switches\Default Work Unit
     guid: 57ffe5678ba1e84980ba252802b0d0e7
     GuidInternal: 
-    m_lastTime: -8584598168964889184
+    m_lastTime: -8584596671389334188
     List: []
   TriggerWwu:
-  - PhysicalPath: Triggers/Default Work Unit.wwu
+  - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Triggers
       ObjectType: 5
@@ -348,13 +348,13 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: cdc13e1168cb3c4d95a0f4cdb418d527
-    ParentPath: Triggers/Default Work Unit
+    ParentPath: Triggers\Default Work Unit
     guid: cdc13e1168cb3c4d95a0f4cdb418d527
     GuidInternal: 
-    m_lastTime: -8584598168964621119
+    m_lastTime: -8584596671389334188
     List: []
-  ExpandedFileSystemItemIds: 010000000200000003000000050000000600000007000000090000000a0000000c0000000d0000000f0000001200000013000000140000001500000016000000
-  ExpandedWaapiItemIds: 010000000200000003000000050000000600000007000000090000000a0000000c0000000d0000000f00000013000000140000001500000016000000
+  ExpandedFileSystemItemIds: 
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 1
   autoPopulateEnabled: 1
   currentDataSource: 1
