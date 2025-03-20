@@ -4,10 +4,20 @@ using System.Collections;
 public class InstantiateUniqueFloopPrefabs : MonoBehaviour
 {
     public BoxCollider spawnArea; // Assign a BoxCollider in the Inspector
-    public GameObject[] floopPrefabs; // Assign prefabs manually in the Inspector
     public float waitTime = 15f; // Base time interval per spawn
     private int spawnCount = 0;
 
+    public GameObject[] floopPrefabs; // Assign prefabs manually in the Inspector
+    public GameObject floopParent;
+
+    private void Awake()
+    {
+        floopPrefabs = new GameObject[floopParent.transform.childCount];
+        for (int i = 0; i < floopParent.transform.childCount; i++)
+        {
+            floopPrefabs[i] = floopParent.transform.GetChild(i).gameObject;
+        }
+    }
     void Start()
     {
         if (floopPrefabs.Length == 0)
