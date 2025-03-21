@@ -6,18 +6,13 @@ public class RiverCurrent : MonoBehaviour
     public float riverForce = 3f;
     public float driftStrength = 0.5f;
 
-    private Rigidbody rb;
+    [SerializeField] private Rigidbody rb;
     private int currentWaypointIndex = 0;
     public bool isInWater = false;
 
     //REPELFORCE
     public float repelForce = 5f;
     public float repelDistance = 2f;
-
-    void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -74,12 +69,12 @@ public class RiverCurrent : MonoBehaviour
             if (distance < repelDistance && distance > 0.1f)
             {
                 Vector3 repelDirection = (transform.position - floop.transform.position).normalized;
-                float forceAmount = repelForce * (1 - (distance / repelDistance)); // Mindre kraft, jo længere v?k
+                float forceAmount = repelForce * (1 - (distance / repelDistance)); // Mindre kraft, jo lï¿½ngere v?k
                 rb.AddForce(repelDirection * forceAmount, ForceMode.Force);
             }
         }
 
-        // Dæmp farten for at forhindre uendelig acceleration
+        // Dï¿½mp farten for at forhindre uendelig acceleration
         rb.linearVelocity *= 0.95f;
     }
 }
