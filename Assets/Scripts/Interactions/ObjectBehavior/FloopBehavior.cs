@@ -21,6 +21,8 @@ public class FloopBehavior : ObjectBehaviorParrent
         {
             Debug.LogError("[FloopBehavior] ObjectManager instance is not available in the scene!");
         }
+
+        StorePosition(transform.position);
     }
 
     private void Start()
