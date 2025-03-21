@@ -60,7 +60,10 @@ public class FloopBehavior : ObjectBehaviorParrent
             }
         }
     }
-
+    public void ReturnPoint()
+    {
+        StorePosition(MusicListener.transform.position);
+    }
     public void ApplyRTPCChange()
     {
         if (rtpcChangePending)
