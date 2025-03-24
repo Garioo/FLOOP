@@ -21,6 +21,8 @@ public class FloopBehavior : ObjectBehaviorParrent
         {
             Debug.LogError("[FloopBehavior] ObjectManager instance is not available in the scene!");
         }
+
+        StorePosition(transform.position);
     }
 
     private void Start()
@@ -58,7 +60,10 @@ public class FloopBehavior : ObjectBehaviorParrent
             }
         }
     }
-
+    public void ReturnPoint()
+    {
+        StorePosition(MusicListener.transform.position);
+    }
     public void ApplyRTPCChange()
     {
         if (rtpcChangePending)
