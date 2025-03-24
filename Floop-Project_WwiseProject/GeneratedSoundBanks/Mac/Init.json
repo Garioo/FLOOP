@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{2EB64BE4-8F32-AAB6-CD72-85CDC50DAE8B}",
+    "Hash": "{B151F039-1863-8EDF-E969-55F75E4118B2}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -35,6 +35,18 @@
      ]
     },
     "Busses": [
+     {
+      "Id": "1040548709",
+      "Name": "Melody",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Melody",
+      "GUID": "{44C0B3BE-E29D-43FF-8AD1-D34A9A43715F}"
+     },
+     {
+      "Id": "1229948536",
+      "Name": "Environment",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Environment",
+      "GUID": "{55485E36-4F10-4723-A45C-0AA1C941FD89}"
+     },
      {
       "Id": "3803692087",
       "Name": "Master Audio Bus",
@@ -112,6 +124,6 @@
     ]
    }
   ],
-  "FileHash": "{92A89A54-3CAD-8B15-A896-7C9A1E8F6F41}"
+  "FileHash": "{D122CDC7-AEA2-6626-61E9-F02892E2CE8F}"
  }
 }
