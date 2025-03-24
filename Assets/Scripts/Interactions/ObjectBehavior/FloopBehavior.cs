@@ -1,5 +1,6 @@
 using UnityEngine;
 using AK.Wwise;
+using Unity.VisualScripting;
 
 public class FloopBehavior : ObjectBehaviorParrent
 {
@@ -59,6 +60,11 @@ public class FloopBehavior : ObjectBehaviorParrent
                 Debug.LogError("[FloopBehavior] ObjectManager instance is not available!");
             }
         }
+    }
+
+    public void SavePosition()
+    {
+        StorePosition(MusicListener.transform.position);
     }
 
     public void ApplyRTPCChange()
