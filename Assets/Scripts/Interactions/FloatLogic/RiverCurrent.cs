@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RiverCurrent : MonoBehaviour
 {
-    public Transform[] waypoints; // Assign in Inspector
+
     public float riverForce = 3f;
     public float driftStrength = 0.5f;
 
@@ -14,9 +14,18 @@ public class RiverCurrent : MonoBehaviour
     public float repelForce = 5f;
     public float repelDistance = 2f;
 
+    public Transform[] waypoints; // Assign in Inspector
+    public GameObject waypointParent;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        waypoints = new Transform[waypointParent.transform.childCount];
+        for (int i = 0; i < waypointParent.transform.childCount; i++)
+        {
+            waypoints[i] = waypointParent.transform.GetChild(i);
+        }
     }
 
     void OnTriggerEnter(Collider other)

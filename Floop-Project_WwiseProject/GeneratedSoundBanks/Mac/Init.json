@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{1FF1BC27-92F9-404D-EBF7-DF68D10CF73B}",
+    "Hash": "{B151F039-1863-8EDF-E969-55F75E4118B2}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -36,6 +36,18 @@
     },
     "Busses": [
      {
+      "Id": "1040548709",
+      "Name": "Melody",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Melody",
+      "GUID": "{44C0B3BE-E29D-43FF-8AD1-D34A9A43715F}"
+     },
+     {
+      "Id": "1229948536",
+      "Name": "Environment",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Environment",
+      "GUID": "{55485E36-4F10-4723-A45C-0AA1C941FD89}"
+     },
+     {
       "Id": "3803692087",
       "Name": "Master Audio Bus",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
@@ -43,6 +55,12 @@
      }
     ],
     "GameParameters": [
+     {
+      "Id": "508408299",
+      "Name": "Attenuation",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Attenuation",
+      "GUID": "{03B61E6E-A299-4481-9835-77FDCBE14F46}"
+     },
      {
       "Id": "595039813",
       "Name": "Organ_Volume",
@@ -106,6 +124,6 @@
     ]
    }
   ],
-  "FileHash": "{716F1FA8-8EE0-6230-F0CC-218EAD975C04}"
+  "FileHash": "{D122CDC7-AEA2-6626-61E9-F02892E2CE8F}"
  }
 }

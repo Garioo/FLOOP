@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Wwise.unity
     guid: b336bd366112e482e9207facef235e25
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SimonsScener/SimonsFloatingTest.unity
     guid: f1c8369d549154f45b55fe5b11943aa4
+  - enabled: 1
+    path: Assets/Scenes/MariusTest.unity
+    guid: afda1e5965fad414688a231d1e9fa19f
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: dc5a169419fa04987b057f65238cf3ba, type: 2}
