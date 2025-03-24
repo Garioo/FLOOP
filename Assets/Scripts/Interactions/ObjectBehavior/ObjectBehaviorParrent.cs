@@ -30,7 +30,7 @@ public abstract class ObjectBehaviorParrent : MonoBehaviour
         {
             // We'll scan angles from 10° to 80° in increments of 1°
             float minAngleDeg = 10f;
-            float maxAngleDeg = 70f;
+            float maxAngleDeg = 50f;
             float angleStep = 1f;
             float gravity = 9.81f;
 

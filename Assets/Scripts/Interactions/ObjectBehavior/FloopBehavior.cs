@@ -76,4 +76,16 @@ public class FloopBehavior : ObjectBehaviorParrent
             rtpcChangePending = false;
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            if (collision.relativeVelocity.magnitude > 1)
+            {
+                AkSoundEngine.PostEvent("Play_Grab", gameObject);
+            }
+        }
+    }
+
 }
