@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{5AA4CD87-A037-00AB-FF8B-6228A1227960}",
+    "Hash": "{DF7B42E9-2DDC-81D7-FA85-BA07C9769631}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -43,6 +43,12 @@
      }
     ],
     "GameParameters": [
+     {
+      "Id": "508408299",
+      "Name": "Attenuation",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Attenuation",
+      "GUID": "{03B61E6E-A299-4481-9835-77FDCBE14F46}"
+     },
      {
       "Id": "595039813",
       "Name": "Organ_Volume",
@@ -106,6 +112,6 @@
     ]
    }
   ],
-  "FileHash": "{59E4384D-D30F-0A98-CCF4-35D3415245CB}"
+  "FileHash": "{00659CA1-69F5-81E7-7133-6EEB63C8D012}"
  }
 }

@@ -14,6 +14,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Grab" ID="{A366161D-E170-472E-A2F7-0652A1F0D3D6}">
+					<ChildrenList>
+						<Action Name="" ID="{00C4A59E-D49B-4C5A-9D56-56EE8F69B4B2}" ShortID="423763589">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Grab" ID="{CD662DDE-B997-4AE1-AAB4-9308D26648A2}" WorkUnitID="{C6BB1450-4754-4066-8BC0-A4D17C0F49B2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Birds" ID="{F7CECD97-AF10-4CC5-945E-31A42991FCED}">
+					<ChildrenList>
+						<Action Name="" ID="{31E17FE9-E1E8-4A9E-AC72-71DEA313259E}" ShortID="448473786">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Birds" ID="{733D6D24-BC1C-49FA-9A32-230ADA8B3450}" WorkUnitID="{C6BB1450-4754-4066-8BC0-A4D17C0F49B2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

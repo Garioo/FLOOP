@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{A107B4BE-8C98-4987-B42D-8CADCE960A7B}",
     "Language": "SFX",
-    "Hash": "{1F1E938B-0704-36AF-5579-4420A958D961}",
+    "Hash": "{B5859878-75CF-A9C7-C95E-C40B702C2941}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -22,6 +22,14 @@
       "Location": "Memory",
       "ShortName": "4 - Organ.wav",
       "CachePath": "D4/{D4849CC2-B3EC-D34B-12C3-AC10FA6A4FAD}.wem"
+     },
+     {
+      "Id": "224131774",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Soundly Audio\\Human, Skin, Touch Face, Taps, Stroke 01 SND120697 1.wav",
+      "CachePath": "20/{2098E822-2FD4-5202-116C-7358D114CFFE}.wem"
      },
      {
       "Id": "288265239",
@@ -88,6 +96,14 @@
       "CachePath": "AC/{AC4EDB87-B63F-6FCD-6252-4A20D8096BEC}.wem"
      },
      {
+      "Id": "975094203",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Soundly Audio\\Ambience, Birdsong, Singing Birds, Early Morning SND11282.wav",
+      "CachePath": "67/{67047A5B-AE38-99FB-2C47-B7084396F4E0}.wem"
+     },
+     {
       "Id": "1070597832",
       "Language": "SFX",
       "Streaming": "false",
@@ -133,6 +149,33 @@
        },
        {
         "Id": "1070597832"
+       }
+      ]
+     },
+     {
+      "Id": "3025897706",
+      "Name": "Play_Birds",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Birds",
+      "GUID": "{F7CECD97-AF10-4CC5-945E-31A42991FCED}",
+      "MaxAttenuation": "100",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "975094203"
+       }
+      ]
+     },
+     {
+      "Id": "17721092",
+      "Name": "Play_Grab",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Grab",
+      "GUID": "{A366161D-E170-472E-A2F7-0652A1F0D3D6}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.33273202",
+      "DurationMax": "0.33273202",
+      "MediaRefs": [
+       {
+        "Id": "224131774"
        }
       ]
      }
@@ -201,6 +244,6 @@
     ]
    }
   ],
-  "FileHash": "{42113BBD-FE1F-C3D9-98B0-9931EFDA8F4A}"
+  "FileHash": "{AAC20548-E1D6-F413-49D2-129F6EC19060}"
  }
 }
