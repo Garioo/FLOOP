@@ -1,4 +1,6 @@
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	1040548709	Melody			\Default Work Unit\Master Audio Bus\Melody	
+	1229948536	Environment			\Default Work Unit\Master Audio Bus\Environment	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 Audio Devices	ID	Name	Type				Notes
