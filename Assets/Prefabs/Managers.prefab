@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2939396742900596162}
   - component: {fileID: 7568865709186700466}
   - component: {fileID: 3652388692219213328}
+  - component: {fileID: 385599215066162226}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -59,3 +60,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
+--- !u!114 &385599215066162226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4982893252876093585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8516c64908913b94e9f6218604717e07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menus:
+  - name: Pause
+    menuObject: {fileID: 0}
+  openMenuAction: {fileID: -6567689307730063194, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  defaultMenu: Pause
+  menuDistance: 4
