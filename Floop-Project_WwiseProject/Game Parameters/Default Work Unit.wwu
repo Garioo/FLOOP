@@ -67,6 +67,12 @@
 				<GameParameter Name="Environment_RTPC" ID="{435DE393-FCFB-4186-A9CA-458ED4D7952A}"/>
 				<GameParameter Name="Melody_RTPC" ID="{3F9EE960-5379-4EB5-B249-3D2A3FD54D02}"/>
 				<GameParameter Name="Master_RTPC" ID="{5A47F9E7-FA02-461F-A9C2-BB7C5E2A0EB8}"/>
+				<GameParameter Name="Song_RTPC" ID="{6000CC3F-6D53-4F70-A32C-F81AE26B3394}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="4"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

@@ -128,7 +128,7 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 7e9b391fb2ac8d4cb284d6b301d048ed
     GuidInternal: 
-    m_lastTime: -8584587881451009201
+    m_lastTime: -8584584575110810417
     List:
     - name: Play_AllLoops
       guid: 87b7639b488c6440a1826fd1a05aed13
@@ -193,7 +193,7 @@ MonoBehaviour:
     ParentPath: Game Parameters/Default Work Unit
     guid: 5c4d9252d284c34497eee673bb61bca1
     GuidInternal: 
-    m_lastTime: -8584585002566817995
+    m_lastTime: -8584584575110785902
     List:
     - name: Attenuation
       guid: 6e1eb60399a28144983577fdcbe14f46
@@ -418,6 +418,20 @@ MonoBehaviour:
         ObjectType: 13
         guid: 5bdcb8241b9ea447b4f532a147eef634
       Path: Game Parameters/Default Work Unit/Marimba_Shuffle_RTPC/Piano_Volume
+    - name: Song_RTPC
+      guid: 3fcc0060536d704fa32cf81ae26b3394
+      id: 2232545612
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5c4d9252d284c34497eee673bb61bca1
+      - ElementName: Song_RTPC
+        ObjectType: 13
+        guid: 3fcc0060536d704fa32cf81ae26b3394
+      Path: Game Parameters/Default Work Unit/Song_RTPC
     - name: Strings_Volume
       guid: ed43a81cc2c9844383efcdd63f5dd4b3
       id: 806281178
@@ -447,8 +461,42 @@ MonoBehaviour:
     ParentPath: States/Default Work Unit
     guid: af366e5864ec2247b31e988bba343539
     GuidInternal: 
-    m_lastTime: -8584598168964930825
-    List: []
+    m_lastTime: -8584584575110835825
+    List:
+    - name: Songs
+      guid: 096269c8a3aeb242a0e3990ab71d8ac5
+      id: 778469101
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: af366e5864ec2247b31e988bba343539
+      - ElementName: Songs
+        ObjectType: 9
+        guid: 096269c8a3aeb242a0e3990ab71d8ac5
+      Path: States/Default Work Unit/Songs
+      values:
+      - name: None
+        guid: 38ff399d4f6e7847896f65489471a888
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: af366e5864ec2247b31e988bba343539
+        - ElementName: Songs
+          ObjectType: 9
+          guid: 096269c8a3aeb242a0e3990ab71d8ac5
+        - ElementName: None
+          ObjectType: 8
+          guid: 38ff399d4f6e7847896f65489471a888
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches/Default Work Unit.wwu
     PathAndIcons:
@@ -461,8 +509,58 @@ MonoBehaviour:
     ParentPath: Switches/Default Work Unit
     guid: 57ffe5678ba1e84980ba252802b0d0e7
     GuidInternal: 
-    m_lastTime: -8584598168964889184
-    List: []
+    m_lastTime: -8584584573991941794
+    List:
+    - name: Songs_Switch
+      guid: f7a7f484d0ee894c95cc32ad90b99727
+      id: 4182704652
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 57ffe5678ba1e84980ba252802b0d0e7
+      - ElementName: Songs_Switch
+        ObjectType: 11
+        guid: f7a7f484d0ee894c95cc32ad90b99727
+      Path: Switches/Default Work Unit/Songs_Switch
+      values:
+      - name: Marimba_Shuffle
+        guid: 6c1a7c6dc5a7084abb913925942ea5fd
+        id: 661838124
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 57ffe5678ba1e84980ba252802b0d0e7
+        - ElementName: Songs_Switch
+          ObjectType: 11
+          guid: f7a7f484d0ee894c95cc32ad90b99727
+        - ElementName: Marimba_Shuffle
+          ObjectType: 10
+          guid: 6c1a7c6dc5a7084abb913925942ea5fd
+      - name: Sigurd
+        guid: 17a5324f074f964d8579c652df00d5ff
+        id: 733468371
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 57ffe5678ba1e84980ba252802b0d0e7
+        - ElementName: Songs_Switch
+          ObjectType: 11
+          guid: f7a7f484d0ee894c95cc32ad90b99727
+        - ElementName: Sigurd
+          ObjectType: 10
+          guid: 17a5324f074f964d8579c652df00d5ff
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers/Default Work Unit.wwu
     PathAndIcons:
