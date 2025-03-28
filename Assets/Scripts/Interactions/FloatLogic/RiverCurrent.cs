@@ -2,13 +2,14 @@ using UnityEngine;
 
 public class RiverCurrent : MonoBehaviour
 {
-
     public float riverForce = 3f;
     public float driftStrength = 0.5f;
 
     private Rigidbody rb;
     private int currentWaypointIndex = 0;
-    public bool isInWater = false;
+
+    private int waterTriggerCount = 0;
+    public bool isInWater => waterTriggerCount > 0;
 
     //REPELFORCE
     public float repelForce = 5f;
@@ -30,21 +31,33 @@ public class RiverCurrent : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger entered with: " + other.gameObject.name); // Debugging
+        Debug.Log("Trigger entered with: " + other.gameObject.name);
         if (other.CompareTag("WaterSurface"))
         {
             Debug.Log("Ball has hit water!");
-            isInWater = true;
+            waterTriggerCount++;
+
+            // Find the closest waypoint when entering water
+            float closestDistance = float.MaxValue;
+            for (int i = 0; i < waypoints.Length; i++)
+            {
+                float distance = Vector3.Distance(transform.position, waypoints[i].position);
+                if (distance < closestDistance)
+                {
+                    closestDistance = distance;
+                    currentWaypointIndex = i;
+                }
+            }
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        Debug.Log("Trigger exited with: " + other.gameObject.name); // Debugging
+        Debug.Log("Trigger exited with: " + other.gameObject.name);
         if (other.CompareTag("WaterSurface"))
         {
             Debug.Log("Ball left the water!");
-            isInWater = false;
+            waterTriggerCount = Mathf.Max(0, waterTriggerCount - 1);
         }
     }
 
@@ -69,12 +82,11 @@ public class RiverCurrent : MonoBehaviour
             currentWaypointIndex++;
             if (currentWaypointIndex >= waypoints.Length)
             {
-                currentWaypointIndex = 0; // Loop or remove object
+                currentWaypointIndex = 0; // Loop
             }
         }
 
-
-        //REPELFORCE
+        // Repel force
         GameObject[] floopObjects = GameObject.FindGameObjectsWithTag("Floop");
 
         foreach (GameObject floop in floopObjects)
@@ -83,13 +95,12 @@ public class RiverCurrent : MonoBehaviour
             if (distance < repelDistance && distance > 0.1f)
             {
                 Vector3 repelDirection = (transform.position - floop.transform.position).normalized;
-                float forceAmount = repelForce * (1 - (distance / repelDistance)); // Mindre kraft, jo længere v?k
+                float forceAmount = repelForce * (1 - (distance / repelDistance));
                 rb.AddForce(repelDirection * forceAmount, ForceMode.Force);
             }
         }
 
-        // Dæmp farten for at forhindre uendelig acceleration
+        // Dampen velocity
         rb.linearVelocity *= 0.95f;
     }
 }
-

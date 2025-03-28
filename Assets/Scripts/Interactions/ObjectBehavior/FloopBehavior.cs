@@ -1,5 +1,6 @@
 using UnityEngine;
 using AK.Wwise;
+using Unity.VisualScripting;
 
 public class FloopBehavior : ObjectBehaviorParrent
 {
@@ -60,10 +61,12 @@ public class FloopBehavior : ObjectBehaviorParrent
             }
         }
     }
-    public void ReturnPoint()
+
+    public void SavePosition()
     {
         StorePosition(MusicListener.transform.position);
     }
+
     public void ApplyRTPCChange()
     {
         if (rtpcChangePending)

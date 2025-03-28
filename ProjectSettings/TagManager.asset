@@ -30,6 +30,7 @@ TagManager:
   - QDSUIToggleCheckboxRadio
   - QDSUISection
   - Floop
+  - QDSUIBackplateGradient
   layers:
   - Default
   - TransparentFX
@@ -37,7 +38,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - UIOnly
   - 
   - 
   - 
@@ -64,6 +65,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: UI
+    uniqueID: 520142449
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

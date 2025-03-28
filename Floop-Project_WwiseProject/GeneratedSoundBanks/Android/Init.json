@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{5AA4CD87-A037-00AB-FF8B-6228A1227960}",
+    "Hash": "{D8438C6D-A5B6-7E40-E5C3-5521300F7B92}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -36,6 +36,18 @@
     },
     "Busses": [
      {
+      "Id": "1040548709",
+      "Name": "Melody",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Melody",
+      "GUID": "{44C0B3BE-E29D-43FF-8AD1-D34A9A43715F}"
+     },
+     {
+      "Id": "1229948536",
+      "Name": "Environment",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Environment",
+      "GUID": "{55485E36-4F10-4723-A45C-0AA1C941FD89}"
+     },
+     {
       "Id": "3803692087",
       "Name": "Master Audio Bus",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
@@ -43,6 +55,12 @@
      }
     ],
     "GameParameters": [
+     {
+      "Id": "508408299",
+      "Name": "Attenuation",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Attenuation",
+      "GUID": "{03B61E6E-A299-4481-9835-77FDCBE14F46}"
+     },
      {
       "Id": "595039813",
       "Name": "Organ_Volume",
@@ -54,6 +72,18 @@
       "Name": "Strings_Volume",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Strings_Volume",
       "GUID": "{1CA843ED-C9C2-4384-83EF-CDD63F5DD4B3}"
+     },
+     {
+      "Id": "872532970",
+      "Name": "Environment_RTPC",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Environment_RTPC",
+      "GUID": "{435DE393-FCFB-4186-A9CA-458ED4D7952A}"
+     },
+     {
+      "Id": "1214867155",
+      "Name": "Master_RTPC",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Master_RTPC",
+      "GUID": "{5A47F9E7-FA02-461F-A9C2-BB7C5E2A0EB8}"
      },
      {
       "Id": "2001784154",
@@ -92,6 +122,12 @@
       "GUID": "{CEF9FC06-A50C-4FB4-80B9-340B91F2B409}"
      },
      {
+      "Id": "3880838049",
+      "Name": "Melody_RTPC",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Melody_RTPC",
+      "GUID": "{3F9EE960-5379-4EB5-B249-3D2A3FD54D02}"
+     },
+     {
       "Id": "3895114124",
       "Name": "Guitar_Volume",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Guitar_Volume",
@@ -106,6 +142,6 @@
     ]
    }
   ],
-  "FileHash": "{59E4384D-D30F-0A98-CCF4-35D3415245CB}"
+  "FileHash": "{6F13FC52-8C76-B762-BB0B-4FAD10ED5ABE}"
  }
 }

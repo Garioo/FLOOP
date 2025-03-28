@@ -66,4 +66,9 @@ public class SoundManager : MonoBehaviour
             }
         }
     }
+
+    public void PlayGrab()
+    {
+        AkSoundEngine.PostEvent("Play_Grab", gameObject);
+    }
 }
