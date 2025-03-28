@@ -7,6 +7,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_AllLoops" ID="{9B63B787-8C48-4064-A182-6FD1A05AED13}" WorkUnitID="{1F399B7E-ACB2-4C8D-B284-D6B301D048ED}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Grab" ID="{A366161D-E170-472E-A2F7-0652A1F0D3D6}" WorkUnitID="{1F399B7E-ACB2-4C8D-B284-D6B301D048ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Songs" ID="{D1DED186-7C5F-4A03-907F-EB535290C86C}" WorkUnitID="{B26EB749-0698-4ED0-96E9-C20E1BBDEA2C}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Birds" ID="{F7CECD97-AF10-4CC5-945E-31A42991FCED}" WorkUnitID="{1F399B7E-ACB2-4C8D-B284-D6B301D048ED}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

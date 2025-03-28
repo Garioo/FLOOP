@@ -18,6 +18,35 @@ namespace AK
         static const AkUniqueID PLAY_GRAB = 17721092U;
     } // namespace EVENTS
 
+    namespace STATES
+    {
+        namespace SONGS
+        {
+            static const AkUniqueID GROUP = 778469101U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace SONGS
+
+    } // namespace STATES
+
+    namespace SWITCHES
+    {
+        namespace SONGS_SWITCH
+        {
+            static const AkUniqueID GROUP = 4182704652U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID FLOOPJAM = 2321764949U;
+                static const AkUniqueID MARIMBASHUFFLE = 1786842365U;
+            } // namespace SWITCH
+        } // namespace SONGS_SWITCH
+
+    } // namespace SWITCHES
+
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID ATTENUATION = 508408299U;
@@ -33,6 +62,7 @@ namespace AK
         static const AkUniqueID MELODY_RTPC = 3880838049U;
         static const AkUniqueID ORGAN_VOLUME = 595039813U;
         static const AkUniqueID PIANO_VOLUME = 3305412081U;
+        static const AkUniqueID SONG_RTPC = 2232545612U;
         static const AkUniqueID STRINGS_VOLUME = 806281178U;
     } // namespace GAME_PARAMETERS
 

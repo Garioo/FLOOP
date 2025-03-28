@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{7862E949-1769-3EA4-E622-340C0C9BB9AE}",
+    "Hash": "{2E7B1542-8E82-0CAF-DF72-C136035D4DB4}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -92,6 +92,12 @@
       "GUID": "{FD0E59DC-72DD-4272-B505-BE5CCD26A643}"
      },
      {
+      "Id": "2232545612",
+      "Name": "Song_RTPC",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Song_RTPC",
+      "GUID": "{6000CC3F-6D53-4F70-A32C-F81AE26B3394}"
+     },
+     {
       "Id": "2512063722",
       "Name": "Drum2_Volume",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Drum2_Volume",
@@ -139,9 +145,50 @@
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Bass_Volume",
       "GUID": "{075D32A4-0DB7-42DA-A39E-CEE16D3797EB}"
      }
+    ],
+    "StateGroups": [
+     {
+      "Id": "778469101",
+      "Name": "Songs",
+      "ObjectPath": "\\States\\Default Work Unit\\Songs",
+      "GUID": "{C8696209-AEA3-42B2-A0E3-990AB71D8AC5}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Songs\\None",
+        "GUID": "{9D39FF38-6E4F-4778-896F-65489471A888}"
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "4182704652",
+      "Name": "Songs_Switch",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Songs_Switch",
+      "GUID": "{84F4A7F7-EED0-4C89-95CC-32AD90B99727}",
+      "GameParameterRef": {
+       "Id": "2232545612"
+      },
+      "Switches": [
+       {
+        "Id": "1786842365",
+        "Name": "MarimbaShuffle",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Songs_Switch\\MarimbaShuffle",
+        "GUID": "{6D7C1A6C-A7C5-4A08-BB91-3925942EA5FD}"
+       },
+       {
+        "Id": "2321764949",
+        "Name": "FloopJam",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Songs_Switch\\FloopJam",
+        "GUID": "{4F32A517-4F07-4D96-8579-C652DF00D5FF}"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{9BF949A3-1B8E-C2B7-3F85-0130FD09A194}"
+  "FileHash": "{6578F1E5-F107-F523-511D-3C9945B02F26}"
  }
 }

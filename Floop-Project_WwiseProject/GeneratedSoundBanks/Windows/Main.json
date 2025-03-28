@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{A107B4BE-8C98-4987-B42D-8CADCE960A7B}",
     "Language": "SFX",
-    "Hash": "{07DD2492-131B-6271-95BD-7D95D1784F6A}",
+    "Hash": "{25C2DB91-FE61-982F-DD3F-5E4D2D14F027}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -22,6 +22,22 @@
       "Location": "Memory",
       "ShortName": "4 - Organ.wav",
       "CachePath": "D4/{D4849CC2-B3EC-D34B-12C3-AC10FA6A4FAD}.wem"
+     },
+     {
+      "Id": "186093839",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "FloopJam 2-Grand Piano Equal Mellow Production.wav",
+      "CachePath": "99/{9973277E-6EDC-EE93-43CD-716F7109B442}.wem"
+     },
+     {
+      "Id": "206787469",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "FloopJam 10-Double Bass Section Pizzicato.wav",
+      "CachePath": "8A/{8AFE01C7-5E91-B4C0-8D8F-076AC4013F72}.wem"
      },
      {
       "Id": "224131774",
@@ -38,6 +54,30 @@
       "Location": "Memory",
       "ShortName": "3 - Drum2.wav",
       "CachePath": "04/{043CC456-BA0B-13BC-F61E-5BB30E5679C0}.wem"
+     },
+     {
+      "Id": "347608943",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "FloopJam 9-Cello Section Legato.wav",
+      "CachePath": "65/{65C361A5-72D9-63D9-5694-67C6D768E923}.wem"
+     },
+     {
+      "Id": "362878747",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "FloopJam 8-Bossa Nova.wav",
+      "CachePath": "D0/{D0F1A198-C9C2-D8F9-54E1-0EB2B31FC7EB}.wem"
+     },
+     {
+      "Id": "402147434",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "FloopJam 7-Bossa Nova.wav",
+      "CachePath": "30/{30F9585B-F7EF-F1D0-4D13-5B38D3435269}.wem"
      },
      {
       "Id": "412913142",
@@ -64,6 +104,14 @@
       "CachePath": "97/{971186CF-7EE6-4253-E341-0F8DD470FC73}.wem"
      },
      {
+      "Id": "613101691",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "FloopJam 13-Jazz Soft Kit.wav",
+      "CachePath": "1D/{1DADA2B1-45F3-47EC-A9A9-DC7BE6049FFD}.wem"
+     },
+     {
       "Id": "649551334",
       "Language": "SFX",
       "Streaming": "false",
@@ -88,6 +136,14 @@
       "CachePath": "B0/{B0789FB9-910D-ACBB-1203-495898696B47}.wem"
      },
      {
+      "Id": "913459317",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "FloopJam 5-Reflectere Piano (Multisampled).wav",
+      "CachePath": "A9/{A927DC8A-1D1F-A1B9-9C32-265E8A5EC123}.wem"
+     },
+     {
       "Id": "954328041",
       "Language": "SFX",
       "Streaming": "false",
@@ -102,6 +158,14 @@
       "Location": "Memory",
       "ShortName": "Soundly Audio\\Ambience, Birdsong, Singing Birds, Early Morning SND11282.wav",
       "CachePath": "67/{67047A5B-AE38-99FB-2C47-B7084396F4E0}.wem"
+     },
+     {
+      "Id": "1016435368",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "FloopJam 14-Violin Section Staccato.wav",
+      "CachePath": "AA/{AAD87FAF-D17D-F07C-6DEE-B6212927CF35}.wem"
      },
      {
       "Id": "1070597832",
@@ -200,6 +264,12 @@
       "GUID": "{FD0E59DC-72DD-4272-B505-BE5CCD26A643}"
      },
      {
+      "Id": "2232545612",
+      "Name": "Song_RTPC",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Song_RTPC",
+      "GUID": "{6000CC3F-6D53-4F70-A32C-F81AE26B3394}"
+     },
+     {
       "Id": "2512063722",
       "Name": "Drum2_Volume",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Drum2_Volume",
@@ -241,9 +311,34 @@
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Marimba_Shuffle_RTPC\\Bass_Volume",
       "GUID": "{075D32A4-0DB7-42DA-A39E-CEE16D3797EB}"
      }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "4182704652",
+      "Name": "Songs_Switch",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Songs_Switch",
+      "GUID": "{84F4A7F7-EED0-4C89-95CC-32AD90B99727}",
+      "GameParameterRef": {
+       "Id": "2232545612"
+      },
+      "Switches": [
+       {
+        "Id": "1786842365",
+        "Name": "MarimbaShuffle",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Songs_Switch\\MarimbaShuffle",
+        "GUID": "{6D7C1A6C-A7C5-4A08-BB91-3925942EA5FD}"
+       },
+       {
+        "Id": "2321764949",
+        "Name": "FloopJam",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Songs_Switch\\FloopJam",
+        "GUID": "{4F32A517-4F07-4D96-8579-C652DF00D5FF}"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{97872CC6-D3B8-00E6-DF21-B122171A4CFE}"
+  "FileHash": "{D4C58B19-5C33-D33A-834D-D712F2E9115C}"
  }
 }

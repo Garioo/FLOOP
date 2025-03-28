@@ -23,28 +23,28 @@ public class SoundManager : MonoBehaviour
     }
 
     private void Start()
-{
-    // Start music only once
-    if (!musicStarted)
     {
-        Debug.Log("[SoundManager] Playing Music Event...");
-        AkSoundEngine.PostEvent("Play_AllLoops", gameObject);
-        musicStarted = true;
-    }
+        // Start music only once
+        if (!musicStarted)
+        {
+            Debug.Log("[SoundManager] Playing Music Event...");
+            AkSoundEngine.PostEvent("Play_AllLoops", gameObject);
+            musicStarted = true;
+        }
 
-    // Manually Register the MusicSyncBar Callback
-    Debug.Log("[SoundManager] Registering MusicSyncBar Callback...");
-    uint playingID = AkSoundEngine.PostEvent("Play_AllLoops", gameObject, (uint)AkCallbackType.AK_MusicSyncBar, OnMusicBar, null);
+        // Manually Register the MusicSyncBar Callback
+        Debug.Log("[SoundManager] Registering MusicSyncBar Callback...");
+        uint playingID = AkSoundEngine.PostEvent("Play_AllLoops", gameObject, (uint)AkCallbackType.AK_MusicSyncBar, OnMusicBar, null);
 
-    if (playingID == AkSoundEngine.AK_INVALID_PLAYING_ID)
-    {
-        Debug.LogError("[SoundManager] ❌ Failed to register MusicSyncBar callback. Event might not be playing.");
+        if (playingID == AkSoundEngine.AK_INVALID_PLAYING_ID)
+        {
+            Debug.LogError("[SoundManager] ❌ Failed to register MusicSyncBar callback. Event might not be playing.");
+        }
+        else
+        {
+            Debug.Log($"[SoundManager] ✅ Successfully registered MusicSyncBar callback. Playing ID: {playingID}");
+        }
     }
-    else
-    {
-        Debug.Log($"[SoundManager] ✅ Successfully registered MusicSyncBar callback. Playing ID: {playingID}");
-    }
-}
 
     public void RegisterFloopBehavior(FloopBehavior floop)
     {
@@ -70,5 +70,11 @@ public class SoundManager : MonoBehaviour
     public void PlayGrab()
     {
         AkSoundEngine.PostEvent("Play_Grab", gameObject);
+    }
+
+    public void SwitchMusicPlaylist(float value)
+    {
+        Debug.Log($"[SoundManager] Switching music playlist with RTPC value: {value}");
+        AkSoundEngine.SetRTPCValue("Song_RTPC", value);
     }
 }

@@ -3,10 +3,18 @@ Event	ID	Name			Wwise Object Path	Notes
 	2262267240	Play_AllLoops			\Default Work Unit\Play_AllLoops	
 	3025897706	Play_Birds			\Default Work Unit\Play_Birds	
 
+Switch Group	ID	Name			Wwise Object Path	Notes
+	4182704652	Songs_Switch			\Default Work Unit\Songs_Switch	
+
+Switch	ID	Name	Switch Group			Notes
+	1786842365	MarimbaShuffle	Songs_Switch			
+	2321764949	FloopJam	Songs_Switch			
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	595039813	Organ_Volume			\Default Work Unit\Marimba_Shuffle_RTPC\Organ_Volume	
 	806281178	Strings_Volume			\Default Work Unit\Marimba_Shuffle_RTPC\Strings_Volume	
 	2001784154	Drum_Volume			\Default Work Unit\Marimba_Shuffle_RTPC\Drum_Volume	
+	2232545612	Song_RTPC			\Default Work Unit\Song_RTPC	
 	2512063722	Drum2_Volume			\Default Work Unit\Marimba_Shuffle_RTPC\Drum2_Volume	
 	2909751391	Choir_Volume			\Default Work Unit\Marimba_Shuffle_RTPC\Choir_Volume	
 	3123229146	Flute_Volume			\Default Work Unit\Marimba_Shuffle_RTPC\Flute_Volume	
@@ -16,16 +24,24 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	4181822845	Bass_Volume			\Default Work Unit\Marimba_Shuffle_RTPC\Bass_Volume	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	134075064	4 - Organ	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\D4\{D4849CC2-B3EC-D34B-12C3-AC10FA6A4FAD}.wem		\Interactive Music Hierarchy\Instruments\Melody 1\Marimba Shuffle\4 - Organ		4545716
+	134075064	4 - Organ	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\D4\{D4849CC2-B3EC-D34B-12C3-AC10FA6A4FAD}.wem		\Interactive Music Hierarchy\Instruments\Songs\MarimbaShuffle\Marimba Shuffle\4 - Organ		4545716
+	186093839	1 - Piano	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\99\{9973277E-6EDC-EE93-43CD-716F7109B442}.wem		\Interactive Music Hierarchy\Instruments\Songs\Floop Jam\Floop Jam\1 - Piano		2822496
+	206787469	6 - Bass	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\8A\{8AFE01C7-5E91-B4C0-8D8F-076AC4013F72}.wem		\Interactive Music Hierarchy\Instruments\Songs\Floop Jam\Floop Jam\6 - Bass		2822496
 	224131774	Grab	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\20\{2098E822-2FD4-5202-116C-7358D114CFFE}.wem		\Actor-Mixer Hierarchy\Soundly\Grab		64044
-	288265239	3 - Drum2	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\04\{043CC456-BA0B-13BC-F61E-5BB30E5679C0}.wem		\Interactive Music Hierarchy\Instruments\Melody 1\Marimba Shuffle\3 - Drum2		4802320
-	412913142	7 - Guitar	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\1F\{1F15FD0D-7656-7757-90A4-BED61C95C283}.wem		\Interactive Music Hierarchy\Instruments\Melody 1\Marimba Shuffle\7 - Guitar		4615844
-	439121340	8 - Choir	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\07\{076D85A2-3C4C-0314-854C-CA081E4B7248}.wem		\Interactive Music Hierarchy\Instruments\Melody 1\Marimba Shuffle\8 - Choir		4596568
-	553901115	2 - Drum	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\97\{971186CF-7EE6-4253-E341-0F8DD470FC73}.wem		\Interactive Music Hierarchy\Instruments\Melody 1\Marimba Shuffle\2 - Drum		5327408
-	649551334	5 - Bass	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\06\{068F2F77-84AC-810F-8104-EF8170AE27A7}.wem		\Interactive Music Hierarchy\Instruments\Melody 1\Marimba Shuffle\5 - Bass		4549076
-	736135616	9 - Keys	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\0B\{0B1D0574-D460-2A83-4EED-B9144C4B2BAC}.wem		\Interactive Music Hierarchy\Instruments\Melody 1\Marimba Shuffle\9 - Keys		4952508
-	764985191	10 - Flute	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\B0\{B0789FB9-910D-ACBB-1203-495898696B47}.wem		\Interactive Music Hierarchy\Instruments\Melody 1\Marimba Shuffle\10 - Flute		4596568
-	954328041	6 - Strings	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\AC\{AC4EDB87-B63F-6FCD-6252-4A20D8096BEC}.wem		\Interactive Music Hierarchy\Instruments\Melody 1\Marimba Shuffle\6 - Strings		4798168
+	288265239	3 - Drum2	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\04\{043CC456-BA0B-13BC-F61E-5BB30E5679C0}.wem		\Interactive Music Hierarchy\Instruments\Songs\MarimbaShuffle\Marimba Shuffle\3 - Drum2		4802320
+	347608943	5 - Cello	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\65\{65C361A5-72D9-63D9-5694-67C6D768E923}.wem		\Interactive Music Hierarchy\Instruments\Songs\Floop Jam\Floop Jam\5 - Cello		2822496
+	362878747	4 - Drum 2	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\D0\{D0F1A198-C9C2-D8F9-54E1-0EB2B31FC7EB}.wem		\Interactive Music Hierarchy\Instruments\Songs\Floop Jam\Floop Jam\4 - Drum 2		2822496
+	402147434	3 - Drum	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\30\{30F9585B-F7EF-F1D0-4D13-5B38D3435269}.wem		\Interactive Music Hierarchy\Instruments\Songs\Floop Jam\Floop Jam\3 - Drum		2822496
+	412913142	7 - Guitar	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\1F\{1F15FD0D-7656-7757-90A4-BED61C95C283}.wem		\Interactive Music Hierarchy\Instruments\Songs\MarimbaShuffle\Marimba Shuffle\7 - Guitar		4615844
+	439121340	8 - Choir	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\07\{076D85A2-3C4C-0314-854C-CA081E4B7248}.wem		\Interactive Music Hierarchy\Instruments\Songs\MarimbaShuffle\Marimba Shuffle\8 - Choir		4596568
+	553901115	2 - Drum	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\97\{971186CF-7EE6-4253-E341-0F8DD470FC73}.wem		\Interactive Music Hierarchy\Instruments\Songs\MarimbaShuffle\Marimba Shuffle\2 - Drum		5327408
+	613101691	7 - Drum 3	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\1D\{1DADA2B1-45F3-47EC-A9A9-DC7BE6049FFD}.wem		\Interactive Music Hierarchy\Instruments\Songs\Floop Jam\Floop Jam\7 - Drum 3		2822496
+	649551334	5 - Bass	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\06\{068F2F77-84AC-810F-8104-EF8170AE27A7}.wem		\Interactive Music Hierarchy\Instruments\Songs\MarimbaShuffle\Marimba Shuffle\5 - Bass		4549076
+	736135616	9 - Keys	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\0B\{0B1D0574-D460-2A83-4EED-B9144C4B2BAC}.wem		\Interactive Music Hierarchy\Instruments\Songs\MarimbaShuffle\Marimba Shuffle\9 - Keys		4952508
+	764985191	10 - Flute	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\B0\{B0789FB9-910D-ACBB-1203-495898696B47}.wem		\Interactive Music Hierarchy\Instruments\Songs\MarimbaShuffle\Marimba Shuffle\10 - Flute		4596568
+	913459317	2 - Piano	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\A9\{A927DC8A-1D1F-A1B9-9C32-265E8A5EC123}.wem		\Interactive Music Hierarchy\Instruments\Songs\Floop Jam\Floop Jam\2 - Piano		2822496
+	954328041	6 - Strings	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\AC\{AC4EDB87-B63F-6FCD-6252-4A20D8096BEC}.wem		\Interactive Music Hierarchy\Instruments\Songs\MarimbaShuffle\Marimba Shuffle\6 - Strings		4798168
 	975094203	Birds	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\67\{67047A5B-AE38-99FB-2C47-B7084396F4E0}.wem		\Actor-Mixer Hierarchy\Soundly\Birds		19321800
-	1070597832	1 - Piano	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\46\{465E3458-A68E-AEF5-3273-248EDAE019FB}.wem		\Interactive Music Hierarchy\Instruments\Melody 1\Marimba Shuffle\1 - Piano		4797368
+	1016435368	8 - Violin	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\AA\{AAD87FAF-D17D-F07C-6DEE-B6212927CF35}.wem		\Interactive Music Hierarchy\Instruments\Songs\Floop Jam\Floop Jam\8 - Violin		2822496
+	1070597832	1 - Piano	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\46\{465E3458-A68E-AEF5-3273-248EDAE019FB}.wem		\Interactive Music Hierarchy\Instruments\Songs\MarimbaShuffle\Marimba Shuffle\1 - Piano		4797368
 

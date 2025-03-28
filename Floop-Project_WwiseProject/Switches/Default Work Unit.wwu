@@ -8,8 +8,8 @@
 						<Property Name="UseGameParameter" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Switch Name="Marimba_Shuffle" ID="{6D7C1A6C-A7C5-4A08-BB91-3925942EA5FD}"/>
-						<Switch Name="Sigurd" ID="{4F32A517-4F07-4D96-8579-C652DF00D5FF}"/>
+						<Switch Name="MarimbaShuffle" ID="{6D7C1A6C-A7C5-4A08-BB91-3925942EA5FD}"/>
+						<Switch Name="FloopJam" ID="{4F32A517-4F07-4D96-8579-C652DF00D5FF}"/>
 					</ChildrenList>
 					<SwitchOnRTPC>
 						<GameParameterRef Name="Song_RTPC" ID="{6000CC3F-6D53-4F70-A32C-F81AE26B3394}"/>
@@ -24,7 +24,7 @@
 									<Flags>5</Flags>
 								</Point>
 								<Point>
-									<XPos>1.01106</XPos>
+									<XPos>1.06447</XPos>
 									<YPos>2</YPos>
 									<Flags>0</Flags>
 								</Point>
