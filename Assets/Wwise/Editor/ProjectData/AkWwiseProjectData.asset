@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Default Work Unit
     guid: 739f1e68539a414395437a1e1dc9824c
     GuidInternal: 
-    m_lastTime: -8584587881444061194
+    m_lastTime: -8584585025426419272
     List:
     - name: Environment
       guid: 365e4855104f2347a45c0aa1c941fd89
@@ -193,7 +193,7 @@ MonoBehaviour:
     ParentPath: Game Parameters/Default Work Unit
     guid: 5c4d9252d284c34497eee673bb61bca1
     GuidInternal: 
-    m_lastTime: -8584587881450987116
+    m_lastTime: -8584585002566817995
     List:
     - name: Attenuation
       guid: 6e1eb60399a28144983577fdcbe14f46
@@ -277,6 +277,20 @@ MonoBehaviour:
         ObjectType: 13
         guid: e5c5a2ff3c4a8d45b257f7f4aefa5af9
       Path: Game Parameters/Default Work Unit/Marimba_Shuffle_RTPC/Drum2_Volume
+    - name: Environment_RTPC
+      guid: 93e35d43fbfc8641a9ca458ed4d7952a
+      id: 872532970
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5c4d9252d284c34497eee673bb61bca1
+      - ElementName: Environment_RTPC
+        ObjectType: 13
+        guid: 93e35d43fbfc8641a9ca458ed4d7952a
+      Path: Game Parameters/Default Work Unit/Environment_RTPC
     - name: Flute_Volume
       guid: f1b9565f8e0ad14c9d9db24a6459aace
       id: 3123229146
@@ -342,6 +356,34 @@ MonoBehaviour:
         ObjectType: 4
         guid: b8198e1da663b84ca9ae7c49ec97a147
       Path: Game Parameters/Default Work Unit/Marimba_Shuffle_RTPC
+    - name: Master_RTPC
+      guid: e7f9475a02fa1f46a9c2bb7c5e2a0eb8
+      id: 1214867155
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5c4d9252d284c34497eee673bb61bca1
+      - ElementName: Master_RTPC
+        ObjectType: 13
+        guid: e7f9475a02fa1f46a9c2bb7c5e2a0eb8
+      Path: Game Parameters/Default Work Unit/Master_RTPC
+    - name: Melody_RTPC
+      guid: 60e99e3f7953b54eb2493d2a3fd54d02
+      id: 3880838049
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5c4d9252d284c34497eee673bb61bca1
+      - ElementName: Melody_RTPC
+        ObjectType: 13
+        guid: 60e99e3f7953b54eb2493d2a3fd54d02
+      Path: Game Parameters/Default Work Unit/Melody_RTPC
     - name: Organ_Volume
       guid: 450981043c486b41b3b2966082e28b46
       id: 595039813
@@ -436,8 +478,8 @@ MonoBehaviour:
     m_lastTime: -8584598168964621119
     List: []
   ExpandedFileSystemItemIds: 0200000003000000120000001300000014000000
-  ExpandedWaapiItemIds: 0200000003000000120000001300000014000000
+  ExpandedWaapiItemIds: 030000000600000007000000120000001400000016000000
   AutoSyncSelection: 1
   autoPopulateEnabled: 1
-  currentDataSource: 1
+  currentDataSource: 0
   CurrentPluginConfig: 
