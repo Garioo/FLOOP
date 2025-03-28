@@ -58,6 +58,7 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: d596106047bba4ef2bbb651c4e2fcefd, type: 2}
   MusicListener: {fileID: 0}
+  rb: {fileID: 4960445333986076591}
 --- !u!114 &5024480032793560812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,7 +72,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floatForce: 18
-  waterDrag: 1.5
   waterHeight: 5
   rb: {fileID: 4960445333986076591}
 --- !u!114 &6578635360429128872

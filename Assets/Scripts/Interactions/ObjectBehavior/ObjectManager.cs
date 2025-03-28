@@ -24,6 +24,7 @@ public class ObjectManager : MonoBehaviour
             {
                 if (floopCounter < maxFloop)
                 {
+
                     objectBehavior.isPlaying = true;
                     objectBehavior.PlayOn();
                     floopCounter++;
@@ -44,6 +45,7 @@ public class ObjectManager : MonoBehaviour
 
     public void RemoveFloop(GameObject floopObject)
     {
+
         ObjectBehaviorParrent objectBehavior = floopObject.GetComponent<ObjectBehaviorParrent>();
         objectBehavior.isPlaying = false;
         floopCounter--;
