@@ -25,9 +25,12 @@ namespace AK
         static const AkUniqueID CHOIR_VOLUME = 2909751391U;
         static const AkUniqueID DRUM2_VOLUME = 2512063722U;
         static const AkUniqueID DRUM_VOLUME = 2001784154U;
+        static const AkUniqueID ENVIRONMENT_RTPC = 872532970U;
         static const AkUniqueID FLUTE_VOLUME = 3123229146U;
         static const AkUniqueID GUITAR_VOLUME = 3895114124U;
         static const AkUniqueID KEYS_VOLUME = 3582539958U;
+        static const AkUniqueID MASTER_RTPC = 1214867155U;
+        static const AkUniqueID MELODY_RTPC = 3880838049U;
         static const AkUniqueID ORGAN_VOLUME = 595039813U;
         static const AkUniqueID PIANO_VOLUME = 3305412081U;
         static const AkUniqueID STRINGS_VOLUME = 806281178U;

@@ -65,7 +65,7 @@ MonoBehaviour:
       animationStateStartValue: {r: 1, g: 0.7843138, b: 0.5686275, a: 1}
       animationStateEndValue: {r: 0.5686275, g: 0.7843138, b: 1, a: 1}
     - stateName: activated
-      animationStateStartValue: {r: 0.90196085, g: 0.90196085, b: 0.90196085, a: 0.78431374}
+      animationStateStartValue: {r: 0, g: 0, b: 0, a: 0.78431374}
       animationStateEndValue: {r: 0.90196085, g: 0.90196085, b: 0.90196085, a: 0.78431374}
     - stateName: focused
       animationStateStartValue: {r: 0.90196085, g: 0.90196085, b: 0.90196085, a: 0.5882353}

@@ -41,7 +41,7 @@
 				<Property Name="Interactive Music\x64_{11EC4230-4BE7-4939-83E5-41107869B078} - SegmentEditorZoomInfo" Type="string" Value="o62PIMEGwz+PEldlxacDQAAAAAAAeGhAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{1C99F73C-E966-435F-A100-6E4F8DFBDE8F} - SegmentEditorZoomInfo" Type="string" Value="HXyeKFE4KkCPEldlxacDQAAAAAAAeGhAAAAAAAAA8D8AAAAAIL3nQAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{272FA848-51DC-4F4B-A012-5ACB655A09BA} - SegmentEditorZoomInfo" Type="string" Value="LrGs/c7qvT//HbjORmEOQAAAAAAAeGhAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
-				<Property Name="Interactive Music\x64_{2B1C185D-52C5-4C27-8608-78171B302082} - SegmentEditorZoomInfo" Type="string" Value="jF9L9QWAyj8SjfCSQ9LiPwAAAAAAeGhAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
+				<Property Name="Interactive Music\x64_{2B1C185D-52C5-4C27-8608-78171B302082} - SegmentEditorZoomInfo" Type="string" Value="jF9L9QWAyj8SjfCSQ9LiPwAAAAAAeGhAAAAAAAAA8D8AAAAAAAAAAAAAAAAAQFVA"/>
 				<Property Name="Interactive Music\x64_{313DF2C8-BB79-4FA4-9DA4-F0606CFB841F} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP67v8ElpWChAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{3896524D-3592-448E-B54D-796508CB98F4} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPwAAAAAA4FNAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{5D2831FD-5D07-48A8-8B30-201AE31E5CC6} - SegmentEditorZoomInfo" Type="string" Value="ya2PIMEGwz8yUNkaBMcMQAAAAAAAeGhAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
@@ -189,7 +189,7 @@
 						<Value Platform="Android"></Value>
 					</ValueList>
 				</Property>
-				<Property Name="SoundEngine\BusMapping\{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" Type="string" Value="{CEF8F2B6-9C1B-4A09-850C-977E8903403F}2969344007"/>
+				<Property Name="SoundEngine\BusMapping\{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" Type="string" Value="{CEF8F2B6-9C1B-4A09-850C-977E8903403F}3845614401"/>
 				<Property Name="TabPropertyEditor\LayoutInstanceId_PropertyEditorInObjectTabLeft_{031E1E2C-DC25-4332-80C3-FFCC371AC803}\CurrentSearch" Type="string" Value=""/>
 				<Property Name="TabPropertyEditor\LayoutInstanceId_PropertyEditorInObjectTabLeft_{031E1E2C-DC25-4332-80C3-FFCC371AC803}\RecentCategoriesTopCount" Type="int32" Value="0"/>
 				<Property Name="TabPropertyEditor\LayoutInstanceId_PropertyEditorInObjectTabLeft_{031E1E2C-DC25-4332-80C3-FFCC371AC803}\ValueColumnWidth" Type="int32" Value="140"/>
