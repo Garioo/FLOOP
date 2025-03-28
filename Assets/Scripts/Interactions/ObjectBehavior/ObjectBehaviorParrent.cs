@@ -46,9 +46,9 @@ public abstract class ObjectBehaviorParrent : MonoBehaviour
                 gravity
             );
 
-            Debug.Log("Launch velocity: " + launchVelocity);
-            Debug.Log("Target position: " + targetPosition);
-            Debug.Log("Start position: " + transform.position);
+        //    Debug.Log("Launch velocity: " + launchVelocity);
+          //  Debug.Log("Target position: " + targetPosition);
+            //Debug.Log("Start position: " + transform.position);
 
             if (launchVelocity != Vector3.zero)
             {

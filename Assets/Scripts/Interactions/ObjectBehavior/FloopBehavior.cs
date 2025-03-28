@@ -84,6 +84,22 @@ public class FloopBehavior : ObjectBehaviorParrent
         }
     }
 
+    public void outlineToggle()
+    {
+        // Get the QuickOutline component from the GameObject
+        Outline outline = GetComponent<Outline>();
+        // If the outline is enabled, disable it
+        if (outline.enabled)
+        {
+            outline.enabled = false;
+        }
+        // If the outline is disabled, enable it
+        else
+        {
+            outline.enabled = true;
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
