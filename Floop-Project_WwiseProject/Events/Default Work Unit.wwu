@@ -8,7 +8,7 @@
 						<Action Name="" ID="{7C1E61CA-C022-46C0-B042-00509193A2A3}" ShortID="972808529">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="MarimbaShuffle" ID="{EB75F318-9119-4DAF-8F71-BB59DC3003A8}" WorkUnitID="{B26EB749-0698-4ED0-96E9-C20E1BBDEA2C}"/>
+									<ObjectRef Name="Songs" ID="{D1DED186-7C5F-4A03-907F-EB535290C86C}" WorkUnitID="{B26EB749-0698-4ED0-96E9-C20E1BBDEA2C}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

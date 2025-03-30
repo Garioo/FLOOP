@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{975B0202-DB43-DDE6-B273-14C9AC156345}",
+    "Hash": "{82491428-4663-1AAF-3AB1-B13AF4C86728}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -158,6 +158,12 @@
         "Name": "None",
         "ObjectPath": "\\States\\Default Work Unit\\Songs\\None",
         "GUID": "{9D39FF38-6E4F-4778-896F-65489471A888}"
+       },
+       {
+        "Id": "2021425847",
+        "Name": "New_State",
+        "ObjectPath": "\\States\\Default Work Unit\\Songs\\New_State",
+        "GUID": "{E09D7356-DB56-4BE3-9109-FF79B99C8AEE}"
        }
       ]
      }
@@ -189,6 +195,6 @@
     ]
    }
   ],
-  "FileHash": "{828B8DA1-7190-1B49-ABE8-EB58CB0A3F0F}"
+  "FileHash": "{688D99E9-2166-3F57-A5CE-941574DE0BD0}"
  }
 }

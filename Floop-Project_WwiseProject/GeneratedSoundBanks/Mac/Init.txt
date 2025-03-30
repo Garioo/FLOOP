@@ -10,6 +10,7 @@ State Group	ID	Name			Wwise Object Path	Notes
 
 State	ID	Name	State Group			Notes
 	748895195	None	Songs			
+	2021425847	New_State	Songs			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	872532970	Environment_RTPC			\Default Work Unit\Environment_RTPC	
