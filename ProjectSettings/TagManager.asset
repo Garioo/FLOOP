@@ -8,6 +8,29 @@ TagManager:
   - WaterSurface
   - CinemachineTarget
   - TeleportTrigger
+  - QDSUIToggleButton
+  - QDSUIIcon
+  - QDSUITextSecondaryColor
+  - QDSUIPrimaryButton
+  - QDSUISharedThemeColor
+  - QDSUIAccentColor
+  - QDSUISecondaryButton
+  - QDSUIDestructiveButton
+  - QDSUIBorderlessButton
+  - QDSUIToggleBorderlessButton
+  - QDSUITooltip
+  - QDSUIToggleSwitch
+  - PassThroughButton
+  - PassThrough
+  - Locomotion
+  - LocoButton
+  - LocoText
+  - QDSUITextInputField
+  - SamplesInfoPanel
+  - QDSUIToggleCheckboxRadio
+  - QDSUISection
+  - Floop
+  - QDSUIBackplateGradient
   layers:
   - Default
   - TransparentFX
@@ -15,7 +38,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - UIOnly
   - 
   - 
   - 
@@ -42,6 +65,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: UI
+    uniqueID: 520142449
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

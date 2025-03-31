@@ -5,11 +5,10 @@ public class FloatingPhysics : MonoBehaviour
     public float floatForce = 9.81f; // Adjust to match gravity
     public float waterDrag = 1.5f; // Helps stabilize movement
     public float waterHeight = 5f;
-    public Rigidbody rb;
+    [SerializeField] private Rigidbody rb;
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
         rb.linearDamping = waterDrag; // Simulate water resistance
         rb.angularDamping = waterDrag;
     }

@@ -1,41 +1,79 @@
-using Unity.VisualScripting;
 using UnityEngine;
+using AK.Wwise;
+using Unity.VisualScripting;
 
 public class FloopBehavior : ObjectBehaviorParrent
 {
-    [SerializeField] private AK.Wwise.Event floopSound;
-   // public bool isGrabbed = false;
-    private float volume;
+    [Header("Wwise RTPC Settings")]
+    [SerializeField] private AK.Wwise.RTPC VolumeParameter;  
+    private float volume = 100; // Target RTPC value
+    [SerializeField] private GameObject MusicListener;
 
-    public override float Volume
+    private bool rtpcChangePending = false;
+    private float pendingValue = 0f; // Stores the next RTPC value
+
+    private ObjectManager objectManager;
+
+     private void Awake()
     {
-        get { return volume; }
-        set { volume = value; }
+        // Find the ObjectManager in the scene
+        objectManager = FindObjectOfType<ObjectManager>();
+        if (objectManager == null)
+        {
+            Debug.LogError("[FloopBehavior] ObjectManager instance is not available in the scene!");
+        }
+
+        StorePosition(transform.position);
     }
 
-    void Update()
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            StorePosition(transform.position);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            PlayOn();
-        }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ReturnObject();
-        }
+        // Register this FloopBehavior with the SoundManager
+        SoundManager.Instance.RegisterFloopBehavior(this);
     }
 
     public override void PlayOn()
     {
-        Volume = 0.5f;
-        // Additional logic
-       
-        Debug.Log("Volume: " + Volume);
+        if (isPlaying)
+        {
+            Debug.Log($"[FloopBehavior] Requested RTPC Change: {VolumeParameter.Name} -> {volume}");
+            volume = 100f;
+            rtpcChangePending = true;
+        }
+    }
+
+    public override void PlayOff()
+    {
+        if (isPlaying)
+        {
+            Debug.Log($"[FloopBehavior] Requested RTPC Reset: {VolumeParameter.Name}");
+            volume = 0f;
+            rtpcChangePending = true;
+
+            // Call RemoveFloop from ObjectManager
+            if (objectManager != null)
+            {
+                objectManager.RemoveFloop(gameObject);
+            }
+            else
+            {
+                Debug.LogError("[FloopBehavior] ObjectManager instance is not available!");
+            }
+        }
+    }
+
+    public void SavePosition()
+    {
+        StorePosition(MusicListener.transform.position);
+    }
+
+    public void ApplyRTPCChange()
+    {
+        if (rtpcChangePending)
+        {
+            Debug.Log($"[FloopBehavior] Applying RTPC Change: {VolumeParameter.Name} -> {pendingValue}");
+            AkSoundEngine.SetRTPCValue(VolumeParameter.Name, volume);
+            rtpcChangePending = false;
+        }
     }
 }
