@@ -6,7 +6,6 @@
 				<StateGroup Name="Songs" ID="{C8696209-AEA3-42B2-A0E3-990AB71D8AC5}">
 					<ChildrenList>
 						<State Name="None" ID="{9D39FF38-6E4F-4778-896F-65489471A888}"/>
-						<State Name="New_State" ID="{E09D7356-DB56-4BE3-9109-FF79B99C8AEE}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

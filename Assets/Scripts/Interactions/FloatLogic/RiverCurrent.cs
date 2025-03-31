@@ -18,6 +18,8 @@ public class RiverCurrent : MonoBehaviour
     public Transform[] waypoints; // Assign in Inspector
     public GameObject waypointParent;
 
+    public float waypointDistance = 1f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -45,7 +47,7 @@ public class RiverCurrent : MonoBehaviour
                 if (distance < closestDistance)
                 {
                     closestDistance = distance;
-                    currentWaypointIndex = i;
+                    currentWaypointIndex = i + 1;;
                 }
             }
         }
@@ -77,7 +79,7 @@ public class RiverCurrent : MonoBehaviour
         rb.AddForce(new Vector3(driftX, 0, driftZ), ForceMode.Acceleration);
 
         // Check if close to waypoint, move to the next
-        if (Vector3.Distance(transform.position, waypoints[currentWaypointIndex].position) < 2f)
+        if (Vector3.Distance(transform.position, waypoints[currentWaypointIndex].position) < waypointDistance)
         {
             currentWaypointIndex++;
             if (currentWaypointIndex >= waypoints.Length)

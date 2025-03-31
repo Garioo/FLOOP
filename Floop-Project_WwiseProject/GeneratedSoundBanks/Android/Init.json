@@ -158,12 +158,6 @@
         "Name": "None",
         "ObjectPath": "\\States\\Default Work Unit\\Songs\\None",
         "GUID": "{9D39FF38-6E4F-4778-896F-65489471A888}"
-       },
-       {
-        "Id": "2021425847",
-        "Name": "New_State",
-        "ObjectPath": "\\States\\Default Work Unit\\Songs\\New_State",
-        "GUID": "{E09D7356-DB56-4BE3-9109-FF79B99C8AEE}"
        }
       ]
      }
@@ -195,6 +189,6 @@
     ]
    }
   ],
-  "FileHash": "{DC6A9E3C-BA2A-3525-9C12-E35FE8DB806E}"
+  "FileHash": "{316F09ED-37EA-25CE-BF9F-3D8E8B3E056E}"
  }
 }
