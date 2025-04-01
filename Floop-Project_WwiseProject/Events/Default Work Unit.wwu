@@ -69,6 +69,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_ButtonClick" ID="{148EECEA-CF9E-4FCE-A72A-5000AB51BE0C}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

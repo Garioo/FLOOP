@@ -77,4 +77,9 @@ public class SoundManager : MonoBehaviour
         Debug.Log($"[SoundManager] Switching music playlist with RTPC value: {value}");
         AkSoundEngine.SetRTPCValue("Song_RTPC", value);
     }
+
+    public void PlayButtonClick()
+    {
+        AkSoundEngine.PostEvent("Play_ButtonClick", gameObject);
+    }
 }

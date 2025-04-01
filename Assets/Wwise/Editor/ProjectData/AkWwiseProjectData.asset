@@ -128,7 +128,7 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 7e9b391fb2ac8d4cb284d6b301d048ed
     GuidInternal: 
-    m_lastTime: -8584581830613610883
+    m_lastTime: -8584581133857297435
     List:
     - name: Play_AllLoops
       guid: 87b7639b488c6440a1826fd1a05aed13
@@ -181,6 +181,23 @@ MonoBehaviour:
       maxAttenuation: 10
       maxDuration: 0
       minDuration: 0
+    - name: Play_ButtonClick
+      guid: eaec8e149ecfce4fa72a5000ab51be0c
+      id: 3548535810
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7e9b391fb2ac8d4cb284d6b301d048ed
+      - ElementName: Play_ButtonClick
+        ObjectType: 3
+        guid: eaec8e149ecfce4fa72a5000ab51be0c
+      Path: Events/Default Work Unit/Play_ButtonClick
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Grab
       guid: 1d1666a370e12e47a2f70652a1f0d3d6
       id: 17721092
