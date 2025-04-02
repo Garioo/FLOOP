@@ -5,11 +5,11 @@ using System.Collections.Generic;
 public class GameData
 {
     public float playedTime = 0f;
-
-    public int totalObjectsInWater = 0;
     public int numberOfSessions = 0;
 
-    // Store full water stats per object
+    public float longestSession = 0f;
+    public float shortestSession = -1f;
+
     public List<ObjectWaterStats> allObjectStats = new List<ObjectWaterStats>();
 }
 

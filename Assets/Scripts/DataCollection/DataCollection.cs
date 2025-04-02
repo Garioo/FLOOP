@@ -8,13 +8,9 @@ public class DataCollection : MonoBehaviour
     private GameData gameData;
     private float playedTime;
 
-    // Optional toggle in Inspector if you want to switch reset on/off easily
-    public bool resetOnStart;
-
     void Start()
     {
         Debug.Log("[Path] persistentDataPath: " + Application.persistentDataPath);
-        resetOnStart = false;
 
         gameData = JsonFileSystem.Load();
         playedTime = gameData.playedTime;
@@ -36,7 +32,17 @@ public class DataCollection : MonoBehaviour
 
         gameData.playedTime = playedTime;
         gameData.numberOfSessions++;
-        gameData.totalObjectsInWater = runtimeTracker.GetAllObjectStats().Count;
+
+        // Track longest and shortest sessions
+        if (runtimeTracker.totalPlayedTime > gameData.longestSession)
+        {
+            gameData.longestSession = runtimeTracker.totalPlayedTime;
+        }
+
+        if (gameData.shortestSession == -1f || runtimeTracker.totalPlayedTime < gameData.shortestSession)
+        {
+            gameData.shortestSession = runtimeTracker.totalPlayedTime;
+        }
 
         gameData.allObjectStats.Clear();
         Dictionary<string, ObjectWaterStats> allStats = runtimeTracker.GetAllObjectStats();
@@ -52,7 +58,8 @@ public class DataCollection : MonoBehaviour
         Debug.Log($"Total played Time: {gameData.playedTime:F2} seconds");
         Debug.Log($"Number of Sessions: {gameData.numberOfSessions}");
         Debug.Log($"Sessions Time: {runtimeTracker.totalPlayedTime:F2} seconds");
-        Debug.Log($"Unique Objects in Water: {gameData.totalObjectsInWater}");
+        Debug.Log($"Longest Session: {gameData.longestSession:F2} seconds");
+        Debug.Log($"Shortest Session: {gameData.shortestSession:F2} seconds");
 
         foreach (ObjectWaterStats stats in gameData.allObjectStats)
         {
@@ -62,10 +69,7 @@ public class DataCollection : MonoBehaviour
 
         JsonFileSystem.Save(gameData);
 
-        // 💥 Reset the saved data every time you end the game
-        if (resetOnStart)
-        {
-            JsonFileSystem.Reset();
-        }
+
+        //JsonFileSystem.Reset();
     }
 }
