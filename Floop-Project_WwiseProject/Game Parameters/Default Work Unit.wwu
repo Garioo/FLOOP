@@ -27,7 +27,7 @@
 						</GameParameter>
 						<GameParameter Name="Bass_Volume" ID="{075D32A4-0DB7-42DA-A39E-CEE16D3797EB}">
 							<PropertyList>
-								<Property Name="InitialValue" Type="Real64" Value="100"/>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
 							</PropertyList>
 						</GameParameter>
 						<GameParameter Name="Strings_Volume" ID="{1CA843ED-C9C2-4384-83EF-CDD63F5DD4B3}">
@@ -57,6 +57,16 @@
 						</GameParameter>
 					</ChildrenList>
 				</Folder>
+				<GameParameter Name="Attenuation" ID="{03B61E6E-A299-4481-9835-77FDCBE14F46}">
+					<PropertyList>
+						<Property Name="BindToBuiltInParam" Type="int16" Value="1"/>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="10"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Environment_RTPC" ID="{435DE393-FCFB-4186-A9CA-458ED4D7952A}"/>
+				<GameParameter Name="Melody_RTPC" ID="{3F9EE960-5379-4EB5-B249-3D2A3FD54D02}"/>
+				<GameParameter Name="Master_RTPC" ID="{5A47F9E7-FA02-461F-A9C2-BB7C5E2A0EB8}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

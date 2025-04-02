@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<MusicPlaylistContainer Name="Melody 1" ID="{EB75F318-9119-4DAF-8F71-BB59DC3003A8}" ShortID="997213194">
 					<PropertyList>
+						<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
 						<Property Name="Tempo" Type="Real64" Value="100"/>
 					</PropertyList>
 					<ReferenceList>
@@ -12,7 +13,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+							<ObjectRef Name="Melody" ID="{44C0B3BE-E29D-43FF-8AD1-D34A9A43715F}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
 						</Reference>
 						<Reference Name="PlaylistRoot">
 							<Custom>
@@ -55,6 +56,11 @@
 						<MusicSegment Name="Marimba Shuffle" ID="{2B1C185D-52C5-4C27-8608-78171B302082}" ShortID="74256776">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="19200"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
