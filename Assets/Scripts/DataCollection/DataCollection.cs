@@ -15,11 +15,6 @@ public class DataCollection : MonoBehaviour
     {
         Debug.Log("[Path] persistentDataPath: " + Application.persistentDataPath);
         resetOnStart = false;
-        // 💥 Reset the saved data every time you start the game
-        if (resetOnStart)
-        {
-            JsonFileSystem.Reset();
-        }
 
         gameData = JsonFileSystem.Load();
         playedTime = gameData.playedTime;
@@ -66,5 +61,11 @@ public class DataCollection : MonoBehaviour
         Debug.Log("======================================");
 
         JsonFileSystem.Save(gameData);
+
+        // 💥 Reset the saved data every time you end the game
+        if (resetOnStart)
+        {
+            JsonFileSystem.Reset();
+        }
     }
 }
