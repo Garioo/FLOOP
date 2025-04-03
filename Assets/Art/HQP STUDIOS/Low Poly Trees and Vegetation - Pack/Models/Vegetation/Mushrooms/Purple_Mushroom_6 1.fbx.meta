@@ -1,12 +1,5 @@
 fileFormatVersion: 2
-guid: b7aa11f45d6df9f4bbcbf52345abd428
-AssetOrigin:
-  serializedVersion: 1
-  productId: 265300
-  packageName: Low Poly Trees and Vegetation - Pack
-  packageVersion: 1.2.0
-  assetPath: Assets/HQP STUDIOS/Low Poly Trees and Vegetation - Pack/Models/Vegetation/Mushrooms/Brown_Mushroom_4.fbx
-  uploadId: 676039
+guid: 3092cc2e516449748804a437344865fd
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
