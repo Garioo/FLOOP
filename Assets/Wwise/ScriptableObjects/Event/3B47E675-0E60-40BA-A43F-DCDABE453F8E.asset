@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 630a8bac58834419fbc0b3494ecc868f, type: 3}
+  m_Name: 3B47E675-0E60-40BA-A43F-DCDABE453F8E
+  m_EditorClassIdentifier: 
+  objectName: Play_SmallSplash
+  id: 2844846418
+  guid: 3B47E675-0E60-40BA-A43F-DCDABE453F8E
+  IsInUserDefinedSoundBank: 1
+  IsAutoBankLoaded: 0

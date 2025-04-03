@@ -1,15 +1,6 @@
-﻿//
-//  OutlineFill.shader
-//  QuickOutline
-//
-//  Created by Chris Nolet on 2/21/18.
-//  Copyright © 2018 Chris Nolet. All rights reserved.
-//
-
-Shader "Custom/Outline Fill" {
+﻿Shader "Custom/Outline Fill" {
   Properties {
     [Enum(UnityEngine.Rendering.CompareFunction)] _ZTest("ZTest", Float) = 0
-
     _OutlineColor("Outline Color", Color) = (1, 1, 1, 1)
     _OutlineWidth("Outline Width", Range(0, 10)) = 2
   }
@@ -35,10 +26,12 @@ Shader "Custom/Outline Fill" {
       }
 
       CGPROGRAM
-      #include "UnityCG.cginc"
-
       #pragma vertex vert
       #pragma fragment frag
+      #pragma target 3.0
+      #pragma multi_compile_instancing
+
+      #include "UnityCG.cginc"
 
       struct appdata {
         float4 vertex : POSITION;
@@ -62,7 +55,11 @@ Shader "Custom/Outline Fill" {
         UNITY_SETUP_INSTANCE_ID(input);
         UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(output);
 
-        float3 normal = any(input.smoothNormal) ? input.smoothNormal : input.normal;
+        // Robust fallback: if smoothNormal is too small, use original normal
+        float3 normal = input.smoothNormal;
+        if (length(normal) < 0.001)
+            normal = input.normal;
+
         float3 viewPosition = UnityObjectToViewPos(input.vertex);
         float3 viewNormal = normalize(mul((float3x3)UNITY_MATRIX_IT_MV, normal));
 

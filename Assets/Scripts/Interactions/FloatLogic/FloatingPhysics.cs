@@ -3,14 +3,14 @@ using UnityEngine;
 public class FloatingPhysics : MonoBehaviour
 {
     public float floatForce = 9.81f; // Adjust to match gravity
-    public float waterDrag = 1.5f; // Helps stabilize movement
+   // public float waterDrag = 1.5f; // Helps stabilize movement
     public float waterHeight = 5f;
     [SerializeField] private Rigidbody rb;
 
     private void Start()
     {
-        rb.linearDamping = waterDrag; // Simulate water resistance
-        rb.angularDamping = waterDrag;
+       // rb.linearDamping = waterDrag; // Simulate water resistance
+       // rb.angularDamping = waterDrag;
     }
 
     private void FixedUpdate()

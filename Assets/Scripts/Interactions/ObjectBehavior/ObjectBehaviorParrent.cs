@@ -28,9 +28,11 @@ public abstract class ObjectBehaviorParrent : MonoBehaviour
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb != null)
         {
+            rb.angularDamping = 0f;
+            rb.linearDamping = 0f;
             // We'll scan angles from 10° to 80° in increments of 1°
             float minAngleDeg = 10f;
-            float maxAngleDeg = 50f;
+            float maxAngleDeg = 80f;
             float angleStep = 1f;
             float gravity = 9.81f;
 
@@ -44,9 +46,9 @@ public abstract class ObjectBehaviorParrent : MonoBehaviour
                 gravity
             );
 
-            Debug.Log("Launch velocity: " + launchVelocity);
-            Debug.Log("Target position: " + targetPosition);
-            Debug.Log("Start position: " + transform.position);
+        //    Debug.Log("Launch velocity: " + launchVelocity);
+          //  Debug.Log("Target position: " + targetPosition);
+            //Debug.Log("Start position: " + transform.position);
 
             if (launchVelocity != Vector3.zero)
             {
@@ -61,6 +63,7 @@ public abstract class ObjectBehaviorParrent : MonoBehaviour
             {
                 Debug.LogWarning("No valid ballistic solution found in angle range.");
             }
+            
         }
     }
 

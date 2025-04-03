@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{67E5FF57-A18B-49E8-80BA-252802B0D0E7}" SchemaVersion="123">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{67E5FF57-A18B-49E8-80BA-252802B0D0E7}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{67E5FF57-A18B-49E8-80BA-252802B0D0E7}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Songs_Switch" ID="{84F4A7F7-EED0-4C89-95CC-32AD90B99727}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="MarimbaShuffle" ID="{6D7C1A6C-A7C5-4A08-BB91-3925942EA5FD}"/>
+						<Switch Name="FloopJam" ID="{4F32A517-4F07-4D96-8579-C652DF00D5FF}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="Song_RTPC" ID="{6000CC3F-6D53-4F70-A32C-F81AE26B3394}"/>
+						<Curve Name="" ID="{084B50B5-734E-451E-A510-3C1F9AA9851F}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>1</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>1</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>2</XPos>
+									<YPos>2</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>
