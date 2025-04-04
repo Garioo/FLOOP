@@ -8,6 +8,9 @@ public class FloopBehavior : ObjectBehaviorParrent
     [SerializeField] private AK.Wwise.RTPC VolumeParameter;  
     private float volume = 100; // Target RTPC value
     [SerializeField] private GameObject MusicListener;
+
+    public RuntimeTracker runtimeTracker;
+
     public Rigidbody rb;
     private bool rtpcChangePending = false;
     private float pendingValue = 0f; // Stores the next RTPC value
@@ -43,6 +46,8 @@ public class FloopBehavior : ObjectBehaviorParrent
             Debug.Log($"[FloopBehavior] Requested RTPC Change: {VolumeParameter.Name} -> {volume}");
             volume = 100f;
             rtpcChangePending = true;
+
+            runtimeTracker.ObjectEnteredWater(gameObject.name);
         }
     }
 
