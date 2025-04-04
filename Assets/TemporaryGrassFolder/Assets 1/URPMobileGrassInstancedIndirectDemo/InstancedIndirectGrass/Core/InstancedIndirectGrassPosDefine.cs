@@ -31,7 +31,7 @@ public class InstancedIndirectGrassPosDefine : MonoBehaviour
     }
     private void UpdatePosIfNeeded()
     {
-        if (instanceCount <= cacheCount)
+        if (instanceCount == cacheCount)
             return;
 
         Debug.Log("UpdatePos (Slow)");

@@ -13,10 +13,15 @@ public class GrassBendingRTPrePass : ScriptableRendererFeature
 
         public override void Configure(CommandBuffer cmd, RenderTextureDescriptor cameraTextureDescriptor)
         {
-            _GrassBendingRT = RTHandles.Alloc(512, 512, colorFormat: UnityEngine.Experimental.Rendering.GraphicsFormat.R8_SRGB);
+            if (_GrassBendingRT == null)
+            {
+                _GrassBendingRT = RTHandles.Alloc(512, 512, colorFormat: UnityEngine.Experimental.Rendering.GraphicsFormat.R8_UNorm);
+
+            }
             ConfigureTarget(_GrassBendingRT);
             ConfigureClear(ClearFlag.All, Color.white);
         }
+
 
         public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
         {
@@ -32,7 +37,7 @@ public class GrassBendingRTPrePass : ScriptableRendererFeature
 
             float sizeX = InstancedIndirectGrassRenderer.instance.transform.localScale.x;
             float sizeZ = InstancedIndirectGrassRenderer.instance.transform.localScale.z;
-            Matrix4x4 projectionMatrix = Matrix4x4.Ortho(-sizeX, sizeX, -sizeZ, sizeZ, 0.5f, 1.5f);
+            Matrix4x4 projectionMatrix = Matrix4x4.Ortho(-sizeX, sizeX, -sizeZ, sizeZ, -10f, 7f);
 
             cmd.SetViewProjectionMatrices(viewMatrix, projectionMatrix);
             context.ExecuteCommandBuffer(cmd);
@@ -52,9 +57,14 @@ public class GrassBendingRTPrePass : ScriptableRendererFeature
 
         public override void FrameCleanup(CommandBuffer cmd)
         {
-            cmd.ReleaseTemporaryRT(_GrassBendingRT_pid);
-            _GrassBendingRT.Release();
+            if (_GrassBendingRT != null)
+            {
+                cmd.ReleaseTemporaryRT(_GrassBendingRT_pid);
+                _GrassBendingRT.Release();
+                _GrassBendingRT = null; // Prevent double-release
+            }
         }
+
     }
 
     CustomRenderPass m_ScriptablePass;
