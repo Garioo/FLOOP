@@ -12,6 +12,7 @@ public class GameData
 
     public float floopJamTotalTime;
     public float marimbaShuffleTotalTime;
+    public float totalNoMusicPlaying;
 
     public List<ObjectWaterStats> allObjectStats = new List<ObjectWaterStats>();
 }
