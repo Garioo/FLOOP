@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 630a8bac58834419fbc0b3494ecc868f, type: 3}
+  m_Name: 122EDA2B-812C-48EC-9EF4-35C5AD32FA01
+  m_EditorClassIdentifier: 
+  objectName: Play_WaterFlow
+  id: 518242827
+  guid: 122EDA2B-812C-48EC-9EF4-35C5AD32FA01
+  IsInUserDefinedSoundBank: 1
+  IsAutoBankLoaded: 0
