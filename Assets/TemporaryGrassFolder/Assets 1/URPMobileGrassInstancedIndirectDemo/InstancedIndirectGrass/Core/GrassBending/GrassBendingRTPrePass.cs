@@ -37,7 +37,7 @@ public class GrassBendingRTPrePass : ScriptableRendererFeature
 
             float sizeX = InstancedIndirectGrassRenderer.instance.transform.localScale.x;
             float sizeZ = InstancedIndirectGrassRenderer.instance.transform.localScale.z;
-            Matrix4x4 projectionMatrix = Matrix4x4.Ortho(-sizeX, sizeX, -sizeZ, sizeZ, -10f, 10f);
+            Matrix4x4 projectionMatrix = Matrix4x4.Ortho(-sizeX, sizeX, -sizeZ, sizeZ, -10f, 5f);
 
             cmd.SetViewProjectionMatrices(viewMatrix, projectionMatrix);
             context.ExecuteCommandBuffer(cmd);

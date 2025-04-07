@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a9b84978ea955443b2084dde8e9f2fc6
     GuidInternal: 
-    m_lastTime: -8584580106070505799
+    m_lastTime: -8584575921803779179
     List:
     - name: Main
       guid: beb407a1988c8749b42d8cadce960a7b
@@ -128,7 +128,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 7e9b391fb2ac8d4cb284d6b301d048ed
     GuidInternal: 
-    m_lastTime: -8584580106089930553
+    m_lastTime: -8584575921831371090
     List:
     - name: Play_AllLoops
       guid: 87b7639b488c6440a1826fd1a05aed13
@@ -145,8 +145,8 @@ MonoBehaviour:
         guid: 87b7639b488c6440a1826fd1a05aed13
       Path: Events\Default Work Unit\Play_AllLoops
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_BigSplash
       guid: 4807d93cf4fb924ba71ae6064e8b81cb
       id: 2974250173
@@ -161,9 +161,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 4807d93cf4fb924ba71ae6064e8b81cb
       Path: Events\Default Work Unit\Play_BigSplash
-      maxAttenuation: 25
-      maxDuration: 1.7798524
-      minDuration: 1.0970656
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Birds
       guid: 97cdcef710afc54c945e31a42991fced
       id: 3025897706
@@ -178,9 +178,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 97cdcef710afc54c945e31a42991fced
       Path: Events\Default Work Unit\Play_Birds
-      maxAttenuation: 10
-      maxDuration: 0
-      minDuration: 0
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_ButtonClick
       guid: eaec8e149ecfce4fa72a5000ab51be0c
       id: 3548535810
@@ -213,8 +213,8 @@ MonoBehaviour:
         guid: 1d1666a370e12e47a2f70652a1f0d3d6
       Path: Events\Default Work Unit\Play_Grab
       maxAttenuation: 0
-      maxDuration: 0.33273202
-      minDuration: 0.33273202
+      maxDuration: -1
+      minDuration: -1
     - name: Play_SmallSplash
       guid: 75e6473b600eba40a43fdcdabe453f8e
       id: 2844846418
@@ -229,9 +229,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 75e6473b600eba40a43fdcdabe453f8e
       Path: Events\Default Work Unit\Play_SmallSplash
-      maxAttenuation: 25
-      maxDuration: 1.4538924
-      minDuration: 0.64165986
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_WaterFlow
       guid: 2bda2e122c81ec489ef435c5ad32fa01
       id: 518242827
@@ -246,9 +246,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 2bda2e122c81ec489ef435c5ad32fa01
       Path: Events\Default Work Unit\Play_WaterFlow
-      maxAttenuation: 10
-      maxDuration: 0
-      minDuration: 0
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -261,7 +261,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 5c4d9252d284c34497eee673bb61bca1
     GuidInternal: 
-    m_lastTime: -8584580106089915477
+    m_lastTime: -8584575921831304678
     List:
     - name: Attenuation
       guid: 6e1eb60399a28144983577fdcbe14f46
@@ -529,7 +529,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: af366e5864ec2247b31e988bba343539
     GuidInternal: 
-    m_lastTime: -8584580955637814320
+    m_lastTime: -8584578498345287496
     List:
     - name: Songs
       guid: 096269c8a3aeb242a0e3990ab71d8ac5
@@ -577,7 +577,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 57ffe5678ba1e84980ba252802b0d0e7
     GuidInternal: 
-    m_lastTime: -8584580106070500725
+    m_lastTime: -8584575921803753486
     List:
     - name: Songs_Switch
       guid: f7a7f484d0ee894c95cc32ad90b99727
