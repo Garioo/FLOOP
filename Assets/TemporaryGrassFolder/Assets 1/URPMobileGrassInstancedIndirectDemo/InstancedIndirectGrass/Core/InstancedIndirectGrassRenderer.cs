@@ -22,6 +22,8 @@ public class InstancedIndirectGrassRenderer : MonoBehaviour
     //=====================================================
     [HideInInspector]
     public static InstancedIndirectGrassRenderer instance;// global ref to this script
+    public List<Matrix4x4> allGrassMatrices = new List<Matrix4x4>();
+
 
     private int cellCountX = -1;
     private int cellCountZ = -1;
@@ -118,12 +120,13 @@ public class InstancedIndirectGrassRenderer : MonoBehaviour
             cullingComputeShader.SetInt("_StartOffset", memoryOffset); //culling read data started at offseted pos, will start from cell's total offset in memory
             int jobLength = cellPosWSsList[targetCellFlattenID].Count;
 
+
             //============================================================================================
             //batch n dispatchs into 1 dispatch, if memory is continuous in allInstancesPosWSBuffer
             if (shouldBatchDispatch)
             {
                 while ((i < visibleCellIDList.Count - 1) && //test this first to avoid out of bound access to visibleCellIDList
-                        (visibleCellIDList[i + 1] == visibleCellIDList[i] + 1))
+                        (visibleCellIDList[i + 1] <= visibleCellIDList[i] + 1))
                 {
                     //if memory is continuous, append them together into the same dispatch call
                     jobLength += cellPosWSsList[visibleCellIDList[i + 1]].Count;
@@ -136,6 +139,11 @@ public class InstancedIndirectGrassRenderer : MonoBehaviour
             dispatchCount++;
         }
 
+        if (cellPosWSsList == null)
+        {
+            Debug.LogWarning("cellPosWSsList is null. Grass positions may not have been generated.");
+            return; // Exit LateUpdate if cellPosWSsList is not initialized
+        }
         //====================================================================================
         // Final 1 big DrawMeshInstancedIndirect draw call 
         //====================================================================================
@@ -206,11 +214,16 @@ public class InstancedIndirectGrassRenderer : MonoBehaviour
         instanceMaterial.SetVector("_BoundSize", new Vector2(transform.localScale.x, transform.localScale.z));
 
         //early exit if no need to update buffer
-        if (instanceCountCache == allGrassPos.Count &&
+        if (instanceCountCache <= allGrassPos.Count &&
             argsBuffer != null &&
             allInstancesPosWSBuffer != null &&
             visibleInstancesOnlyPosWSIDBuffer != null)
         {
+            return;
+        }
+        if (allGrassPos.Count == 0)
+        {
+            Debug.LogWarning("allGrassPos is empty. Skipping buffer creation.");
             return;
         }
 
