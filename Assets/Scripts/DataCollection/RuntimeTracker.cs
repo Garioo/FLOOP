@@ -27,6 +27,8 @@ public class RuntimeTracker : MonoBehaviour
 
         objectStats[objectName].enterCount += 1;
         objectsInWater.Add(objectName);
+
+        Debug.Log("TESTFEST");
     }
 
     public void ObjectExitedWater(string objectName)

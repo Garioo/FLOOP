@@ -12,6 +12,8 @@ public class MusicStateTracker : MonoBehaviour
     public float marimbaShuffleTime;
     public float noMusicPlaying;
 
+    [SerializeField] private int localFloopCounter;
+
     void Start()
     {
         //Starter paa marimba shuffle!
@@ -32,7 +34,9 @@ public class MusicStateTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (objectManager.floopCounter == 0)
+        localFloopCounter = objectManager.floopCounter;
+
+        if (localFloopCounter < 1)
         {
             noMusicPlaying += Time.deltaTime;
             return;
