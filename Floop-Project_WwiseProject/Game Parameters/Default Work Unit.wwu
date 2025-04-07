@@ -70,7 +70,7 @@
 				<GameParameter Name="Song_RTPC" ID="{6000CC3F-6D53-4F70-A32C-F81AE26B3394}">
 					<PropertyList>
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
-						<Property Name="Max" Type="Real64" Value="4"/>
+						<Property Name="Max" Type="Real64" Value="2"/>
 					</PropertyList>
 				</GameParameter>
 			</ChildrenList>

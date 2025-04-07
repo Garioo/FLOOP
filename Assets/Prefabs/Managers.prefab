@@ -143,6 +143,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9a345974df514691bd3d17df7215813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  masterSlider: {fileID: 0}
+  musicSlider: {fileID: 0}
+  sfxSlider: {fileID: 0}
+  masterRTPC: Master_RTPC
+  musicRTPC: Melody_RTPC
+  sfxRTPC: Environment_RTPC
+  defaultVolume: 50
 --- !u!1 &7600634166075762444
 GameObject:
   m_ObjectHideFlags: 0

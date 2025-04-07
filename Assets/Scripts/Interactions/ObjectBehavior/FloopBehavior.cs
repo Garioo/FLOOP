@@ -56,8 +56,8 @@ public class FloopBehavior : ObjectBehaviorParrent
         if (isPlaying)
         {
 
-            rb.angularDamping = 0f;
-            rb.linearDamping = 0f;
+            rb.angularDamping = 0.75f;
+            rb.linearDamping = 0.175f;
             Debug.Log($"[FloopBehavior] Requested RTPC Reset: {VolumeParameter.Name}");
             volume = 0f;
             rtpcChangePending = true;

@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C6BB1450-4754-4066-8BC0-A4D17C0F49B2}" SchemaVersion="123">
+	<AudioObjects>
+		<WorkUnit Name="Environment" ID="{C6BB1450-4754-4066-8BC0-A4D17C0F49B2}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Grab" ID="{CD662DDE-B997-4AE1-AAB4-9308D26648A2}" ShortID="541888737">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="Soundly:ActiveChannels" Type="string" Value="[1, 1]"/>
+						<Property Name="Soundly:FileID" Type="string" Value="SND120697"/>
+						<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1742392295Q_i_OrL_yP4X2gZrMd3&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND120697/sfy_SsWRAShbxwwyODylbzMipUhdrZtkJH"/>
+						<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+						<Property Name="Soundly:HandleStopTime" Type="string" Value="4.4855625"/>
+						<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+						<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+						<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+						<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+						<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+						<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/mariusqvarnstrom/Documents/Soundly Audio/Human, Skin, Touch Face, Taps, Stroke 01 SND120697 1.wav"/>
+						<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+						<Property Name="Soundly:SelectionStartTime" Type="string" Value="0"/>
+						<Property Name="Soundly:SelectionStopTime" Type="string" Value="0"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Human, Skin, Touch Face, Taps, Stroke 01 SND120697 1" ID="{21824454-3E44-43E8-8012-D1EDBD68D167}">
+							<PropertyList>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND120697"/>
+								<Property Name="TrimBegin" Type="Real64" Value="1.02767812881112"/>
+								<Property Name="TrimEnd" Type="Real64" Value="1.36041015746784"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Soundly Audio\Human, Skin, Touch Face, Taps, Stroke 01 SND120697 1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="224131774"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Human, Skin, Touch Face, Taps, Stroke 01 SND120697 1" ID="{21824454-3E44-43E8-8012-D1EDBD68D167}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Birds" ID="{733D6D24-BC1C-49FA-9A32-230ADA8B3450}" ShortID="91821840">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+						<Property Name="Soundly:FileID" Type="string" Value="SND11282"/>
+						<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1742473623E_VHb56YuIs6SiEaz7F&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND11282/sfy_bJhTIvyuFEpmjraEfAtdzBtmJaCsJP"/>
+						<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+						<Property Name="Soundly:HandleStopTime" Type="string" Value="100.633875"/>
+						<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+						<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+						<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+						<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+						<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+						<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/mariusqvarnstrom/Documents/Soundly Audio/Ambience, Birdsong, Singing Birds, Early Morning SND11282.wav"/>
+						<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+						<Property Name="Soundly:SelectionStartTime" Type="string" Value="0"/>
+						<Property Name="Soundly:SelectionStopTime" Type="string" Value="0"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="10m" ID="{FC40DD08-90B5-4C94-AAD8-9760CDEF814E}" WorkUnitID="{78F23D91-101F-4A87-9D16-B0332EA70327}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Environment" ID="{55485E36-4F10-4723-A45C-0AA1C941FD89}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ambience, Birdsong, Singing Birds, Early Morning SND11282" ID="{5B7CC008-77EF-4DAA-A7EA-72CD4EB63DCB}">
+							<PropertyList>
+								<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND11282"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Soundly Audio\Ambience, Birdsong, Singing Birds, Early Morning SND11282.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="975094203"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ambience, Birdsong, Singing Birds, Early Morning SND11282" ID="{5B7CC008-77EF-4DAA-A7EA-72CD4EB63DCB}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="WaterFlow" ID="{69A2D5CA-A9CE-42FB-B226-8860F68E9580}" ShortID="972657473">
+					<PropertyList>
+						<Property Name="3DPosition" Type="int16" Value="1"/>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="10m_water" ID="{E2A991EF-AEAA-4F71-A98D-F2D5EED5217F}" WorkUnitID="{78F23D91-101F-4A87-9D16-B0332EA70327}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Environment" ID="{55485E36-4F10-4723-A45C-0AA1C941FD89}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Water, Flow, Closeup Water, Parabolic SND65672 S05" ID="{EDFE64B2-A7D5-4383-BE07-04B087D6E0D3}">
+							<Language>SFX</Language>
+							<AudioFile>Water, Flow, Closeup Water, Parabolic SND65672 S05.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="991228109"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<PositioningInfo>
+						<Position Name="" ID="{B2DDBFB7-0394-454A-80D5-B1DD16248F30}"/>
+					</PositioningInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="Water, Flow, Closeup Water, Parabolic SND65672 S05" ID="{EDFE64B2-A7D5-4383-BE07-04B087D6E0D3}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="ButtonClick" ID="{6ABA2624-5DC8-4EF7-84FE-0A23BC84C9D2}" ShortID="429386857">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Toys, Misc, Plastic Button, Press SND33338 S00" ID="{78D16794-B2E1-49DC-B912-6A03B0CD4569}">
+							<Language>SFX</Language>
+							<AudioFile>Toys, Misc, Plastic Button, Press SND33338 S00.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="566968451"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{68A63BA6-B7AF-4423-A557-EA4223EC9113}" ShortID="907836938">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+												<ObjectRef Name="Low_Pass_20KHz" ID="{830124FB-B9D5-4AE8-846E-E94A74652666}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+					<ActiveSourceList>
+						<ActiveSource Name="Toys, Misc, Plastic Button, Press SND33338 S00" ID="{78D16794-B2E1-49DC-B912-6A03B0CD4569}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="LargeSplash" ID="{1136456A-448D-430F-938F-8BBCB15C4BA2}" ShortID="433839647">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="25m_Splash" ID="{9B437DE3-858C-4AF9-913A-F6E5F31A5691}" WorkUnitID="{78F23D91-101F-4A87-9D16-B0332EA70327}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S00" ID="{CDFE0E91-DDC5-40DF-B925-59D2B078EC89}" ShortID="58203217">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S00" ID="{23BBD713-A7FD-466F-94FA-E7B684B5A60E}">
+									<PropertyList>
+										<Property Name="ChannelConfigOverride" Type="int64" Value="8589935106"/>
+										<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.137929029867683"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.31278879959035"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Water, Splash, Multiple Water Splashes, Rock, River SND70699 S00.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="298472235"/>
+									</MediaIDList>
+									<ObjectLists>
+										<ObjectList Name="Markers">
+											<Reference>
+												<Local>
+													<Marker Name="" ID="{B4043EC9-AC93-4CA1-A269-836EE1CADC51}">
+														<PropertyList>
+															<Property Name="Time" Type="Real64" Value="0.140392048258177"/>
+														</PropertyList>
+													</Marker>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<Marker Name="" ID="{ACD235AE-52CF-4398-9426-F42692E43B6B}">
+														<PropertyList>
+															<Property Name="Time" Type="Real64" Value="2.62310416666667"/>
+														</PropertyList>
+													</Marker>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S00" ID="{23BBD713-A7FD-466F-94FA-E7B684B5A60E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S01" ID="{AB1A6057-4ADD-472A-9750-12C71D918B9C}" ShortID="521662906">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S01" ID="{71AABB09-30CF-431B-8484-808AC822EBB4}">
+									<PropertyList>
+										<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0285853869478467"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.3292205216851"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Water, Splash, Multiple Water Splashes, Rock, River SND70699 S01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="272049186"/>
+									</MediaIDList>
+									<ObjectLists>
+										<ObjectList Name="Markers">
+											<Reference>
+												<Local>
+													<Marker Name="" ID="{0C5EFBD4-1D0E-4701-8C41-370214D3BD08}">
+														<PropertyList>
+															<Property Name="Time" Type="Real64" Value="0.032669013654682"/>
+														</PropertyList>
+													</Marker>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<Marker Name="" ID="{DBE99D97-3BB8-4FDE-A2BB-B0F7C661C81D}">
+														<PropertyList>
+															<Property Name="Time" Type="Real64" Value="2.17452083333333"/>
+														</PropertyList>
+													</Marker>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S01" ID="{71AABB09-30CF-431B-8484-808AC822EBB4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S03" ID="{C19D2ED5-00C1-47E5-9FD3-8519DC3F386F}" ShortID="567604000">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S03" ID="{E4E18904-9CF6-46E2-8CE3-A70510E5BCDF}">
+									<PropertyList>
+										<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.162968546907667"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.58894330310374"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Water, Splash, Multiple Water Splashes, Rock, River SND70699 S03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="996988222"/>
+									</MediaIDList>
+									<ObjectLists>
+										<ObjectList Name="Markers">
+											<Reference>
+												<Local>
+													<Marker Name="" ID="{E865B68B-A047-4554-8982-B4CAE1091F94}">
+														<PropertyList>
+															<Property Name="Time" Type="Real64" Value="0.161028445158766"/>
+														</PropertyList>
+													</Marker>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<Marker Name="" ID="{BB64A293-5077-4281-BF42-11F31A363F56}">
+														<PropertyList>
+															<Property Name="Time" Type="Real64" Value="2.06620833333333"/>
+														</PropertyList>
+													</Marker>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S03" ID="{E4E18904-9CF6-46E2-8CE3-A70510E5BCDF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S05" ID="{8D123212-5C15-4137-8D56-3B1CB7AEDF89}" ShortID="432281779">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S05" ID="{322B1F30-8F51-4EB1-9500-D6765561A65E}">
+									<PropertyList>
+										<Property Name="ChannelConfigOverride" Type="int64" Value="12546"/>
+										<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.32032523110439"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.10017756250766"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Water, Splash, Multiple Water Splashes, Rock, River SND70699 S05.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="469971845"/>
+									</MediaIDList>
+									<ObjectLists>
+										<ObjectList Name="Markers">
+											<Reference>
+												<Local>
+													<Marker Name="" ID="{B595B888-3A20-43D9-A262-0A0250748190}">
+														<PropertyList>
+															<Property Name="Time" Type="Real64" Value="0.322733691488633"/>
+														</PropertyList>
+													</Marker>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<Marker Name="" ID="{E64ED1EE-607F-4A0B-98BF-7975F9358245}">
+														<PropertyList>
+															<Property Name="Time" Type="Real64" Value="2.565"/>
+														</PropertyList>
+													</Marker>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S05" ID="{322B1F30-8F51-4EB1-9500-D6765561A65E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S11" ID="{5388A9CC-28CB-42EB-A0FD-49CDBC8865CB}" ShortID="564610357">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S11" ID="{D408D0BF-FBF4-45E1-8017-A204D7158996}">
+									<PropertyList>
+										<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.150884683703033"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.31139279855809"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Water, Splash, Multiple Water Splashes, Rock, River SND70699 S11.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="702792605"/>
+									</MediaIDList>
+									<ObjectLists>
+										<ObjectList Name="Markers">
+											<Reference>
+												<Local>
+													<Marker Name="" ID="{5048FE16-A6D3-4DFD-B6FA-61BB9799044B}">
+														<PropertyList>
+															<Property Name="Time" Type="Real64" Value="0.150884683703033"/>
+														</PropertyList>
+													</Marker>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<Marker Name="" ID="{105088BD-9C64-4DA3-B033-B216B713E8D0}">
+														<PropertyList>
+															<Property Name="Time" Type="Real64" Value="1.98384375"/>
+														</PropertyList>
+													</Marker>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S11" ID="{D408D0BF-FBF4-45E1-8017-A204D7158996}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S12" ID="{997A8124-5671-4E84-A688-A69EF08EF957}" ShortID="261609525">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S12" ID="{DF85FADF-50F9-46CE-ADC5-E9CED8D6BAC9}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.19347873204191"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.2905443567267"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Water, Splash, Multiple Water Splashes, Rock, River SND70699 S12.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="474002969"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S12" ID="{DF85FADF-50F9-46CE-ADC5-E9CED8D6BAC9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S04" ID="{1FF043C8-2DE2-43CC-AA97-7AD1CE3CE6CF}" ShortID="26087482">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S04" ID="{FA145CA6-1C22-4366-8605-BBDF3093D939}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.113805374852928"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.42619915574481"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Water, Splash, Multiple Water Splashes, Rock, River SND70699 S04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="862481600"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S04" ID="{FA145CA6-1C22-4366-8605-BBDF3093D939}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S07" ID="{C7F7011A-AB11-43E1-8068-65F42938300F}" ShortID="478113743">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S07" ID="{5DA663F1-AD7F-445F-89E7-BE0D8DC40C4D}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0870451592503579"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.28530509932164"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Water, Splash, Multiple Water Splashes, Rock, River SND70699 S07.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="954860661"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S07" ID="{5DA663F1-AD7F-445F-89E7-BE0D8DC40C4D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<PositioningInfo>
+						<Position Name="" ID="{B250B4CB-5A67-4340-BBDD-68D9EFCA6C93}"/>
+					</PositioningInfo>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="SmallSplash" ID="{EC12629A-C8F1-4A33-B75C-6434394F8D5B}" ShortID="314638783">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="25m_Splash" ID="{9B437DE3-858C-4AF9-913A-F6E5F31A5691}" WorkUnitID="{78F23D91-101F-4A87-9D16-B0332EA70327}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S02" ID="{2856B9C9-BA22-402B-8C37-FF3B4EA55DDD}" ShortID="210321656">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S02" ID="{C6F68CC2-A3B9-4935-AC54-FD301435B824}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0741066137949626"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.45037224070231"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Water, Splash, Multiple Water Splashes, Rock, River SND70699 S02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="41017027"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S02" ID="{C6F68CC2-A3B9-4935-AC54-FD301435B824}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S06" ID="{C6FDFB94-2EE6-4E6A-A8EC-17086E1AC684}" ShortID="721699883">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S06" ID="{EB8F6125-7129-4C74-989D-2F4306E56427}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.236165264290823"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.69005760518822"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Water, Splash, Multiple Water Splashes, Rock, River SND70699 S06.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="339543282"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S06" ID="{EB8F6125-7129-4C74-989D-2F4306E56427}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S09" ID="{2BC6F264-63FE-45A7-A393-BDB9846478B1}" ShortID="445597220">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S09" ID="{4856F2A3-F5D9-4D76-934B-B35FE0D01856}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.191420418108013"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.968252840283891"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Water, Splash, Multiple Water Splashes, Rock, River SND70699 S09.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="239754376"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S09" ID="{4856F2A3-F5D9-4D76-934B-B35FE0D01856}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S10" ID="{D47403B8-98AF-4D1B-AF07-598ABA15DE1D}" ShortID="204828012">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S10" ID="{8BC32C2C-CD7C-4F46-9043-8AD35F279EF7}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.106114931509528"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.34283611102395"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Water, Splash, Multiple Water Splashes, Rock, River SND70699 S10.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="687289582"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S10" ID="{8BC32C2C-CD7C-4F46-9043-8AD35F279EF7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S13" ID="{8DCC84F9-37B9-44F5-ADB9-CF60A75B654D}" ShortID="756906368">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S13" ID="{7CCC2FE6-EEE6-4222-947D-075AE41D997B}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0783082174023552"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.719968065467799"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Water, Splash, Multiple Water Splashes, Rock, River SND70699 S13.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="771541514"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S13" ID="{7CCC2FE6-EEE6-4222-947D-075AE41D997B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S14" ID="{EE945F0A-9ABA-41F8-AD25-0CEF8034B11F}" ShortID="674834115">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S14" ID="{E52C8E14-AA75-4C6E-A056-373246DCAED0}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0775181519593432"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.05354219018909"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Water, Splash, Multiple Water Splashes, Rock, River SND70699 S14.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="863445340"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S14" ID="{E52C8E14-AA75-4C6E-A056-373246DCAED0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S15" ID="{20430703-19F5-49DE-A92A-D467AABAF35B}" ShortID="1013885149">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S15" ID="{2B2002FB-C803-4B1C-9273-0444F773E679}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.136045853968517"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.04228677521737"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Water, Splash, Multiple Water Splashes, Rock, River SND70699 S15.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="710380475"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S15" ID="{2B2002FB-C803-4B1C-9273-0444F773E679}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<PositioningInfo>
+						<Position Name="" ID="{AE33F082-079F-42CE-BD19-AB1E30136B11}"/>
+					</PositioningInfo>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
