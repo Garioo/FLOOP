@@ -128,7 +128,7 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 7e9b391fb2ac8d4cb284d6b301d048ed
     GuidInternal: 
-    m_lastTime: -8584575930181921623
+    m_lastTime: -8584575902149049315
     List:
     - name: Play_AllLoops
       guid: 87b7639b488c6440a1826fd1a05aed13
@@ -644,7 +644,7 @@ MonoBehaviour:
     m_lastTime: -8584598168964621119
     List: []
   ExpandedFileSystemItemIds: 0200000003000000120000001300000014000000
-  ExpandedWaapiItemIds: 0100000003000000040000000500000006000000070000000c0000000d00000012000000140000001600000018000000190000001a000000
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 1
   autoPopulateEnabled: 1
   currentDataSource: 0
