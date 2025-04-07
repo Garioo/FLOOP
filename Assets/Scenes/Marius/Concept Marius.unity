@@ -11202,7 +11202,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b5be05c313523354990f3da627684ab5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b5be05c313523354990f3da627684ab5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11598,6 +11598,10 @@ PrefabInstance:
     - target: {fileID: 1282320072821617754, guid: 22547bb1471e7e84e8b991e8a47462e5, type: 3}
       propertyPath: m_Name
       value: Water
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622317656872837107, guid: 22547bb1471e7e84e8b991e8a47462e5, type: 3}
+      propertyPath: m_TagString
+      value: WaterSurface
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
