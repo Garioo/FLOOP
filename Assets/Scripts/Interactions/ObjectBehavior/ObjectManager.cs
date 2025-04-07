@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class ObjectManager : MonoBehaviour
 {
-    [SerializeField] private int floopCounter;
+    [SerializeField] public int floopCounter;
     [SerializeField] private int maxFloop;
     [SerializeField] private AK.Wwise.Event smallSplashEvent;
     [SerializeField] private AK.Wwise.Event bigSplashEvent;
     [SerializeField] private float bigSplashThreshold = 4f;
 
-    private void OnTriggerEnter(Collider other)// Floop ryger, i vandet!
+    public void ChildTriggerEnter(Collider other)
     {
+        // This code is basically your original OnTriggerEnter.
         Rigidbody rb = other.GetComponent<Rigidbody>();
         float velocity = rb != null ? rb.linearVelocity.magnitude : 0f;
 
@@ -30,6 +31,7 @@ public class ObjectManager : MonoBehaviour
             AddFloob(other.gameObject);
         }
     }
+
 
     public void AddFloob(GameObject floopObject) // floob tilf�jes til floobCounter
     {
