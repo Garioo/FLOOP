@@ -1,7 +1,7 @@
 {
  "SoundBanksInfo": {
-  "Platform": "Android",
-  "BasePlatform": "Android",
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
   "SchemaVersion": "16",
   "SoundBankVersion": "154",
   "SoundBanks": [
@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{69317550-1A18-4741-499C-04866DCDB4ED}",
+    "Hash": "{82491428-4663-1AAF-3AB1-B13AF4C86728}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -189,6 +189,6 @@
     ]
    }
   ],
-  "FileHash": "{316F09ED-37EA-25CE-BF9F-3D8E8B3E056E}"
+  "FileHash": "{F35A5F33-FA0C-C0C2-12B5-BBEE3C2C9DB7}"
  }
 }
