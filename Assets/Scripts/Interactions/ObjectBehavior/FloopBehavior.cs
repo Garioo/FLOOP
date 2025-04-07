@@ -66,6 +66,7 @@ public class FloopBehavior : ObjectBehaviorParrent
             if (objectManager != null)
             {
                 objectManager.RemoveFloop(gameObject);
+                runtimeTracker.ObjectExitedWater(gameObject.name);
             }
             else
             {
