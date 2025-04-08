@@ -997,7 +997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3646457969431532528, guid: 6b2bdbebfa694467c818f6838730b2c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.01
+      value: 6.075
       objectReference: {fileID: 0}
     - target: {fileID: 3646457969431532528, guid: 6b2bdbebfa694467c818f6838730b2c2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1139,6 +1139,14 @@ PrefabInstance:
       propertyPath: MusicListener
       value: 
       objectReference: {fileID: 1549308933}
+    - target: {fileID: 8783630273214805140, guid: 6b2bdbebfa694467c818f6838730b2c2, type: 3}
+      propertyPath: linearDamping
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783630273214805140, guid: 6b2bdbebfa694467c818f6838730b2c2, type: 3}
+      propertyPath: angularDamping
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8783630273214805140, guid: 6b2bdbebfa694467c818f6838730b2c2, type: 3}
       propertyPath: VolumeParameter.WwiseObjectReference
       value: 
@@ -4362,6 +4370,9 @@ MonoBehaviour:
     WwiseObjectReference: {fileID: 11400000, guid: 1adc774b7f9443e408adaa2939c849b9, type: 2}
   MusicListener: {fileID: 0}
   runtimeTracker: {fileID: 0}
+  angularDamping: 0
+  linearDamping: 0
+  mass: 1
   rb: {fileID: 0}
 --- !u!114 &704238576
 MonoBehaviour:
@@ -10204,6 +10215,9 @@ MonoBehaviour:
     WwiseObjectReference: {fileID: 11400000, guid: 1adc774b7f9443e408adaa2939c849b9, type: 2}
   MusicListener: {fileID: 0}
   runtimeTracker: {fileID: 0}
+  angularDamping: 0
+  linearDamping: 0
+  mass: 1
   rb: {fileID: 0}
 --- !u!114 &1878484428
 MonoBehaviour:
@@ -11494,6 +11508,9 @@ MonoBehaviour:
     WwiseObjectReference: {fileID: 11400000, guid: 1adc774b7f9443e408adaa2939c849b9, type: 2}
   MusicListener: {fileID: 0}
   runtimeTracker: {fileID: 0}
+  angularDamping: 0
+  linearDamping: 0
+  mass: 1
   rb: {fileID: 0}
 --- !u!114 &2082312284
 MonoBehaviour:
