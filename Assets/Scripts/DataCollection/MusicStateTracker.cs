@@ -34,7 +34,9 @@ public class MusicStateTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (objectManager.floopCounter < 1)
+        
+
+        if (objectManager.floopCounter< 1)
         {
             noMusicPlaying += Time.deltaTime;
             return;
