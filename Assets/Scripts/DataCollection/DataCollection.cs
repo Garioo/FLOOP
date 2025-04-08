@@ -34,15 +34,10 @@ public class DataCollection : MonoBehaviour
 
         gameData.playedTime = playedTime;
         gameData.numberOfSessions++;
-        gameData.floopJamTotalTime = musicStateTracker.floopJamTime;
-        gameData.marimbaShuffleTotalTime = musicStateTracker.marimbaShuffleTime;
-        gameData.totalNoMusicPlaying = musicStateTracker.noMusicPlaying;
 
-
-
-        gameData.noMusicPlaying = musicStateTracker.noMusicPlaying;
         gameData.floopJamTime = musicStateTracker.floopJamTime;
         gameData.marimbaShuffleTime = musicStateTracker.marimbaShuffleTime;
+        gameData.noMusicPlaying = musicStateTracker.noMusicPlaying;
 
         // Track longest and shortest sessions
         if (runtimeTracker.totalPlayedTime > gameData.longestSession)
@@ -69,9 +64,9 @@ public class DataCollection : MonoBehaviour
         Debug.Log($"Total played Time: {gameData.playedTime:F2} seconds");
         Debug.Log($"Number of Sessions: {gameData.numberOfSessions}");
         Debug.Log($"Sessions Time: {runtimeTracker.totalPlayedTime:F2} seconds");
-        Debug.Log($"Total FloopJam Time: {gameData.floopJamTotalTime:F2} seconds");
-        Debug.Log($"Total No Music Playing Time: {gameData.totalNoMusicPlaying:F2} seconds");
-        Debug.Log($"Total MarimbaShuffle Time: {gameData.marimbaShuffleTotalTime:F2} seconds");
+        Debug.Log($"Total FloopJam Time: {gameData.floopJamTime:F2} seconds");
+        Debug.Log($"Total No Music Playing Time: {gameData.noMusicPlaying:F2} seconds");
+        Debug.Log($"Total MarimbaShuffle Time: {gameData.marimbaShuffleTime:F2} seconds");
         Debug.Log($"Longest Session: {gameData.longestSession:F2} seconds");
         Debug.Log($"Shortest Session: {gameData.shortestSession:F2} seconds");
 
