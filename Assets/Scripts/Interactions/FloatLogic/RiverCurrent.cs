@@ -33,10 +33,10 @@ public class RiverCurrent : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger entered with: " + other.gameObject.name);
+     //   Debug.Log("Trigger entered with: " + other.gameObject.name);
         if (other.CompareTag("WaterSurface"))
         {
-            Debug.Log("Ball has hit water!");
+       //     Debug.Log("Ball has hit water!");
             waterTriggerCount++;
 
             // Find the closest waypoint when entering water
@@ -55,10 +55,10 @@ public class RiverCurrent : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        Debug.Log("Trigger exited with: " + other.gameObject.name);
+      //  Debug.Log("Trigger exited with: " + other.gameObject.name);
         if (other.CompareTag("WaterSurface"))
         {
-            Debug.Log("Ball left the water!");
+        //    Debug.Log("Ball left the water!");
             waterTriggerCount = Mathf.Max(0, waterTriggerCount - 1);
         }
     }

@@ -27,7 +27,7 @@ public class ObjectManager : MonoBehaviour
 
         if (other.gameObject.CompareTag("Floop"))
         {
-            Debug.Log("Floop collided with water");
+          //  Debug.Log("Floop collided with water");
             AddFloob(other.gameObject);
         }
     }
@@ -45,11 +45,11 @@ public class ObjectManager : MonoBehaviour
                     objectBehavior.isPlaying = true;
                     objectBehavior.PlayOn();
                     floopCounter++;
-                    Debug.Log("Floop Counter: " + floopCounter);
+           //         Debug.Log("Floop Counter: " + floopCounter);
                 }
                 else
                 {
-                    Debug.Log("Floop Counter is full");
+             //       Debug.Log("Floop Counter is full");
                     objectBehavior.ReturnObject(); // floop returneres til target position
                 }
             }
@@ -65,6 +65,6 @@ public class ObjectManager : MonoBehaviour
         ObjectBehaviorParrent objectBehavior = floopObject.GetComponent<ObjectBehaviorParrent>();
         objectBehavior.isPlaying = false;
         floopCounter--;
-        Debug.Log("Floop Counter: " + floopCounter);
+     //   Debug.Log("Floop Counter: " + floopCounter);
     }
 }
