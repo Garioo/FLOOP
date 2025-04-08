@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5772678881530252428}
   - component: {fileID: 7240925914464172670}
   - component: {fileID: 5323823996346019913}
+  - component: {fileID: 3947767573690717438}
   m_Layer: 0
   m_Name: Floop Prefabs
   m_TagString: Floop
@@ -60,6 +61,9 @@ MonoBehaviour:
     WwiseObjectReference: {fileID: 11400000, guid: d596106047bba4ef2bbb651c4e2fcefd, type: 2}
   MusicListener: {fileID: 0}
   runtimeTracker: {fileID: 320149137030946474, guid: 3ee2d5a0920a9da46844ce9492946b87, type: 3}
+  angularDamping: 0.1
+  linearDamping: 0.09
+  mass: 1
   rb: {fileID: 4960445333986076591}
 --- !u!114 &5024480032793560812
 MonoBehaviour:
@@ -790,6 +794,19 @@ MonoBehaviour:
     - {x: -0.54356056, y: 0.114776775, z: 0.8314855}
     - {x: -0.045398917, y: -0.59602743, z: 0.8016797}
     - {x: -0.59491736, y: -0.43734974, z: 0.67438745}
+--- !u!114 &3947767573690717438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2884744068279909024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f50e9976b2f303b49b7fa4711b914808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxGrabDistance: 5
 --- !u!1 &3116611368495145758
 GameObject:
   m_ObjectHideFlags: 0
