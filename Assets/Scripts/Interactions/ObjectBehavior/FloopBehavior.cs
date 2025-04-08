@@ -48,6 +48,7 @@ public class FloopBehavior : ObjectBehaviorParrent
             rtpcChangePending = true;
 
             runtimeTracker.ObjectEnteredWater(gameObject.name);
+            Debug.Log($"[FloopBehavior] Object {gameObject.name} entered water. Current volume: {volume}");
         }
     }
 

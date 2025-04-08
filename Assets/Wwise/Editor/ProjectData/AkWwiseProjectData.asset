@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 9c049b484ad5594fa50d1bb72497cd26
     GuidInternal: 
-    m_lastTime: -8584595456298341363
+    m_lastTime: -8584594082606848799
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a9b84978ea955443b2084dde8e9f2fc6
     GuidInternal: 
-    m_lastTime: -8584575919922884953
+    m_lastTime: -8584575003765918473
     List:
     - name: Main
       guid: beb407a1988c8749b42d8cadce960a7b
@@ -128,7 +128,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 7e9b391fb2ac8d4cb284d6b301d048ed
     GuidInternal: 
-    m_lastTime: -8584575919953932088
+    m_lastTime: -8584575003790695388
     List:
     - name: Play_AllLoops
       guid: 87b7639b488c6440a1826fd1a05aed13
@@ -261,7 +261,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 5c4d9252d284c34497eee673bb61bca1
     GuidInternal: 
-    m_lastTime: -8584575919953658774
+    m_lastTime: -8584575003790549844
     List:
     - name: Attenuation
       guid: 6e1eb60399a28144983577fdcbe14f46
@@ -577,7 +577,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 57ffe5678ba1e84980ba252802b0d0e7
     GuidInternal: 
-    m_lastTime: -8584575919922577456
+    m_lastTime: -8584575003765898453
     List:
     - name: Songs_Switch
       guid: f7a7f484d0ee894c95cc32ad90b99727
@@ -641,7 +641,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: cdc13e1168cb3c4d95a0f4cdb418d527
     GuidInternal: 
-    m_lastTime: -8584595456298351374
+    m_lastTime: -8584594082606848799
     List: []
   ExpandedFileSystemItemIds: 0200000003000000120000001300000014000000
   ExpandedWaapiItemIds: 0100000003000000040000000500000006000000070000000c0000000d00000012000000140000001600000018000000190000001a000000

@@ -51,13 +51,10 @@ public class DataCollection : MonoBehaviour
         }
 
         gameData.allObjectStats.Clear();
-        Dictionary<string, ObjectWaterStats> allStats = runtimeTracker.GetAllObjectStats();
 
-        foreach (var entry in allStats)
-        {
-            ObjectWaterStats stats = entry.Value;
-            gameData.allObjectStats.Add(stats);
-        }
+        List<ObjectWaterStats> allStats = runtimeTracker.GetAllObjectStats();
+        gameData.allObjectStats.AddRange(allStats);
+
 
         // 🔽 Print the full GameData info
         Debug.Log("===== GAME DATA SUMMARY ON QUIT =====");
@@ -79,6 +76,6 @@ public class DataCollection : MonoBehaviour
         JsonFileSystem.Save(gameData);
 
         if (dataReset)
-        JsonFileSystem.Reset();
+            JsonFileSystem.Reset();
     }
 }
