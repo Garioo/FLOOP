@@ -4,9 +4,11 @@ using UnityEngine;
 public class DataCollection : MonoBehaviour
 {
     public RuntimeTracker runtimeTracker;
+    public MusicStateTracker musicStateTracker;
     
     private GameData gameData;
     private float playedTime;
+    private bool resetData;
 
     void Start()
     {
@@ -32,17 +34,16 @@ public class DataCollection : MonoBehaviour
 
         gameData.playedTime = playedTime;
         gameData.numberOfSessions++;
+        gameData.totalFloopJamTime = musicStateTracker.floopJamTime;
+        gameData.totalMarimbaShuffleTime = musicStateTracker.marimbaShuffleTime;
+        gameData.totalNoMusicPlaying = musicStateTracker.noMusicPlaying;
 
         // Track longest and shortest sessions
         if (runtimeTracker.totalPlayedTime > gameData.longestSession)
-        {
             gameData.longestSession = runtimeTracker.totalPlayedTime;
-        }
 
         if (gameData.shortestSession == -1f || runtimeTracker.totalPlayedTime < gameData.shortestSession)
-        {
             gameData.shortestSession = runtimeTracker.totalPlayedTime;
-        }
 
         gameData.allObjectStats.Clear();
         Dictionary<string, ObjectWaterStats> allStats = runtimeTracker.GetAllObjectStats();
@@ -53,7 +54,7 @@ public class DataCollection : MonoBehaviour
             gameData.allObjectStats.Add(stats);
         }
 
-        // 🔽 Print the full GameData info
+        /*// 🔽 Print the full GameData info
         Debug.Log("===== GAME DATA SUMMARY ON QUIT =====");
         Debug.Log($"Total played Time: {gameData.playedTime:F2} seconds");
         Debug.Log($"Number of Sessions: {gameData.numberOfSessions}");
@@ -65,11 +66,11 @@ public class DataCollection : MonoBehaviour
         {
             Debug.Log($"Object: {stats.objectName} | Total Time in Water: {stats.totalTimeInWater:F2}s | Entries: {stats.enterCount}");
         }
-        Debug.Log("======================================");
+        Debug.Log("======================================");*/
 
         JsonFileSystem.Save(gameData);
 
-
-        //JsonFileSystem.Reset();
+        if (resetData)
+            JsonFileSystem.Reset();
     }
 }

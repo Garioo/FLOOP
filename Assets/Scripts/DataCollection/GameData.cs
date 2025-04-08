@@ -10,6 +10,10 @@ public class GameData
     public float longestSession = 0f;
     public float shortestSession = -1f;
 
+    public float totalFloopJamTime;
+    public float totalMarimbaShuffleTime;
+    public float totalNoMusicPlaying;
+
     public List<ObjectWaterStats> allObjectStats = new List<ObjectWaterStats>();
 }
 
