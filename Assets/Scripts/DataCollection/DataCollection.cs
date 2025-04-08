@@ -39,6 +39,11 @@ public class DataCollection : MonoBehaviour
         gameData.totalNoMusicPlaying = musicStateTracker.noMusicPlaying;
 
 
+
+        gameData.noMusicPlaying = musicStateTracker.noMusicPlaying;
+        gameData.floopJamTime = musicStateTracker.floopJamTime;
+        gameData.marimbaShuffleTime = musicStateTracker.marimbaShuffleTime;
+
         // Track longest and shortest sessions
         if (runtimeTracker.totalPlayedTime > gameData.longestSession)
         {
