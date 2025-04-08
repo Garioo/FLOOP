@@ -4,7 +4,8 @@ using UnityEngine;
 public class DataCollection : MonoBehaviour
 {
     public RuntimeTracker runtimeTracker;
-    
+    public MusicStateTracker musicStateTracker;
+
     private GameData gameData;
     private float playedTime;
 
@@ -32,6 +33,11 @@ public class DataCollection : MonoBehaviour
 
         gameData.playedTime = playedTime;
         gameData.numberOfSessions++;
+
+
+        gameData.noMusicPlaying = musicStateTracker.noMusicPlaying;
+        gameData.floopJamTime = musicStateTracker.floopJamTime;
+        gameData.marimbaShuffleTime = musicStateTracker.marimbaShuffleTime;
 
         // Track longest and shortest sessions
         if (runtimeTracker.totalPlayedTime > gameData.longestSession)

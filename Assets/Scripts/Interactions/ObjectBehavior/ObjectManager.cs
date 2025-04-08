@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ObjectManager : MonoBehaviour
 {
-    [SerializeField] private int floopCounter;
+    [SerializeField] public int floopCounter;
     [SerializeField] private int maxFloop;
 
     private void OnTriggerEnter(Collider other)// Floop ryger, i vandet!

@@ -10,7 +10,13 @@ public class GameData
     public float longestSession = 0f;
     public float shortestSession = -1f;
 
+    public float noMusicPlaying = 0f;
+    public float floopJamTime = 0f;
+    public float marimbaShuffleTime = 0f;
+
     public List<ObjectWaterStats> allObjectStats = new List<ObjectWaterStats>();
+
+
 }
 
 // This class is used to store the statistics of objects that have entered the water.
