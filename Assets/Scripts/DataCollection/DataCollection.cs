@@ -8,6 +8,10 @@ public class DataCollection : MonoBehaviour
 
     private GameData gameData;
     private float playedTime;
+<<<<<<< Updated upstream
+=======
+    public bool resetData;
+>>>>>>> Stashed changes
 
     void Start()
     {
@@ -50,15 +54,30 @@ public class DataCollection : MonoBehaviour
             gameData.shortestSession = runtimeTracker.totalPlayedTime;
         }
 
-        gameData.allObjectStats.Clear();
-        Dictionary<string, ObjectWaterStats> allStats = runtimeTracker.GetAllObjectStats();
+        // 🔹 Create and store session report
+        SessionData session = new SessionData();
+        session.sessionNumber = gameData.numberOfSessions;
+        session.sessionTime = runtimeTracker.totalPlayedTime;
+        session.floopJamTime = musicStateTracker.floopJamTime;
+        session.marimbaShuffleTime = musicStateTracker.marimbaShuffleTime;
+        session.noMusicPlaying = musicStateTracker.noMusicPlaying;
 
-        foreach (var entry in allStats)
+        Dictionary<string, ObjectWaterStats> sessionStats = runtimeTracker.GetAllObjectStats();
+        foreach (var entry in sessionStats)
         {
-            ObjectWaterStats stats = entry.Value;
-            gameData.allObjectStats.Add(stats);
+            session.objectStats.Add(entry.Value);
         }
 
+        gameData.allSessions.Add(session);
+
+        // Save all object stats for next time
+        gameData.allObjectStats.Clear();
+        foreach (var entry in sessionStats)
+        {
+            gameData.allObjectStats.Add(entry.Value);
+        }
+
+<<<<<<< Updated upstream
         // 🔽 Print the full GameData info
         Debug.Log("===== GAME DATA SUMMARY ON QUIT =====");
         Debug.Log($"Total played Time: {gameData.playedTime:F2} seconds");
@@ -73,6 +92,8 @@ public class DataCollection : MonoBehaviour
         }
         Debug.Log("======================================");
 
+=======
+>>>>>>> Stashed changes
         JsonFileSystem.Save(gameData);
 
 

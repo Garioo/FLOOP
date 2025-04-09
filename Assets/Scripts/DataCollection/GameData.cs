@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 [Serializable]
@@ -15,17 +15,22 @@ public class GameData
     public float marimbaShuffleTime = 0f;
 
     public List<ObjectWaterStats> allObjectStats = new List<ObjectWaterStats>();
+<<<<<<< Updated upstream
 
 
+=======
+    public List<SessionData> allSessions = new List<SessionData>(); // 🔽 ny
+>>>>>>> Stashed changes
 }
 
-// This class is used to store the statistics of objects that have entered the water.
+
 [Serializable]
 public class ObjectWaterStats
 {
     public string objectName;
     public float totalTimeInWater = 0f;
     public int enterCount = 0;
+    public ObjectWaterStats() { }
 
     public ObjectWaterStats(string name)
     {
@@ -34,3 +39,17 @@ public class ObjectWaterStats
         enterCount = 0;
     }
 }
+
+[Serializable]
+public class SessionData
+{
+    public int sessionNumber;
+    public float sessionTime;
+    public float floopJamTime;
+    public float marimbaShuffleTime;
+    public float noMusicPlaying;
+
+    public List<ObjectWaterStats> objectStats = new List<ObjectWaterStats>();
+}
+
+
