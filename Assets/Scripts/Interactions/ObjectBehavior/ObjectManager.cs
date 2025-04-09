@@ -10,9 +10,8 @@ public class ObjectManager : MonoBehaviour
     [SerializeField] private AK.Wwise.Event bigSplashEvent;
     [SerializeField] private float bigSplashThreshold = 4f;
 
-    public void ChildTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)// Floop ryger, i vandet!
     {
-        // This code is basically your original OnTriggerEnter.
         Rigidbody rb = other.GetComponent<Rigidbody>();
         float velocity = rb != null ? rb.linearVelocity.magnitude : 0f;
 
@@ -31,7 +30,6 @@ public class ObjectManager : MonoBehaviour
             AddFloob(other.gameObject);
         }
     }
-
 
     public void AddFloob(GameObject floopObject) // floob tilf�jes til floobCounter
     {
