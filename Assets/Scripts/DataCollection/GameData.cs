@@ -15,12 +15,8 @@ public class GameData
     public float marimbaShuffleTime = 0f;
 
     public List<ObjectWaterStats> allObjectStats = new List<ObjectWaterStats>();
-<<<<<<< Updated upstream
 
-
-=======
-    public List<SessionData> allSessions = new List<SessionData>(); // 🔽 ny
->>>>>>> Stashed changes
+    public List<SessionData> allSessions = new List<SessionData>(); 
 }
 
 
