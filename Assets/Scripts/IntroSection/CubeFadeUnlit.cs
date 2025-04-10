@@ -3,7 +3,7 @@ using UnityEngine;
 public class CubeFadeUnlit : MonoBehaviour
 {
     public float fadeDelay = 2f; // Time before starting the fade
-    public float fadeDuration = 3f; // Duration of the fade
+    public static float fadeDuration = 3f; // Duration of the fade
     private Material cubeMaterial;
     private Color targetColor;
     private Color startColor;

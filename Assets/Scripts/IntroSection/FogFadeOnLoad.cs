@@ -2,9 +2,15 @@ using UnityEngine;
 
 public class FogFadeOnLoad : MonoBehaviour
 {
-  public float startDensity = 1.0f;
+
+    [Header("Fade Settings")]
+    public float startDensity = 1.0f;
     public float endDensity = 0.0f;
-    public float duration = 6f;
+   
+    [Tooltip("Time before starting the fade (in seconds)")]
+     public static float fogduration = 6f;
+
+
 
     private float timer = 0f;
     private bool isFading = false;
@@ -33,10 +39,10 @@ public class FogFadeOnLoad : MonoBehaviour
 
     private void FogFade()
     {
-        if (timer < duration)
+        if (timer < fogduration)
         {
             timer += Time.deltaTime;
-            float t = Mathf.Clamp01(timer / duration);
+            float t = Mathf.Clamp01(timer / fogduration);
             RenderSettings.fogDensity = Mathf.Lerp(startDensity, endDensity, t);
             Debug.Log("Fading... density: " + RenderSettings.fogDensity);
         }
