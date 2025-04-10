@@ -16,8 +16,6 @@ public class GameData
 
     public List<ObjectWaterStats> allObjectStats = new List<ObjectWaterStats>();
     public List<SessionData> allSessions = new List<SessionData>();
-
-    public List<string> sessionDates = new List<string>();
 }
 
 
@@ -48,6 +46,8 @@ public class SessionData
     public string sessionDate;
 
     public List<ObjectWaterStats> objectStats = new List<ObjectWaterStats>();
+
+    public float averageFloopCount;
 }
 
 
