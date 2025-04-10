@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &323970000587568501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2090239534975064022}
+  - component: {fileID: 2477019501453078840}
+  - component: {fileID: 5796699034771208944}
+  - component: {fileID: 8502994576311341517}
+  m_Layer: 0
+  m_Name: DataCollection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2090239534975064022
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323970000587568501}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.4010525, y: 18.664017, z: 5.1780686}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2477019501453078840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323970000587568501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a5a03cbf38a44fc497511d11ddb69d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runtimeTracker: {fileID: 5796699034771208944}
+  musicStateTracker: {fileID: 8502994576311341517}
+  resetData: 0
+--- !u!114 &5796699034771208944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323970000587568501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c235663cccb034bf5b666075f51de2bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalPlayedTime: 0
+--- !u!114 &8502994576311341517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323970000587568501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a50b320c20785f943b52af2e047c0012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectManager: {fileID: 0}
+  floopJamTime: 0
+  marimbaShuffleTime: 0
+  noMusicPlaying: 0
+  localFloopCounter: 0

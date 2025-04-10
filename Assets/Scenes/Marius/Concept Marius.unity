@@ -6963,7 +6963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a50b320c20785f943b52af2e047c0012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectManager: {fileID: 0}
+  objectManager: {fileID: 1591186079}
   floopJamTime: 0
   marimbaShuffleTime: 0
   noMusicPlaying: 0
