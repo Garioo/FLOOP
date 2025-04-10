@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -36,7 +37,6 @@ public class DataCollection : MonoBehaviour
         gameData.playedTime = playedTime;
         gameData.numberOfSessions++;
 
-
         gameData.noMusicPlaying = musicStateTracker.noMusicPlaying;
         gameData.floopJamTime = musicStateTracker.floopJamTime;
         gameData.marimbaShuffleTime = musicStateTracker.marimbaShuffleTime;
@@ -60,6 +60,9 @@ public class DataCollection : MonoBehaviour
         session.marimbaShuffleTime = musicStateTracker.marimbaShuffleTime;
         session.noMusicPlaying = musicStateTracker.noMusicPlaying;
 
+        // Add the current date to the session data
+        session.sessionDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
         Dictionary<string, ObjectWaterStats> sessionStats = runtimeTracker.GetAllObjectStats();
         foreach (var entry in sessionStats)
         {
@@ -75,10 +78,7 @@ public class DataCollection : MonoBehaviour
             gameData.allObjectStats.Add(entry.Value);
         }
 
-
+        // Gem data til JSON fil
         JsonFileSystem.Save(gameData);
-
-
-        //JsonFileSystem.Reset();
     }
 }

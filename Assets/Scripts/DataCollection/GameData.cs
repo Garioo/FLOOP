@@ -15,8 +15,9 @@ public class GameData
     public float marimbaShuffleTime = 0f;
 
     public List<ObjectWaterStats> allObjectStats = new List<ObjectWaterStats>();
+    public List<SessionData> allSessions = new List<SessionData>();
 
-    public List<SessionData> allSessions = new List<SessionData>(); 
+    public List<string> sessionDates = new List<string>();
 }
 
 
@@ -44,6 +45,7 @@ public class SessionData
     public float floopJamTime;
     public float marimbaShuffleTime;
     public float noMusicPlaying;
+    public string sessionDate;
 
     public List<ObjectWaterStats> objectStats = new List<ObjectWaterStats>();
 }
