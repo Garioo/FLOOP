@@ -31,12 +31,12 @@ public class MusicStateTracker : MonoBehaviour
         floopJamMusic = true;
     }
 
+
     // Update is called once per frame
     void Update()
     {
-        localFloopCounter = objectManager.floopCounter;
+        if (objectManager.floopCounter< 1)
 
-        if (localFloopCounter < 1)
         {
             noMusicPlaying += Time.deltaTime;
             return;

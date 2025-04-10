@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +9,8 @@ public class DataCollection : MonoBehaviour
 
     private GameData gameData;
     private float playedTime;
-    public bool dataReset = false;
+    public bool resetData;
+
 
     void Start()
     {
@@ -34,10 +36,10 @@ public class DataCollection : MonoBehaviour
 
         gameData.playedTime = playedTime;
         gameData.numberOfSessions++;
-        gameData.floopJamTotalTime = musicStateTracker.floopJamTime;
-        gameData.marimbaShuffleTotalTime = musicStateTracker.marimbaShuffleTime;
-        gameData.totalNoMusicPlaying = musicStateTracker.noMusicPlaying;
 
+        gameData.noMusicPlaying = musicStateTracker.noMusicPlaying;
+        gameData.floopJamTime = musicStateTracker.floopJamTime;
+        gameData.marimbaShuffleTime = musicStateTracker.marimbaShuffleTime;
 
         // Track longest and shortest sessions
         if (runtimeTracker.totalPlayedTime > gameData.longestSession)
@@ -50,35 +52,33 @@ public class DataCollection : MonoBehaviour
             gameData.shortestSession = runtimeTracker.totalPlayedTime;
         }
 
+        // 🔹 Create and store session report
+        SessionData session = new SessionData();
+        session.sessionNumber = gameData.numberOfSessions;
+        session.sessionTime = runtimeTracker.totalPlayedTime;
+        session.floopJamTime = musicStateTracker.floopJamTime;
+        session.marimbaShuffleTime = musicStateTracker.marimbaShuffleTime;
+        session.noMusicPlaying = musicStateTracker.noMusicPlaying;
+
+        // Add the current date to the session data
+        session.sessionDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+        Dictionary<string, ObjectWaterStats> sessionStats = runtimeTracker.GetAllObjectStats();
+        foreach (var entry in sessionStats)
+        {
+            session.objectStats.Add(entry.Value);
+        }
+
+        gameData.allSessions.Add(session);
+
+        // Save all object stats for next time
         gameData.allObjectStats.Clear();
-        Dictionary<string, ObjectWaterStats> allStats = runtimeTracker.GetAllObjectStats();
-
-        foreach (var entry in allStats)
+        foreach (var entry in sessionStats)
         {
-            ObjectWaterStats stats = entry.Value;
-            gameData.allObjectStats.Add(stats);
+            gameData.allObjectStats.Add(entry.Value);
         }
 
-        // 🔽 Print the full GameData info
-        Debug.Log("===== GAME DATA SUMMARY ON QUIT =====");
-        Debug.Log($"Total played Time: {gameData.playedTime:F2} seconds");
-        Debug.Log($"Number of Sessions: {gameData.numberOfSessions}");
-        Debug.Log($"Sessions Time: {runtimeTracker.totalPlayedTime:F2} seconds");
-        Debug.Log($"Total FloopJam Time: {gameData.floopJamTotalTime:F2} seconds");
-        Debug.Log($"Total No Music Playing Time: {gameData.totalNoMusicPlaying:F2} seconds");
-        Debug.Log($"Total MarimbaShuffle Time: {gameData.marimbaShuffleTotalTime:F2} seconds");
-        Debug.Log($"Longest Session: {gameData.longestSession:F2} seconds");
-        Debug.Log($"Shortest Session: {gameData.shortestSession:F2} seconds");
-
-        foreach (ObjectWaterStats stats in gameData.allObjectStats)
-        {
-            Debug.Log($"Object: {stats.objectName} | Total Time in Water: {stats.totalTimeInWater:F2}s | Entries: {stats.enterCount}");
-        }
-        Debug.Log("======================================");
-
+        // Gem data til JSON fil
         JsonFileSystem.Save(gameData);
-
-        if (dataReset)
-        JsonFileSystem.Reset();
     }
 }

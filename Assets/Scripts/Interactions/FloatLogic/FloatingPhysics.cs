@@ -21,7 +21,7 @@ public class FloatingPhysics : MonoBehaviour
            if (hitUp.collider.CompareTag("WaterSurface"))
             {
             waterHeight = hitUp.point.y;
-            print(waterHeight);
+          //  print(waterHeight);
             }
         }
 
@@ -31,7 +31,7 @@ public class FloatingPhysics : MonoBehaviour
             if (hitDown.collider.CompareTag("WaterSurface"))
             {
             waterHeight = hitDown.point.y;
-            print(waterHeight);
+            //print(waterHeight);
             }
         }
 

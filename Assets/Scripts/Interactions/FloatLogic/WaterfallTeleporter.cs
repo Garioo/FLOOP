@@ -21,7 +21,7 @@ public class WaterfallTeleporter : MonoBehaviour
         if (targetPosition != null)
         {
             other.gameObject.transform.position = targetPosition.position; // Only move the colliding object
-            Debug.Log($"{other.gameObject.name} teleported.");
+          //  Debug.Log($"{other.gameObject.name} teleported.");
         }
         else
         {
