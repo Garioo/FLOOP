@@ -9,9 +9,6 @@ public class SoundManager : MonoBehaviour
     private List<FloopBehavior> floopBehaviors = new List<FloopBehavior>();
     private bool musicStarted = false;
 
-    [SerializeField]
-    private GameObject musicGameObject;
-
     private void Awake()
     {
         if (Instance == null)
@@ -83,6 +80,6 @@ public class SoundManager : MonoBehaviour
 
     public void PlayButtonClick()
     {
-        AkSoundEngine.PostEvent("Play_ButtonClick", musicGameObject);
+        AkSoundEngine.PostEvent("Play_ButtonClick", gameObject);
     }
 }

@@ -33,12 +33,6 @@
         //make SRP batcher happy
         [HideInInspector]_PivotPosWS("_PivotPosWS", Vector) = (0,0,0,0)
         [HideInInspector]_BoundSize("_BoundSize", Vector) = (1,1,0)
-
-        
-        
-
-
-
     }
 
     SubShader
@@ -267,6 +261,4 @@
         //copy pass, change LightMode to ShadowCaster will make grass cast shadow
         //copy pass, change LightMode to DepthOnly will make grass render into _CameraDepthTexture
     }
-
 }
-
