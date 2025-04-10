@@ -4,7 +4,7 @@ using UnityEngine;
 public static class JsonFileSystem
 {
     private static string fileName = "GameData.json";
-    
+
     public static void Save(GameData data)
     {
         string json = JsonUtility.ToJson(data, true);

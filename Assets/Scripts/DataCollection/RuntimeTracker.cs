@@ -1,88 +1,47 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class RuntimeTracker : MonoBehaviour
 {
     public float totalPlayedTime;
 
-    
-    [SerializeField] private List<ObjectWaterStats> objectStatsList = new List<ObjectWaterStats>(); //😈😈😈😈😈
-
-    // Keep track of which objects are currently in water (using object names)
-    private List<string> objectsInWater = new List<string>();
+   [SerializeField] private Dictionary<string, ObjectWaterStats> objectStats = new Dictionary<string, ObjectWaterStats>();
+    private HashSet<string> objectsInWater = new HashSet<string>();
 
     void Update()
     {
         totalPlayedTime += Time.deltaTime;
-        Debug.Log($"[RuntimeTracker] Total Played Time: {totalPlayedTime}");
-        // Update the total time in water for each object currently in water.
-        foreach (var objectName in objectsInWater)
+
+        foreach (var name in objectsInWater)
         {
-            Debug.Log($"[RuntimeTracker] Updating time in water for: {objectName}");
-            ObjectWaterStats stats = GetObjectStat(objectName);
-            if (stats != null)
-            {
-                stats.totalTimeInWater += Time.deltaTime;
-
-                Debug.Log($"[RuntimeTracker] Updated time in water for: {objectName}, Total Time in Water: {stats.totalTimeInWater}");
-            }
+            objectStats[name].totalTimeInWater += Time.deltaTime;
         }
-    }
-
-    // Helper method to get ObjectWaterStats by object name.
-    private ObjectWaterStats GetObjectStat(string objectName)
-    {
-        return objectStatsList.Find(stats => stats.objectName == objectName);
     }
 
     public void ObjectEnteredWater(string objectName)
     {
-        Debug.Log($"[RuntimeTracker] Object Entered Water: {objectName}");
-        ObjectWaterStats stats = GetObjectStat(objectName);
-        if (stats == null)
+        if (!objectStats.ContainsKey(objectName))
         {
-            Debug.Log($"[RuntimeTracker] Object not found in stats list: {objectName}");
-            stats = new ObjectWaterStats(objectName);
-            objectStatsList.Add(stats);
+            objectStats[objectName] = new ObjectWaterStats(objectName);
+            Debug.Log($"[RuntimeTracker] Created new stats for object: {objectName}");
         }
-        stats.enterCount += 1;
-
-        // Add to our list of objects in water if it's not already there.
-        if (!objectsInWater.Contains(objectName))
-        {
-             Debug.Log($"[RuntimeTracker] Adding object to list: {objectName}");
-            objectsInWater.Add(objectName);
-        }
-
-        Debug.Log($"[RuntimeTracker] Object Entered Water: {objectName}, Enter Count: {stats.enterCount}");
+        Debug.Log($"[RuntimeTracker] Object {objectName} entered water. Current total time in water: {objectStats[objectName].totalTimeInWater}");
+        objectStats[objectName].enterCount += 1;
+        objectsInWater.Add(objectName);
     }
 
     public void ObjectExitedWater(string objectName)
     {
         objectsInWater.Remove(objectName);
-        Debug.Log($"[RuntimeTracker] Object Exited Water: {objectName}");
     }
 
-    // Return a copy of the list for serialization.
-    public List<ObjectWaterStats> GetAllObjectStats()
+    public Dictionary<string, ObjectWaterStats> GetAllObjectStats()
     {
-        return new List<ObjectWaterStats>(objectStatsList);
+        return new Dictionary<string, ObjectWaterStats>(objectStats);
     }
 
-    // Update the stats from saved game data.
     public void SetObjectStats(ObjectWaterStats stats)
     {
-        ObjectWaterStats existing = GetObjectStat(stats.objectName);
-        if (existing == null)
-        {
-            objectStatsList.Add(stats);
-        }
-        else
-        {
-            // Replace fields if you want to update an already existing entry.
-            existing.totalTimeInWater = stats.totalTimeInWater;
-            existing.enterCount = stats.enterCount;
-        }
-        Debug.Log($"[RuntimeTracker] Set Object Stats: {stats.objectName}, Total Time in Water: {stats.totalTimeInWater}, Enter Count: {stats.enterCount}");
+        objectStats[stats.objectName] = stats;
     }
 }

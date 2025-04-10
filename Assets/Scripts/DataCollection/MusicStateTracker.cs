@@ -36,6 +36,7 @@ public class MusicStateTracker : MonoBehaviour
     void Update()
     {
         if (objectManager.floopCounter< 1)
+
         {
             noMusicPlaying += Time.deltaTime;
             return;
