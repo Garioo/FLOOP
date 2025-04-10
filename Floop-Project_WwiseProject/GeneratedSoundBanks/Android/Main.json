@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{A107B4BE-8C98-4987-B42D-8CADCE960A7B}",
     "Language": "SFX",
-    "Hash": "{EB9D5C9E-1D90-BDA2-BD8C-DD3802D773A5}",
+    "Hash": "{B2A026B7-9BB8-C3EF-BDFC-3B7F09581CFC}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -22,14 +22,6 @@
       "Location": "Memory",
       "ShortName": "Water, Splash, Multiple Water Splashes, Rock, River SND70699 S02.wav",
       "CachePath": "9F/{9F85985F-819A-14A7-BC0B-24F5D53DC99E}.wem"
-     },
-     {
-      "Id": "53966085",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "User Interface, Click, Button Click, Input Response, Tap, Short SND86193 S01.wav",
-      "CachePath": "20/{20ABC241-7B2E-322A-D46A-8C659D782A38}.wem"
      },
      {
       "Id": "134075064",
@@ -520,20 +512,6 @@
       ]
      },
      {
-      "Id": "3548535810",
-      "Name": "Play_ButtonClick",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_ButtonClick",
-      "GUID": "{148EECEA-CF9E-4FCE-A72A-5000AB51BE0C}",
-      "DurationType": "OneShot",
-      "DurationMin": "0.5201375",
-      "DurationMax": "0.5201375",
-      "MediaRefs": [
-       {
-        "Id": "53966085"
-       }
-      ]
-     },
-     {
       "Id": "17721092",
       "Name": "Play_Grab",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Grab",
@@ -689,6 +667,6 @@
     ]
    }
   ],
-  "FileHash": "{7CAF9451-1B6D-770B-2C65-A86F5F18A0DD}"
+  "FileHash": "{9618E399-115A-27F4-0718-09517D5F18A8}"
  }
 }

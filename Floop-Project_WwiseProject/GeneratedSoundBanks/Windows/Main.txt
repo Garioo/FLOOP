@@ -5,7 +5,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	2844846418	Play_SmallSplash			\Default Work Unit\Play_SmallSplash	
 	2974250173	Play_BigSplash			\Default Work Unit\Play_BigSplash	
 	3025897706	Play_Birds			\Default Work Unit\Play_Birds	
-	3548535810	Play_ButtonClick			\Default Work Unit\Play_ButtonClick	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	4182704652	Songs_Switch			\Default Work Unit\Songs_Switch	
@@ -29,7 +28,6 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	41017027	Water, Splash, Multiple Water Splashes, Rock, River SND70699 S02	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\9F\{9F85985F-819A-14A7-BC0B-24F5D53DC99E}.wem		\Actor-Mixer Hierarchy\Environment\SmallSplash\Water, Splash, Multiple Water Splashes, Rock, River SND70699 S02		264340
-	53966085	ButtonClick	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\20\{20ABC241-7B2E-322A-D46A-8C659D782A38}.wem		\Actor-Mixer Hierarchy\Environment\ButtonClick		100024
 	134075064	4 - Organ	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\D4\{D4849CC2-B3EC-D34B-12C3-AC10FA6A4FAD}.wem		\Interactive Music Hierarchy\Instruments\Songs\MarimbaShuffle\Marimba Shuffle\4 - Organ		4545716
 	186093839	1 - Piano	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\99\{9973277E-6EDC-EE93-43CD-716F7109B442}.wem		\Interactive Music Hierarchy\Instruments\Songs\Floop Jam\Floop Jam\1 - Piano		2822496
 	206787469	6 - Bass	Y:\Documents\GitHub\FLOOP\Floop-Project\Floop-Project_WwiseProject\.cache\8A\{8AFE01C7-5E91-B4C0-8D8F-076AC4013F72}.wem		\Interactive Music Hierarchy\Instruments\Songs\Floop Jam\Floop Jam\6 - Bass		2822496
