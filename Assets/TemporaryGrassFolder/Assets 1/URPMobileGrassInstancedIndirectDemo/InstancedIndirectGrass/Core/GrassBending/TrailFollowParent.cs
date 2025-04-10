@@ -24,7 +24,7 @@ public class TrailFollowParent : MonoBehaviour
         if (parentTransform == null) return;
 
         // Set trail position to follow parent's X and Z, but Y is always parent Y - 1
-        transform.position = new Vector3(parentTransform.position.x, parentTransform.position.y, parentTransform.position.z);
+        transform.position = new Vector3(parentTransform.position.x, parentTransform.position.y -1f, parentTransform.position.z);
 
         // Lock rotation to initial state
         transform.rotation = initialRotation;
