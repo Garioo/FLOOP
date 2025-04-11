@@ -2,37 +2,31 @@ using UnityEngine;
 
 public class LockTrailRotation : MonoBehaviour
 {
-    private Quaternion initialRotation;
-    private float lockedYPosition;
+    [Tooltip("The GameObject to follow")]
+    public Transform target;
 
-    public bool lockYPosition = true;  // Toggle for locking Y position
-    public bool lockRotation = true;   // Toggle for locking rotation
+    private Quaternion initialRotation;
 
     void Start()
     {
-        // Store the initial rotation and Y position
+        // Store the initial rotation of this object
         initialRotation = transform.rotation;
-        lockedYPosition = transform.position.y;
+
+        if (target == null)
+        {
+            Debug.LogWarning("No target assigned for FollowTargetWithLockedRotation.");
+        }
     }
 
     void LateUpdate()
     {
-        Vector3 newPosition = transform.position;
+        if (target == null) return;
 
-        // Lock Y Position
-        if (lockYPosition)
-        {
-            newPosition.y = lockedYPosition;
-        }
+        // Follow the target's position
+        transform.position = target.position;
 
-        // Lock Rotation
-        if (lockRotation)
-        {
-            transform.rotation = initialRotation;
-        }
-
-        // Apply position update
-        transform.position = newPosition;
+        // Keep original rotation
+        transform.rotation = initialRotation;
     }
 }
 
