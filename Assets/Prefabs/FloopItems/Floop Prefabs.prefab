@@ -105,7 +105,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  waypointParent: {fileID: 0}
+  waypointParent: {fileID: 919132149155446097, guid: 7fe77b6e95259cf40b4472fd923f92be, type: 3}
   waypointDistance: 1
 --- !u!54 &4960445333986076591
 Rigidbody:
@@ -334,7 +334,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2884744068279909024}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
@@ -807,7 +807,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4290537952566805026
 Transform:
   m_ObjectHideFlags: 0
