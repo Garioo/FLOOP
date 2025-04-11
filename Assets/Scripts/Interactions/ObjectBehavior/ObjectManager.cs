@@ -10,7 +10,7 @@ public class ObjectManager : MonoBehaviour
     [SerializeField] private AK.Wwise.Event bigSplashEvent;
     [SerializeField] private float bigSplashThreshold = 4f;
 
-    private void OnTriggerEnter(Collider other)// Floop ryger, i vandet!
+    private void on(Collider other)// Floop ryger, i vandet!
     {
         Rigidbody rb = other.GetComponent<Rigidbody>();
         float velocity = rb != null ? rb.linearVelocity.magnitude : 0f;
