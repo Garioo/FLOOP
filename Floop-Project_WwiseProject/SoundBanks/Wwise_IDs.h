@@ -16,7 +16,6 @@ namespace AK
         static const AkUniqueID PLAY_ALLLOOPS = 2262267240U;
         static const AkUniqueID PLAY_BIGSPLASH = 2974250173U;
         static const AkUniqueID PLAY_BIRDS = 3025897706U;
-        static const AkUniqueID PLAY_BUTTONCLICK = 3548535810U;
         static const AkUniqueID PLAY_GRAB = 17721092U;
         static const AkUniqueID PLAY_SMALLSPLASH = 2844846418U;
         static const AkUniqueID PLAY_WATERFLOW = 518242827U;
