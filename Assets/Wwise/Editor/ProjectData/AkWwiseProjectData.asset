@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a9b84978ea955443b2084dde8e9f2fc6
     GuidInternal: 
-    m_lastTime: -8584575003765918473
+    m_lastTime: -8584574661272901226
     List:
     - name: Main
       guid: beb407a1988c8749b42d8cadce960a7b
@@ -128,7 +128,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 7e9b391fb2ac8d4cb284d6b301d048ed
     GuidInternal: 
-    m_lastTime: -8584575003790695388
+    m_lastTime: -8584574661294242237
     List:
     - name: Play_AllLoops
       guid: 87b7639b488c6440a1826fd1a05aed13
@@ -644,8 +644,8 @@ MonoBehaviour:
     m_lastTime: -8584594082606848799
     List: []
   ExpandedFileSystemItemIds: 0200000003000000120000001300000014000000
-  ExpandedWaapiItemIds: 0100000003000000040000000500000006000000070000000c0000000d00000012000000140000001600000018000000190000001a000000
+  ExpandedWaapiItemIds: 0100000003000000040000000500000006000000070000000c0000000d0000001200000014000000150000001600000018000000190000001a000000
   AutoSyncSelection: 1
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 

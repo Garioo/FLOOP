@@ -10,7 +10,7 @@ public class ObjectManager : MonoBehaviour
     [SerializeField] private AK.Wwise.Event bigSplashEvent;
     [SerializeField] private float bigSplashThreshold = 4f;
 
-    private void on(Collider other)// Floop ryger, i vandet!
+    public void ChildTriggerEnter(Collider other)// Floop ryger, i vandet!
     {
         Rigidbody rb = other.GetComponent<Rigidbody>();
         float velocity = rb != null ? rb.linearVelocity.magnitude : 0f;
@@ -28,7 +28,7 @@ public class ObjectManager : MonoBehaviour
         {
           //  Debug.Log("Floop collided with water");
             AddFloob(other.gameObject);
-        }
+        }   
     }
 
     public void AddFloob(GameObject floopObject) // floob tilf�jes til floobCounter
