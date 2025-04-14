@@ -6,20 +6,6 @@
 				<Sound Name="Grab" ID="{CD662DDE-B997-4AE1-AAB4-9308D26648A2}" ShortID="541888737">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
-						<Property Name="Soundly:ActiveChannels" Type="string" Value="[1, 1]"/>
-						<Property Name="Soundly:FileID" Type="string" Value="SND120697"/>
-						<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1742392295Q_i_OrL_yP4X2gZrMd3&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND120697/sfy_SsWRAShbxwwyODylbzMipUhdrZtkJH"/>
-						<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
-						<Property Name="Soundly:HandleStopTime" Type="string" Value="4.4855625"/>
-						<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
-						<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
-						<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
-						<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
-						<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
-						<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/mariusqvarnstrom/Documents/Soundly Audio/Human, Skin, Touch Face, Taps, Stroke 01 SND120697 1.wav"/>
-						<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
-						<Property Name="Soundly:SelectionStartTime" Type="string" Value="0"/>
-						<Property Name="Soundly:SelectionStopTime" Type="string" Value="0"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>7</Value>
@@ -38,7 +24,6 @@
 						<AudioFileSource Name="Human, Skin, Touch Face, Taps, Stroke 01 SND120697 1" ID="{21824454-3E44-43E8-8012-D1EDBD68D167}">
 							<PropertyList>
 								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-								<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND120697"/>
 								<Property Name="TrimBegin" Type="Real64" Value="1.02767812881112"/>
 								<Property Name="TrimEnd" Type="Real64" Value="1.36041015746784"/>
 							</PropertyList>
@@ -57,20 +42,6 @@
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-						<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
-						<Property Name="Soundly:FileID" Type="string" Value="SND11282"/>
-						<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1742473623E_VHb56YuIs6SiEaz7F&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND11282/sfy_bJhTIvyuFEpmjraEfAtdzBtmJaCsJP"/>
-						<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
-						<Property Name="Soundly:HandleStopTime" Type="string" Value="100.633875"/>
-						<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
-						<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
-						<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
-						<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
-						<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
-						<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/mariusqvarnstrom/Documents/Soundly Audio/Ambience, Birdsong, Singing Birds, Early Morning SND11282.wav"/>
-						<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
-						<Property Name="Soundly:SelectionStartTime" Type="string" Value="0"/>
-						<Property Name="Soundly:SelectionStopTime" Type="string" Value="0"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>7</Value>
@@ -90,9 +61,6 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="Ambience, Birdsong, Singing Birds, Early Morning SND11282" ID="{5B7CC008-77EF-4DAA-A7EA-72CD4EB63DCB}">
-							<PropertyList>
-								<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND11282"/>
-							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>Soundly Audio\Ambience, Birdsong, Singing Birds, Early Morning SND11282.wav</AudioFile>
 							<MediaIDList>
@@ -730,6 +698,32 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="User Interface, Click, Button Click, Input Response, Tap, Short SND86193 S01" ID="{72042168-E6A2-42DA-B050-B67ADEE181AF}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="SliderMove" ID="{50708F24-B7F4-4444-A4E1-79A99049C006}" ShortID="1038465308">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="User Interface, Click, Button, Press, Click, Video Game, Variations SND107464" ID="{102E5572-A340-4D9E-BBB2-8716F568FBFF}">
+							<PropertyList>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.200704374785674"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>User Interface, Click, Button, Press, Click, Video Game, Variations SND107464.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="768052929"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="User Interface, Click, Button, Press, Click, Video Game, Variations SND107464" ID="{102E5572-A340-4D9E-BBB2-8716F568FBFF}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

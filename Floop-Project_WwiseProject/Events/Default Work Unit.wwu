@@ -80,6 +80,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_SliderMove" ID="{CEA45468-3BB3-4344-BDC5-C7C6EAB61DB3}">
+					<ChildrenList>
+						<Action Name="" ID="{48C819E5-56BA-42A9-9EDF-4A59AA2A8337}" ShortID="376132502">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SliderMove" ID="{50708F24-B7F4-4444-A4E1-79A99049C006}" WorkUnitID="{C6BB1450-4754-4066-8BC0-A4D17C0F49B2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
