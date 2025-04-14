@@ -19,12 +19,12 @@ public class FogFadeOnLoad : MonoBehaviour
     {
         RenderSettings.fog = true;
         RenderSettings.fogDensity = startDensity;
-        Debug.Log("Fog initialized to density: " + startDensity);
+      //  Debug.Log("Fog initialized to density: " + startDensity);
     }
 
     public void StartFogFade()
     {
-        Debug.Log("StartFogFade triggered!");
+       // Debug.Log("StartFogFade triggered!");
         isFading = true;
         timer = 0f;
     }
@@ -44,13 +44,13 @@ public class FogFadeOnLoad : MonoBehaviour
             timer += Time.deltaTime;
             float t = Mathf.Clamp01(timer / fogduration);
             RenderSettings.fogDensity = Mathf.Lerp(startDensity, endDensity, t);
-            Debug.Log("Fading... density: " + RenderSettings.fogDensity);
+         //   Debug.Log("Fading... density: " + RenderSettings.fogDensity);
         }
         else
         {
             isFading = false;
             RenderSettings.fogDensity = endDensity;
-            Debug.Log("Fog fade complete.");
+           // Debug.Log("Fog fade complete.");
         }
     }
 }
