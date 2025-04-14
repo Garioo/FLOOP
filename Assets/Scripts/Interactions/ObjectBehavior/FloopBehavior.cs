@@ -27,14 +27,11 @@ public class FloopBehavior : ObjectBehaviorParrent
         }
 
         StorePosition(transform.position);
-    }
 
-    private void Awake()
-    {
         // Register this FloopBehavior with the SoundManager
         SoundManager.Instance.RegisterFloopBehavior(this);
-     
     }
+
 
     public override void PlayOn()
     {
