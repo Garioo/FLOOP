@@ -69,7 +69,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-<<<<<<< HEAD
 				<Event Name="Play_ButtonClick" ID="{148EECEA-CF9E-4FCE-A72A-5000AB51BE0C}">
 					<ChildrenList>
 						<Action Name="" ID="{A2D991D9-7DCF-40F6-9C04-2CC40EF9F58C}" ShortID="996772223">
@@ -92,9 +91,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-=======
-				<Event Name="Play_ButtonClick" ID="{148EECEA-CF9E-4FCE-A72A-5000AB51BE0C}"/>
->>>>>>> main
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

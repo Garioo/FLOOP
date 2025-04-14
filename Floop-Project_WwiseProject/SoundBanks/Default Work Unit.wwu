@@ -12,6 +12,7 @@
 						<ObjectRef Name="Songs" ID="{D1DED186-7C5F-4A03-907F-EB535290C86C}" WorkUnitID="{B26EB749-0698-4ED0-96E9-C20E1BBDEA2C}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_BigSplash" ID="{3CD90748-FBF4-4B92-A71A-E6064E8B81CB}" WorkUnitID="{1F399B7E-ACB2-4C8D-B284-D6B301D048ED}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Birds" ID="{F7CECD97-AF10-4CC5-945E-31A42991FCED}" WorkUnitID="{1F399B7E-ACB2-4C8D-B284-D6B301D048ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_ButtonClick" ID="{148EECEA-CF9E-4FCE-A72A-5000AB51BE0C}" WorkUnitID="{1F399B7E-ACB2-4C8D-B284-D6B301D048ED}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

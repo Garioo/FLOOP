@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,16 +5,10 @@ public class DataCollection : MonoBehaviour
 {
     public RuntimeTracker runtimeTracker;
     public MusicStateTracker musicStateTracker;
-    public ObjectManager objectManager;
 
     private GameData gameData;
     private float playedTime;
-    public bool resetData;
-
-    private float totalFloopCount = 0f;
-    private float totalTimeSpent = 0f;  // Total time spent in the current floop state
-    private float weightedFloopCount = 0f; // Weighted floop counter
-    private float averageFloopCount = 0f;
+    public bool dataReset = false;
 
     void Start()
     {
@@ -33,24 +26,6 @@ public class DataCollection : MonoBehaviour
     void Update()
     {
         playedTime += Time.deltaTime;
-
-        // Track time spent with current floopCounter value
-        if (objectManager.floopCounter > 0)
-        {
-            weightedFloopCount += objectManager.floopCounter * Time.deltaTime;
-            totalTimeSpent += Time.deltaTime;
-        }
-        else
-        {
-            // Track when floopCounter is 0
-            totalTimeSpent += Time.deltaTime;
-        }
-
-        // Calculate weighted average if time spent is greater than 0
-        if (totalTimeSpent > 0)
-        {
-            averageFloopCount = weightedFloopCount / totalTimeSpent;
-        }
     }
 
     void OnApplicationQuit()
@@ -59,10 +34,10 @@ public class DataCollection : MonoBehaviour
 
         gameData.playedTime = playedTime;
         gameData.numberOfSessions++;
+        gameData.floopJamTotalTime = musicStateTracker.floopJamTime;
+        gameData.marimbaShuffleTotalTime = musicStateTracker.marimbaShuffleTime;
+        gameData.totalNoMusicPlaying = musicStateTracker.noMusicPlaying;
 
-        gameData.noMusicPlaying = musicStateTracker.noMusicPlaying;
-        gameData.floopJamTime = musicStateTracker.floopJamTime;
-        gameData.marimbaShuffleTime = musicStateTracker.marimbaShuffleTime;
 
         // Track longest and shortest sessions
         if (runtimeTracker.totalPlayedTime > gameData.longestSession)
@@ -75,40 +50,35 @@ public class DataCollection : MonoBehaviour
             gameData.shortestSession = runtimeTracker.totalPlayedTime;
         }
 
-        // 🔹 Create and store session report
-        SessionData session = new SessionData();
-        session.sessionNumber = gameData.numberOfSessions;
-        session.sessionTime = runtimeTracker.totalPlayedTime;
-        session.floopJamTime = musicStateTracker.floopJamTime;
-        session.marimbaShuffleTime = musicStateTracker.marimbaShuffleTime;
-        session.noMusicPlaying = musicStateTracker.noMusicPlaying;
-
-        // Store the average floop count for the session
-        session.averageFloopCount = averageFloopCount;
-
-        // Track the session date
-        session.sessionDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-
-        Dictionary<string, ObjectWaterStats> sessionStats = runtimeTracker.GetAllObjectStats();
-        foreach (var entry in sessionStats)
-        {
-            session.objectStats.Add(entry.Value);
-        }
-
-        // Add the session to gameData
-        gameData.allSessions.Add(session);
-
-        // Save all object stats for next time
         gameData.allObjectStats.Clear();
-        foreach (var entry in sessionStats)
+        Dictionary<string, ObjectWaterStats> allStats = runtimeTracker.GetAllObjectStats();
+
+        foreach (var entry in allStats)
         {
-            gameData.allObjectStats.Add(entry.Value);
+            ObjectWaterStats stats = entry.Value;
+            gameData.allObjectStats.Add(stats);
         }
+
+        // 🔽 Print the full GameData info
+        Debug.Log("===== GAME DATA SUMMARY ON QUIT =====");
+        Debug.Log($"Total played Time: {gameData.playedTime:F2} seconds");
+        Debug.Log($"Number of Sessions: {gameData.numberOfSessions}");
+        Debug.Log($"Sessions Time: {runtimeTracker.totalPlayedTime:F2} seconds");
+        Debug.Log($"Total FloopJam Time: {gameData.floopJamTotalTime:F2} seconds");
+        Debug.Log($"Total No Music Playing Time: {gameData.totalNoMusicPlaying:F2} seconds");
+        Debug.Log($"Total MarimbaShuffle Time: {gameData.marimbaShuffleTotalTime:F2} seconds");
+        Debug.Log($"Longest Session: {gameData.longestSession:F2} seconds");
+        Debug.Log($"Shortest Session: {gameData.shortestSession:F2} seconds");
+
+        foreach (ObjectWaterStats stats in gameData.allObjectStats)
+        {
+            Debug.Log($"Object: {stats.objectName} | Total Time in Water: {stats.totalTimeInWater:F2}s | Entries: {stats.enterCount}");
+        }
+        Debug.Log("======================================");
+
         JsonFileSystem.Save(gameData);
 
-        // Reset the floop stats for the next session
-        totalFloopCount = 0f;
-        totalTimeSpent = 0f;
-        weightedFloopCount = 0f;
+        if (dataReset)
+        JsonFileSystem.Reset();
     }
 }

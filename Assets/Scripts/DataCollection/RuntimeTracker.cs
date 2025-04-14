@@ -5,7 +5,7 @@ public class RuntimeTracker : MonoBehaviour
 {
     public float totalPlayedTime;
 
-   [SerializeField] private Dictionary<string, ObjectWaterStats> objectStats = new Dictionary<string, ObjectWaterStats>();
+    private Dictionary<string, ObjectWaterStats> objectStats = new Dictionary<string, ObjectWaterStats>();
     private HashSet<string> objectsInWater = new HashSet<string>();
 
     void Update()
@@ -23,11 +23,12 @@ public class RuntimeTracker : MonoBehaviour
         if (!objectStats.ContainsKey(objectName))
         {
             objectStats[objectName] = new ObjectWaterStats(objectName);
-            Debug.Log($"[RuntimeTracker] Created new stats for object: {objectName}");
         }
-        Debug.Log($"[RuntimeTracker] Object {objectName} entered water. Current total time in water: {objectStats[objectName].totalTimeInWater}");
+
         objectStats[objectName].enterCount += 1;
         objectsInWater.Add(objectName);
+
+        Debug.Log("TESTFEST");
     }
 
     public void ObjectExitedWater(string objectName)

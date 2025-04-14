@@ -26,7 +26,7 @@ public class InstantiateUniqueFloopPrefabs : MonoBehaviour
             return;
         }
 
-       // Debug.Log($"Attempting to spawn {floopPrefabs.Length} unique prefabs...");
+        Debug.Log($"Attempting to spawn {floopPrefabs.Length} unique prefabs...");
 
         // Start spawning process
         foreach (GameObject prefab in floopPrefabs)
@@ -44,7 +44,7 @@ public class InstantiateUniqueFloopPrefabs : MonoBehaviour
         float maxDelay = spawnCount * waitTime;
         float delay = Random.Range(minDelay, maxDelay);
 
-      //  Debug.Log($"{prefab.name} will attempt to spawn in {delay:F2} seconds.");
+        Debug.Log($"{prefab.name} will attempt to spawn in {delay:F2} seconds.");
         yield return new WaitForSeconds(delay);
 
         // Check if the prefab already exists in the scene
@@ -75,7 +75,7 @@ public class InstantiateUniqueFloopPrefabs : MonoBehaviour
             rb.useGravity = false;
         }
 
-    //   Debug.Log($"{newObj.name} spawned at {spawnPosition}. Gravity will activate in 5 seconds.");
+        Debug.Log($"{newObj.name} spawned at {spawnPosition}. Gravity will activate in 5 seconds.");
 
         // Start gravity activation coroutine
         StartCoroutine(EnableGravityAfterDelay(rb, newObj));
@@ -88,7 +88,7 @@ public class InstantiateUniqueFloopPrefabs : MonoBehaviour
         if (rb != null)
         {
             rb.useGravity = true;
-     //       Debug.Log($"{obj.name} gravity enabled.");
+            Debug.Log($"{obj.name} gravity enabled.");
         }
     }
 
