@@ -737,11 +737,114 @@
 								<ActiveSource Name="Water, Splash, Multiple Water Splashes, Rock, River SND70699 S15" ID="{2B2002FB-C803-4B1C-9273-0444F773E679}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="User Interface, Click, Button, Press, Click, Video Game, Variations SND107464" ID="{2817D813-4C2E-43ED-9125-5B644F9F7CC3}" ShortID="452609704">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="User Interface, Click, Button, Press, Click, Video Game, Variations SND107464" ID="{69C2A314-C19C-4BE3-B599-1885B1C9B4E8}">
+									<Language>SFX</Language>
+									<AudioFile>User Interface, Click, Button, Press, Click, Video Game, Variations SND107464.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="619395167"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="User Interface, Click, Button, Press, Click, Video Game, Variations SND107464" ID="{69C2A314-C19C-4BE3-B599-1885B1C9B4E8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 					<PositioningInfo>
 						<Position Name="" ID="{AE33F082-079F-42CE-BD19-AB1E30136B11}"/>
 					</PositioningInfo>
 				</RandomSequenceContainer>
+				<Sound Name="MasterSlider" ID="{3226ADC3-24C1-49A8-BDFB-E5EDD43D09FA}" ShortID="275992296">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="User Interface, Click, Button, Press, Click, Video Game, Variations SND107464" ID="{474AD686-683F-4A15-B842-6EA55C992CAA}">
+							<PropertyList>
+								<Property Name="LoopBegin" Type="Real64" Value="0"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.202093332318549"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>User Interface, Click, Button, Press, Click, Video Game, Variations SND107464.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="203257141"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="User Interface, Click, Button, Press, Click, Video Game, Variations SND107464" ID="{474AD686-683F-4A15-B842-6EA55C992CAA}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="MusicSlider" ID="{1B18D90B-3673-46D7-938C-B1E6238DA28D}" ShortID="384180401">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Melody" ID="{44C0B3BE-E29D-43FF-8AD1-D34A9A43715F}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="User Interface, Click, Button, Press, Click, Video Game, Variations SND107464" ID="{ACED9986-5CD8-498A-A64C-70583A2FFEBC}">
+							<PropertyList>
+								<Property Name="LoopBegin" Type="Real64" Value="0"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.202093332318549"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>User Interface, Click, Button, Press, Click, Video Game, Variations SND107464.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="203257141"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="User Interface, Click, Button, Press, Click, Video Game, Variations SND107464" ID="{ACED9986-5CD8-498A-A64C-70583A2FFEBC}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="SFXSlider" ID="{AB73F926-9532-44CB-972B-4075FB60135F}" ShortID="671380317">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{AFDE047C-9ACC-4C8A-9F69-7D52BB0523C6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Environment" ID="{55485E36-4F10-4723-A45C-0AA1C941FD89}" WorkUnitID="{681E9F73-9A53-4341-9543-7A1E1DC9824C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="User Interface, Click, Button, Press, Click, Video Game, Variations SND107464" ID="{2DEFBCF5-3B3D-4600-9183-4485FF4C02E6}">
+							<PropertyList>
+								<Property Name="LoopBegin" Type="Real64" Value="0"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.202093332318549"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>User Interface, Click, Button, Press, Click, Video Game, Variations SND107464.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="203257141"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="User Interface, Click, Button, Press, Click, Video Game, Variations SND107464" ID="{2DEFBCF5-3B3D-4600-9183-4485FF4C02E6}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
