@@ -26674,10 +26674,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3766729991367009762, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1900571814}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
 --- !u!20 &1900571812 stripped
 Camera:
@@ -26689,31 +26686,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3766729991367009762, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
   m_PrefabInstance: {fileID: 1900571811}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1900571814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1900571813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16142cfdd81ca46f8ac6acd18ae44068, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _opacity: 1
-  _edgeColor: {r: 0, g: 0, b: 0, a: 1}
-  _edgeContrast: 1.5
-  _fillColor: {r: 1, g: 1, b: 1, a: 1}
-  _blurWidth: 0.73
-  _blurFrequency: 1
-  _hueShift: 0
-  _interval: 0.1
-  _iteration: 32
-  _overlayMode: 0
-  _overlayTexture: {fileID: 0}
-  _overlayOpacity: 0
-  _shader: {fileID: -6465566751694194690, guid: 3e152a7c1e1bb4527901f4b4a55fbbc3, type: 3}
 --- !u!1 &1919652061
 GameObject:
   m_ObjectHideFlags: 0
