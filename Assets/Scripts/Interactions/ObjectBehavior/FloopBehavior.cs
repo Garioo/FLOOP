@@ -27,21 +27,22 @@ public class FloopBehavior : ObjectBehaviorParrent
         objectManager = FindObjectOfType<ObjectManager>();
         if (objectManager == null)
         {
-            Debug.LogError("[FloopBehavior] ObjectManager instance is not available in the scene!");
+        //    Debug.LogError("[FloopBehavior] ObjectManager instance is not available in the scene!");
         }
 
         StorePosition(transform.position);
-    }
 
-    private void Awake()
-    {
         // Register this FloopBehavior with the SoundManager
         SoundManager.Instance.RegisterFloopBehavior(this);
+<<<<<<< HEAD
         rb.mass = mass;
         rb.angularDamping = angularDamping;
         rb.linearDamping = linearDamping;
      
+=======
+>>>>>>> main
     }
+
 
     public override void PlayOn()
     {
@@ -50,11 +51,12 @@ public class FloopBehavior : ObjectBehaviorParrent
             rb.angularDamping = 1.5f;
             rb.linearDamping = 1.5f;
 
-            Debug.Log($"[FloopBehavior] Requested RTPC Change: {VolumeParameter.Name} -> {volume}");
+           // Debug.Log($"[FloopBehavior] Requested RTPC Change: {VolumeParameter.Name} -> {volume}");
             volume = 100f;
             rtpcChangePending = true;
 
             runtimeTracker.ObjectEnteredWater(gameObject.name);
+            Debug.Log($"[FloopBehavior] Object {gameObject.name} entered water. Current volume: {volume}");
         }
     }
 
@@ -65,7 +67,14 @@ public class FloopBehavior : ObjectBehaviorParrent
 
         if (isPlaying)
         {
+<<<<<<< HEAD
             Debug.Log($"[FloopBehavior] Requested RTPC Reset: {VolumeParameter.Name}");
+=======
+
+            rb.angularDamping = 0.75f;
+            rb.linearDamping = 0.175f;
+            //Debug.Log($"[FloopBehavior] Requested RTPC Reset: {VolumeParameter.Name}");
+>>>>>>> main
             volume = 0f;
             rtpcChangePending = true;
 
@@ -76,7 +85,7 @@ public class FloopBehavior : ObjectBehaviorParrent
             }
             else
             {
-                Debug.LogError("[FloopBehavior] ObjectManager instance is not available!");
+          //      Debug.LogError("[FloopBehavior] ObjectManager instance is not available!");
             }
         }
     }
@@ -90,7 +99,7 @@ public class FloopBehavior : ObjectBehaviorParrent
     {
         if (rtpcChangePending)
         {
-            Debug.Log($"[FloopBehavior] Applying RTPC Change: {VolumeParameter.Name} -> {pendingValue}");
+        //    Debug.Log($"[FloopBehavior] Applying RTPC Change: {VolumeParameter.Name} -> {pendingValue}");
             AkSoundEngine.SetRTPCValue(VolumeParameter.Name, volume);
             rtpcChangePending = false;
         }

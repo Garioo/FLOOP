@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed67b81fb4b64d498a58bbb1c32d63d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drawDistance: 125
+  drawDistance: 0
   instanceMaterial: {fileID: 2100000, guid: 2a0ca5d9e755e74448eaac7a643303db, type: 2}
   cullingComputeShader: {fileID: 7200000, guid: 4ff257ce2a1c37546a9b544e669e976b, type: 3}
   allGrassMatrices: []
@@ -61,6 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d6ee35f46cc6a449199c3d64518325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instanceCount: 756145
+  instanceCount: 1
   drawDistance: 125
   terrain: {fileID: 0}
+  grassMask: {fileID: 0}

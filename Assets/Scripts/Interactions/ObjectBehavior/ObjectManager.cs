@@ -10,9 +10,8 @@ public class ObjectManager : MonoBehaviour
     [SerializeField] private AK.Wwise.Event bigSplashEvent;
     [SerializeField] private float bigSplashThreshold = 4f;
 
-    public void ChildTriggerEnter(Collider other)
+    public void ChildTriggerEnter(Collider other)// Floop ryger, i vandet!
     {
-        // This code is basically your original OnTriggerEnter.
         Rigidbody rb = other.GetComponent<Rigidbody>();
         float velocity = rb != null ? rb.linearVelocity.magnitude : 0f;
 
@@ -27,11 +26,10 @@ public class ObjectManager : MonoBehaviour
 
         if (other.gameObject.CompareTag("Floop"))
         {
-            Debug.Log("Floop collided with water");
+          //  Debug.Log("Floop collided with water");
             AddFloob(other.gameObject);
-        }
+        }   
     }
-
 
     public void AddFloob(GameObject floopObject) // floob tilf�jes til floobCounter
     {
@@ -45,11 +43,11 @@ public class ObjectManager : MonoBehaviour
                     objectBehavior.isPlaying = true;
                     objectBehavior.PlayOn();
                     floopCounter++;
-                    Debug.Log("Floop Counter: " + floopCounter);
+           //         Debug.Log("Floop Counter: " + floopCounter);
                 }
                 else
                 {
-                    Debug.Log("Floop Counter is full");
+             //       Debug.Log("Floop Counter is full");
                     objectBehavior.ReturnObject(); // floop returneres til target position
                 }
             }
@@ -65,6 +63,6 @@ public class ObjectManager : MonoBehaviour
         ObjectBehaviorParrent objectBehavior = floopObject.GetComponent<ObjectBehaviorParrent>();
         objectBehavior.isPlaying = false;
         floopCounter--;
-        Debug.Log("Floop Counter: " + floopCounter);
+     //   Debug.Log("Floop Counter: " + floopCounter);
     }
 }
