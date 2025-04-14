@@ -70,6 +70,39 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="Play_ButtonClick" ID="{148EECEA-CF9E-4FCE-A72A-5000AB51BE0C}"/>
+				<Event Name="Play_MasterSlider" ID="{F453E694-629E-4197-858F-F09B08CC8D1D}">
+					<ChildrenList>
+						<Action Name="" ID="{7E77B690-50E0-4162-82D2-18D831288880}" ShortID="165081443">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MasterSlider" ID="{3226ADC3-24C1-49A8-BDFB-E5EDD43D09FA}" WorkUnitID="{C6BB1450-4754-4066-8BC0-A4D17C0F49B2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SFXSlider" ID="{DD9D78F4-4D8B-45F2-B170-D370E64681AE}">
+					<ChildrenList>
+						<Action Name="" ID="{5B3C467F-29C2-49F6-8F9B-A453AA8E4B89}" ShortID="31841777">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXSlider" ID="{AB73F926-9532-44CB-972B-4075FB60135F}" WorkUnitID="{C6BB1450-4754-4066-8BC0-A4D17C0F49B2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SongSlider" ID="{C05D172C-D906-4BD8-AFBE-D4EF9E741F15}">
+					<ChildrenList>
+						<Action Name="" ID="{727DFA7E-E5E6-4E78-8060-AF67800E1B68}" ShortID="956745365">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MusicSlider" ID="{1B18D90B-3673-46D7-938C-B1E6238DA28D}" WorkUnitID="{C6BB1450-4754-4066-8BC0-A4D17C0F49B2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

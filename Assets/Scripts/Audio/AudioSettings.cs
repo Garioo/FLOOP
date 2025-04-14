@@ -16,22 +16,17 @@ public class AudioSettings : MonoBehaviour
     [Header("Default Volume Value")]
     public float defaultVolume = 100f;
 
-    [Header("Wwise Feedback Events")]
-    public string masterFeedbackEvent = "Play_MasterSlide";
-    public string musicFeedbackEvent = "Play_MusicSlide";
-    public string sfxFeedbackEvent = "Play_SFXSlide";
+    [Header("Feedback Events (Wwise)")]
+    public string masterFeedbackEvent = "Play_MasterSlider";
+    public string musicFeedbackEvent = "Play_MusicSlider";
+    public string sfxFeedbackEvent = "Play_SFXSlider";
 
-    [Header("Wwise Feedback RTPC")]
-    public string feedbackRTPC = "SliderFeedback";
-
-    [Header("Feedback Cooldown (seconds)")]
+    [Header("Cooldown Between Feedback Sounds")]
     public float feedbackCooldown = 0.3f;
-
     private float nextFeedbackTime;
 
     private void Start()
     {
-        // Load saved values or default to 100
         float masterValue = PlayerPrefs.GetFloat("MasterVolume", defaultVolume);
         float musicValue = PlayerPrefs.GetFloat("MusicVolume", defaultVolume);
         float sfxValue = PlayerPrefs.GetFloat("SFXVolume", defaultVolume);
@@ -49,21 +44,21 @@ public class AudioSettings : MonoBehaviour
     {
         SetVolume(masterRTPC, value);
         PlayerPrefs.SetFloat("MasterVolume", value);
-        PlayFeedback(masterFeedbackEvent, value);
+        PlayFeedback(masterFeedbackEvent);
     }
 
     public void OnMusicSliderChanged(float value)
     {
         SetVolume(musicRTPC, value);
         PlayerPrefs.SetFloat("MusicVolume", value);
-        PlayFeedback(musicFeedbackEvent, value);
+        PlayFeedback(musicFeedbackEvent);
     }
 
     public void OnSFXSliderChanged(float value)
     {
         SetVolume(sfxRTPC, value);
         PlayerPrefs.SetFloat("SFXVolume", value);
-        PlayFeedback(sfxFeedbackEvent, value);
+        PlayFeedback(sfxFeedbackEvent);
     }
 
     public void ResetToDefaults()
@@ -86,11 +81,10 @@ public class AudioSettings : MonoBehaviour
         AkSoundEngine.SetRTPCValue(rtpcName, value);
     }
 
-    private void PlayFeedback(string eventName, float value)
+    private void PlayFeedback(string eventName)
     {
         if (Time.time >= nextFeedbackTime)
         {
-            AkSoundEngine.SetRTPCValue(feedbackRTPC, value, gameObject);
             AkSoundEngine.PostEvent(eventName, gameObject);
             nextFeedbackTime = Time.time + feedbackCooldown;
         }
