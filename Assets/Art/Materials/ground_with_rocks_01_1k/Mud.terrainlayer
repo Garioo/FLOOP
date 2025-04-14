@@ -7,7 +7,7 @@ TerrainLayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mud
-  m_DiffuseTexture: {fileID: 2800000, guid: 711c38fbba225c64ea74f1d96fe395a7, type: 3}
+  m_DiffuseTexture: {fileID: 2800000, guid: fea696eb29b0e16418f278b95f235a08, type: 3}
   m_NormalMapTexture: {fileID: 2800000, guid: 9297293b820c6084185f0205487dcb97, type: 3}
   m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 2, y: 2}
@@ -15,9 +15,9 @@ TerrainLayer:
   m_Specular: {r: 0, g: 0, b: 0, a: 0}
   m_Metallic: 0
   m_Smoothness: 0
-  m_NormalScale: 0
+  m_NormalScale: 1
   m_DiffuseRemapMin: {x: 0, y: 0, z: 0, w: 0}
-  m_DiffuseRemapMax: {x: 0.3509434, y: 0.17063218, z: 0.06025631, w: 1}
+  m_DiffuseRemapMax: {x: 1, y: 1, z: 1, w: 1}
   m_MaskMapRemapMin: {x: 0, y: 0, z: 0, w: 0}
   m_MaskMapRemapMax: {x: 1, y: 1, z: 0.65800005, w: 1}
-  m_SmoothnessSource: 0
+  m_SmoothnessSource: 1

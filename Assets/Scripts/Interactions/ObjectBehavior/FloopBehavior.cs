@@ -11,6 +11,10 @@ public class FloopBehavior : ObjectBehaviorParrent
 
     public RuntimeTracker runtimeTracker;
 
+    [Header("Physics Settings")]
+    [SerializeField] private float angularDamping;
+    [SerializeField] private float linearDamping;
+    [SerializeField] private float mass = 1f;
     public Rigidbody rb;
     private bool rtpcChangePending = false;
     private float pendingValue = 0f; // Stores the next RTPC value
@@ -27,14 +31,18 @@ public class FloopBehavior : ObjectBehaviorParrent
         }
 
         StorePosition(transform.position);
-    }
 
-    private void Awake()
-    {
         // Register this FloopBehavior with the SoundManager
         SoundManager.Instance.RegisterFloopBehavior(this);
+<<<<<<< HEAD
+        rb.mass = mass;
+        rb.angularDamping = angularDamping;
+        rb.linearDamping = linearDamping;
      
+=======
+>>>>>>> main
     }
+
 
     public override void PlayOn()
     {
@@ -54,12 +62,19 @@ public class FloopBehavior : ObjectBehaviorParrent
 
     public override void PlayOff()
     {
+        rb.angularDamping = angularDamping;
+        rb.linearDamping = linearDamping;
+
         if (isPlaying)
         {
+<<<<<<< HEAD
+            Debug.Log($"[FloopBehavior] Requested RTPC Reset: {VolumeParameter.Name}");
+=======
 
             rb.angularDamping = 0.75f;
             rb.linearDamping = 0.175f;
             //Debug.Log($"[FloopBehavior] Requested RTPC Reset: {VolumeParameter.Name}");
+>>>>>>> main
             volume = 0f;
             rtpcChangePending = true;
 

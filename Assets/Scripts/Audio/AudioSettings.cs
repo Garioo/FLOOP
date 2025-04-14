@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class AudioSettings : MonoBehaviour
+public class AudioSettings : MonoBehaviour, IPointerUpHandler
 {
     [Header("Sliders")]
     public Slider masterSlider;
@@ -16,9 +17,17 @@ public class AudioSettings : MonoBehaviour
     [Header("Default Volume Value")]
     public float defaultVolume = 100f;
 
+    [Header("Wwise Events")]
+    public string sliderMoveEvent = "Play_SliderMove";
+    public string sliderReleaseEvent = "Play_ButtonClick";
+
+    [Header("Feedback Settings")]
+    public float feedbackCooldown = 0.3f;
+
+    private float nextFeedbackTime;
+
     private void Start()
     {
-        // Load saved values or default to 100
         float masterValue = PlayerPrefs.GetFloat("MasterVolume", defaultVolume);
         float musicValue = PlayerPrefs.GetFloat("MusicVolume", defaultVolume);
         float sfxValue = PlayerPrefs.GetFloat("SFXVolume", defaultVolume);
@@ -36,33 +45,33 @@ public class AudioSettings : MonoBehaviour
     {
         SetVolume(masterRTPC, value);
         PlayerPrefs.SetFloat("MasterVolume", value);
+        PlayGentleFeedback();
     }
 
     public void OnMusicSliderChanged(float value)
     {
         SetVolume(musicRTPC, value);
         PlayerPrefs.SetFloat("MusicVolume", value);
+        PlayGentleFeedback();
     }
 
     public void OnSFXSliderChanged(float value)
     {
         SetVolume(sfxRTPC, value);
         PlayerPrefs.SetFloat("SFXVolume", value);
+        PlayGentleFeedback();
     }
 
     public void ResetToDefaults()
     {
-        // Set all volumes to default
         SetVolume(masterRTPC, defaultVolume);
         SetVolume(musicRTPC, defaultVolume);
         SetVolume(sfxRTPC, defaultVolume);
 
-        // Update PlayerPrefs
         PlayerPrefs.SetFloat("MasterVolume", defaultVolume);
         PlayerPrefs.SetFloat("MusicVolume", defaultVolume);
         PlayerPrefs.SetFloat("SFXVolume", defaultVolume);
 
-        // Update sliders
         if (masterSlider != null) masterSlider.SetValueWithoutNotify(defaultVolume);
         if (musicSlider != null) musicSlider.SetValueWithoutNotify(defaultVolume);
         if (sfxSlider != null) sfxSlider.SetValueWithoutNotify(defaultVolume);
@@ -71,5 +80,19 @@ public class AudioSettings : MonoBehaviour
     private void SetVolume(string rtpcName, float value)
     {
         AkSoundEngine.SetRTPCValue(rtpcName, value);
+    }
+
+    private void PlayGentleFeedback()
+    {
+        if (Time.time >= nextFeedbackTime)
+        {
+            AkSoundEngine.PostEvent(sliderMoveEvent, gameObject);
+            nextFeedbackTime = Time.time + feedbackCooldown;
+        }
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        AkSoundEngine.PostEvent(sliderReleaseEvent, gameObject);
     }
 }

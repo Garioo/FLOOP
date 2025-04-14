@@ -24,7 +24,15 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics/Default Work Unit
     guid: 9c049b484ad5594fa50d1bb72497cd26
     GuidInternal: 
+<<<<<<< HEAD
     m_lastTime: -8584599091132767548
+=======
+<<<<<<< HEAD
+    m_lastTime: -8584595456298341363
+=======
+    m_lastTime: -8584594082606848799
+>>>>>>> main
+>>>>>>> main
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
@@ -100,7 +108,15 @@ MonoBehaviour:
     ParentPath: SoundBanks/Default Work Unit
     guid: a9b84978ea955443b2084dde8e9f2fc6
     GuidInternal: 
+<<<<<<< HEAD
     m_lastTime: -8584573217976845740
+=======
+<<<<<<< HEAD
+    m_lastTime: -8584569810457207395
+=======
+    m_lastTime: -8584574661272901226
+>>>>>>> main
+>>>>>>> main
     List:
     - name: Main
       guid: beb407a1988c8749b42d8cadce960a7b
@@ -128,7 +144,15 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 7e9b391fb2ac8d4cb284d6b301d048ed
     GuidInternal: 
+<<<<<<< HEAD
     m_lastTime: -8584573217985165851
+=======
+<<<<<<< HEAD
+    m_lastTime: -8584569759143301685
+=======
+    m_lastTime: -8584574661294242237
+>>>>>>> main
+>>>>>>> main
     List:
     - name: Play_AllLoops
       guid: 87b7639b488c6440a1826fd1a05aed13
@@ -215,6 +239,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.33273202
       minDuration: 0.33273202
+    - name: Play_SliderMove
+      guid: 6854a4ceb33b4443bdc5c7c6eab61db3
+      id: 2633641910
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7e9b391fb2ac8d4cb284d6b301d048ed
+      - ElementName: Play_SliderMove
+        ObjectType: 3
+        guid: 6854a4ceb33b4443bdc5c7c6eab61db3
+      Path: Events\Default Work Unit\Play_SliderMove
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_SmallSplash
       guid: 75e6473b600eba40a43fdcdabe453f8e
       id: 2844846418
@@ -261,7 +302,15 @@ MonoBehaviour:
     ParentPath: Game Parameters/Default Work Unit
     guid: 5c4d9252d284c34497eee673bb61bca1
     GuidInternal: 
+<<<<<<< HEAD
     m_lastTime: -8584578552115661354
+=======
+<<<<<<< HEAD
+    m_lastTime: -8584580106089915477
+=======
+    m_lastTime: -8584575003790549844
+>>>>>>> main
+>>>>>>> main
     List:
     - name: Attenuation
       guid: 6e1eb60399a28144983577fdcbe14f46
@@ -529,7 +578,15 @@ MonoBehaviour:
     ParentPath: States/Default Work Unit
     guid: af366e5864ec2247b31e988bba343539
     GuidInternal: 
+<<<<<<< HEAD
     m_lastTime: -8584584545726266250
+=======
+<<<<<<< HEAD
+    m_lastTime: -8584580955637814320
+=======
+    m_lastTime: -8584575919922874939
+>>>>>>> main
+>>>>>>> main
     List:
     - name: Songs
       guid: 096269c8a3aeb242a0e3990ab71d8ac5
@@ -577,7 +634,15 @@ MonoBehaviour:
     ParentPath: Switches/Default Work Unit
     guid: 57ffe5678ba1e84980ba252802b0d0e7
     GuidInternal: 
+<<<<<<< HEAD
     m_lastTime: -8584578552108618071
+=======
+<<<<<<< HEAD
+    m_lastTime: -8584580106070500725
+=======
+    m_lastTime: -8584575003765898453
+>>>>>>> main
+>>>>>>> main
     List:
     - name: Songs_Switch
       guid: f7a7f484d0ee894c95cc32ad90b99727
@@ -641,11 +706,19 @@ MonoBehaviour:
     ParentPath: Triggers/Default Work Unit
     guid: cdc13e1168cb3c4d95a0f4cdb418d527
     GuidInternal: 
+<<<<<<< HEAD
     m_lastTime: -8584599091132768762
+=======
+<<<<<<< HEAD
+    m_lastTime: -8584595456298351374
+=======
+    m_lastTime: -8584594082606848799
+>>>>>>> main
+>>>>>>> main
     List: []
-  ExpandedFileSystemItemIds: 0200000003000000120000001300000014000000
-  ExpandedWaapiItemIds: 0100000003000000040000000500000006000000070000000c0000000d00000012000000140000001600000018000000190000001a000000
+  ExpandedFileSystemItemIds: 0100000003000000040000000500000006000000070000000c0000000d0000001200000014000000150000001600000018000000190000001a000000
+  ExpandedWaapiItemIds: 0100000003000000040000000500000006000000070000000c0000000d0000001200000014000000150000001600000018000000190000001a000000
   AutoSyncSelection: 1
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 
