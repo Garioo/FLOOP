@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{A107B4BE-8C98-4987-B42D-8CADCE960A7B}",
     "Language": "SFX",
-    "Hash": "{B2A026B7-9BB8-C3EF-BDFC-3B7F09581CFC}",
+    "Hash": "{26D9D622-3BA9-9303-C324-B6471F329195}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -166,6 +166,14 @@
       "Location": "Memory",
       "ShortName": "FloopJam 13-Jazz Soft Kit.wav",
       "CachePath": "1D/{1DADA2B1-45F3-47EC-A9A9-DC7BE6049FFD}.wem"
+     },
+     {
+      "Id": "619395167",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "User Interface, Click, Button, Press, Click, Video Game, Variations SND107464.wav",
+      "CachePath": "3B/{3B2C4F9A-3DB0-799E-B0A9-2EB0F1B95A35}.wem"
      },
      {
       "Id": "649551334",
@@ -532,7 +540,7 @@
       "GUID": "{3B47E675-0E60-40BA-A43F-DCDABE453F8E}",
       "MaxAttenuation": "25",
       "DurationType": "OneShot",
-      "DurationMin": "0.64165986",
+      "DurationMin": "0.5618333",
       "DurationMax": "1.4538924",
       "MediaRefs": [
        {
@@ -543,6 +551,9 @@
        },
        {
         "Id": "339543282"
+       },
+       {
+        "Id": "619395167"
        },
        {
         "Id": "687289582"
@@ -667,6 +678,6 @@
     ]
    }
   ],
-  "FileHash": "{0DD86228-D8CE-0EFC-4E9D-BBA1271469B1}"
+  "FileHash": "{584B4CA7-846D-3A30-080F-C97E93113EFB}"
  }
 }

@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a9b84978ea955443b2084dde8e9f2fc6
     GuidInternal: 
-    m_lastTime: -8584574661272901226
+    m_lastTime: -8584569732744262129
     List:
     - name: Main
       guid: beb407a1988c8749b42d8cadce960a7b
@@ -128,7 +128,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 7e9b391fb2ac8d4cb284d6b301d048ed
     GuidInternal: 
-    m_lastTime: -8584574661294242237
+    m_lastTime: -8584569714345004282
     List:
     - name: Play_AllLoops
       guid: 87b7639b488c6440a1826fd1a05aed13
@@ -215,6 +215,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.33273202
       minDuration: 0.33273202
+    - name: Play_MasterSlider
+      guid: 94e653f49e629741858ff09b08cc8d1d
+      id: 3773587107
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7e9b391fb2ac8d4cb284d6b301d048ed
+      - ElementName: Play_MasterSlider
+        ObjectType: 3
+        guid: 94e653f49e629741858ff09b08cc8d1d
+      Path: Events\Default Work Unit\Play_MasterSlider
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_SFXSlider
+      guid: f4789ddd8b4df245b170d370e64681ae
+      id: 3100625848
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7e9b391fb2ac8d4cb284d6b301d048ed
+      - ElementName: Play_SFXSlider
+        ObjectType: 3
+        guid: f4789ddd8b4df245b170d370e64681ae
+      Path: Events\Default Work Unit\Play_SFXSlider
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_SmallSplash
       guid: 75e6473b600eba40a43fdcdabe453f8e
       id: 2844846418
@@ -232,6 +266,23 @@ MonoBehaviour:
       maxAttenuation: 25
       maxDuration: 1.4538924
       minDuration: 0.64165986
+    - name: Play_SongSlider
+      guid: 2c175dc006d9d84bafbed4ef9e741f15
+      id: 2267786826
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7e9b391fb2ac8d4cb284d6b301d048ed
+      - ElementName: Play_SongSlider
+        ObjectType: 3
+        guid: 2c175dc006d9d84bafbed4ef9e741f15
+      Path: Events\Default Work Unit\Play_SongSlider
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_WaterFlow
       guid: 2bda2e122c81ec489ef435c5ad32fa01
       id: 518242827
