@@ -14434,7 +14434,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3843015836071389973, guid: ab30407458725c343a45b6028894a8a3, type: 3}
       propertyPath: drawDistance
-      value: 40
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6321967289383515273, guid: ab30407458725c343a45b6028894a8a3, type: 3}
       propertyPath: m_Name
@@ -14447,14 +14447,14 @@ PrefabInstance:
     - target: {fileID: 6689108666626573581, guid: ab30407458725c343a45b6028894a8a3, type: 3}
       propertyPath: terrain
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 794327345}
     - target: {fileID: 6689108666626573581, guid: ab30407458725c343a45b6028894a8a3, type: 3}
       propertyPath: drawDistance
-      value: 75
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 6689108666626573581, guid: ab30407458725c343a45b6028894a8a3, type: 3}
       propertyPath: instanceCount
-      value: 1000000
+      value: 795456
       objectReference: {fileID: 0}
     - target: {fileID: 7499444521617435416, guid: ab30407458725c343a45b6028894a8a3, type: 3}
       propertyPath: m_LocalPosition.x

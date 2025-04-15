@@ -68,8 +68,8 @@ public class InstancedIndirectGrassRenderer : MonoBehaviour
             Vector3 centerPosWS = new Vector3(i % cellCountX + 0.5f, 0, i / cellCountX + 0.5f);
             centerPosWS.x = Mathf.Lerp(minX, maxX, centerPosWS.x / cellCountX);
             centerPosWS.z = Mathf.Lerp(minZ, maxZ, centerPosWS.z / cellCountZ);
-            float margin = 5f;
-            Vector3 sizeWS = new Vector3(Mathf.Abs(maxX - minX) / cellCountX + margin,20f, // add vertical buffer to avoid popping when looking up/down
+            float margin = 10f;
+            Vector3 sizeWS = new Vector3(Mathf.Abs(maxX - minX) / cellCountX + margin,30f, // add vertical buffer to avoid popping when looking up/down
             Mathf.Abs(maxX - minX) / cellCountX + margin);
             Bounds cellBound = new Bounds(centerPosWS, sizeWS);
 
@@ -151,7 +151,7 @@ public class InstancedIndirectGrassRenderer : MonoBehaviour
         Graphics.DrawMeshInstancedIndirect(GetGrassMeshCache(), 0, instanceMaterial, renderBound, argsBuffer);
     }
 
-    private void OnGUI()
+    /*private void OnGUI()
     {
         GUI.contentColor = Color.black;
         GUI.Label(new Rect(200, 0, 400, 60),
@@ -161,7 +161,7 @@ public class InstancedIndirectGrassRenderer : MonoBehaviour
 
         shouldBatchDispatch = GUI.Toggle(new Rect(400, 400, 200, 100), shouldBatchDispatch, "shouldBatchDispatch");
     }
-
+    */
     void OnDisable()
     {
         if (allInstancesPosWSBuffer != null) allInstancesPosWSBuffer.Release();

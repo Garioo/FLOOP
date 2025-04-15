@@ -71,8 +71,7 @@ public class InstancedIndirectGrassPosDefine : MonoBehaviour
 
             Vector3 position = new Vector3(worldX, height, worldZ);
 
-            Vector3 normal = terrainData.GetInterpolatedNormal(randomX, randomZ);
-            Quaternion rotation = Quaternion.FromToRotation(Vector3.up, normal);
+            Quaternion rotation = Quaternion.identity; // always face up
             Vector3 scale = Vector3.one;
             Matrix4x4 matrix = Matrix4x4.TRS(position, rotation, scale);
 
@@ -91,7 +90,7 @@ public class InstancedIndirectGrassPosDefine : MonoBehaviour
         InstancedIndirectGrassRenderer.instance.allGrassMatrices = instanceMatrices;
         cacheCount = positions.Count;
     }
-
+/*
     private void OnGUI()
     {
         GUI.Label(new Rect(300, 50, 200, 30), "Instance Count: " + instanceCount / 1000000 + " Million");
@@ -101,7 +100,7 @@ public class InstancedIndirectGrassPosDefine : MonoBehaviour
         drawDistance = Mathf.Max(1, (int)(GUI.HorizontalSlider(new Rect(300, 200, 200, 30), drawDistance / 25f, 1, 8)) * 25);
         InstancedIndirectGrassRenderer.instance.drawDistance = drawDistance;
     }
-
+*/
     private int FindMudLayerIndex(TerrainLayer[] layers)
     {
         for (int i = 0; i < layers.Length; i++)
