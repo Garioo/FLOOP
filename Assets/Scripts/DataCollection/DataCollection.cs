@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DataCollection : MonoBehaviour
 {
-    public RuntimeTracker runtimeTracker;
     public MusicStateTracker musicStateTracker;
     public ObjectManager objectManager;
 
@@ -12,7 +11,6 @@ public class DataCollection : MonoBehaviour
     private float playedTime;
     public bool resetData;
 
-    private float totalFloopCount = 0f;
     private float totalTimeSpent = 0f;  // Total time spent in the current floop state
     private float weightedFloopCount = 0f; // Weighted floop counter
     private float averageFloopCount = 0f;
@@ -23,11 +21,6 @@ public class DataCollection : MonoBehaviour
 
         gameData = JsonFileSystem.Load();
         playedTime = gameData.playedTime;
-
-        foreach (ObjectWaterStats stats in gameData.allObjectStats)
-        {
-            runtimeTracker.SetObjectStats(stats);
-        }
     }
 
     void Update()
@@ -55,7 +48,7 @@ public class DataCollection : MonoBehaviour
 
     void OnApplicationQuit()
     {
-        if (gameData == null || runtimeTracker == null) return;
+        if (gameData == null) return;
 
         gameData.playedTime = playedTime;
         gameData.numberOfSessions++;
@@ -65,20 +58,20 @@ public class DataCollection : MonoBehaviour
         gameData.marimbaShuffleTime = musicStateTracker.marimbaShuffleTime;
 
         // Track longest and shortest sessions
-        if (runtimeTracker.totalPlayedTime > gameData.longestSession)
+        if (playedTime > gameData.longestSession)
         {
-            gameData.longestSession = runtimeTracker.totalPlayedTime;
+            gameData.longestSession = playedTime;
         }
 
-        if (gameData.shortestSession == -1f || runtimeTracker.totalPlayedTime < gameData.shortestSession)
+        if (gameData.shortestSession == -1f || playedTime < gameData.shortestSession)
         {
-            gameData.shortestSession = runtimeTracker.totalPlayedTime;
+            gameData.shortestSession = playedTime;
         }
 
-        // 🔹 Create and store session report
+        // Create and store session report
         SessionData session = new SessionData();
         session.sessionNumber = gameData.numberOfSessions;
-        session.sessionTime = runtimeTracker.totalPlayedTime;
+        session.sessionTime = playedTime;
         session.floopJamTime = musicStateTracker.floopJamTime;
         session.marimbaShuffleTime = musicStateTracker.marimbaShuffleTime;
         session.noMusicPlaying = musicStateTracker.noMusicPlaying;
@@ -89,10 +82,11 @@ public class DataCollection : MonoBehaviour
         // Track the session date
         session.sessionDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
-        Dictionary<string, ObjectWaterStats> sessionStats = runtimeTracker.GetAllObjectStats();
-        foreach (var entry in sessionStats)
+        // Collect data from all FloopBehavior instances
+        FloopBehavior[] floopBehaviors = FindObjectsOfType<FloopBehavior>();
+        foreach (var floopBehavior in floopBehaviors)
         {
-            session.objectStats.Add(entry.Value);
+            session.objectStats.Add(floopBehavior.GetObjectWaterStats());
         }
 
         // Add the session to gameData
@@ -100,15 +94,11 @@ public class DataCollection : MonoBehaviour
 
         // Save all object stats for next time
         gameData.allObjectStats.Clear();
-        foreach (var entry in sessionStats)
+        foreach (var floopBehavior in floopBehaviors)
         {
-            gameData.allObjectStats.Add(entry.Value);
+            gameData.allObjectStats.Add(floopBehavior.GetObjectWaterStats());
         }
-        JsonFileSystem.Save(gameData);
 
-        // Reset the floop stats for the next session
-        totalFloopCount = 0f;
-        totalTimeSpent = 0f;
-        weightedFloopCount = 0f;
+        JsonFileSystem.Save(gameData);
     }
 }
