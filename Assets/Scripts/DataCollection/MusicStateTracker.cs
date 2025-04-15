@@ -7,6 +7,7 @@ public class MusicStateTracker : MonoBehaviour
 
     private bool floopJamMusic;
     private bool marimbaShuffleMusic;
+    private bool musicPlaying;
 
     public float floopJamTime;
     public float marimbaShuffleTime;
@@ -29,12 +30,16 @@ public class MusicStateTracker : MonoBehaviour
         floopJamMusic = true;
     }
 
+    public void NoMusicPaying()
+    {
+        musicPlaying = false;
+    }
+
 
     // Update is called once per frame
     void Update()
     {
-        if (objectManager.floopCounter< 1)
-
+        if (objectManager.floopCounter < 1 || musicPlaying == false)
         {
             noMusicPlaying += Time.deltaTime;
             return;
