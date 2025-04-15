@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class MusicStateTracker : MonoBehaviour
 {
     public ObjectManager objectManager;
+    public AudioSettings audioSettings;
 
     private bool floopJamMusic;
     private bool marimbaShuffleMusic;
@@ -39,7 +40,7 @@ public class MusicStateTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (objectManager.floopCounter < 1 || musicPlaying == false)
+        if (objectManager.floopCounter < 1 || audioSettings.musicSlider.value < 5)
         {
             noMusicPlaying += Time.deltaTime;
             return;
