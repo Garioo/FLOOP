@@ -7,6 +7,7 @@ public class DataCollection : MonoBehaviour
     public MusicStateTracker musicStateTracker;
     public ObjectManager objectManager;
 
+    private float sessionTime;
     private GameData gameData;
     private float playedTime;
     public bool resetData;
@@ -26,6 +27,8 @@ public class DataCollection : MonoBehaviour
     void Update()
     {
         playedTime += Time.deltaTime;
+        sessionTime += Time.deltaTime;
+
 
         // Track time spent with current floopCounter value
         if (objectManager.floopCounter > 0)
@@ -57,11 +60,7 @@ public class DataCollection : MonoBehaviour
         gameData.floopJamTime = musicStateTracker.floopJamTime;
         gameData.marimbaShuffleTime = musicStateTracker.marimbaShuffleTime;
 
-        // Track longest and shortest sessions
-        if (playedTime > gameData.longestSession)
-        {
-            gameData.longestSession = playedTime;
-        }
+     
 
         if (gameData.shortestSession == -1f || playedTime < gameData.shortestSession)
         {
@@ -71,10 +70,16 @@ public class DataCollection : MonoBehaviour
         // Create and store session report
         SessionData session = new SessionData();
         session.sessionNumber = gameData.numberOfSessions;
-        session.sessionTime = playedTime;
+        session.sessionTime = sessionTime;
         session.floopJamTime = musicStateTracker.floopJamTime;
         session.marimbaShuffleTime = musicStateTracker.marimbaShuffleTime;
         session.noMusicPlaying = musicStateTracker.noMusicPlaying;
+
+        if (session.sessionTime > gameData.longestSession)
+        {
+            gameData.longestSession = session.sessionTime;
+        }
+
 
         // Store the average floop count for the session
         session.averageFloopCount = averageFloopCount;

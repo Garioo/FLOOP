@@ -12,8 +12,6 @@ public class MusicStateTracker : MonoBehaviour
     public float marimbaShuffleTime;
     public float noMusicPlaying;
 
-    [SerializeField] private int localFloopCounter;
-
     void Start()
     {
         //Starter paa marimba shuffle!
