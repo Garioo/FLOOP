@@ -5822,7 +5822,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &424535588
 Transform:
   m_ObjectHideFlags: 0
@@ -5870,7 +5870,7 @@ MonoBehaviour:
   fogFade: {fileID: 424535589}
   cubeFade: {fileID: 517730327}
   objectFade: {fileID: 0}
-  fadeDelay: 3
+  fadeDelay: 1
 --- !u!1 &448587707
 GameObject:
   m_ObjectHideFlags: 0
@@ -7587,7 +7587,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &517730326
 Transform:
   m_ObjectHideFlags: 0
@@ -14447,14 +14447,14 @@ PrefabInstance:
     - target: {fileID: 6689108666626573581, guid: ab30407458725c343a45b6028894a8a3, type: 3}
       propertyPath: terrain
       value: 
-      objectReference: {fileID: 794327345}
+      objectReference: {fileID: 0}
     - target: {fileID: 6689108666626573581, guid: ab30407458725c343a45b6028894a8a3, type: 3}
       propertyPath: drawDistance
-      value: 80
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 6689108666626573581, guid: ab30407458725c343a45b6028894a8a3, type: 3}
       propertyPath: instanceCount
-      value: 1061948
+      value: 1000000
       objectReference: {fileID: 0}
     - target: {fileID: 7499444521617435416, guid: ab30407458725c343a45b6028894a8a3, type: 3}
       propertyPath: m_LocalPosition.x
