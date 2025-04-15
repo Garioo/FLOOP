@@ -7,9 +7,6 @@ using UnityEngine.Profiling;
 using UnityEngine.XR;
 using UnityEngine.XR.Management;
 
-
-
-[ExecuteAlways]
 public class InstancedIndirectGrassRenderer : MonoBehaviour
 {
     [Header("Settings")]

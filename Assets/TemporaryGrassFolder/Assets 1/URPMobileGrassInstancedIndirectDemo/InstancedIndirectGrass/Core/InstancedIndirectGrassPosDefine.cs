@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteAlways]
+
 public class InstancedIndirectGrassPosDefine : MonoBehaviour
 {
-    [Range(1, 40000000)]
-    public int instanceCount = 1000000;
+    [Range(1, 1000000)]
+    public int instanceCount = 600000;
     public float drawDistance = 125;
     public Terrain terrain; // Reference to the Unity Terrain
 
