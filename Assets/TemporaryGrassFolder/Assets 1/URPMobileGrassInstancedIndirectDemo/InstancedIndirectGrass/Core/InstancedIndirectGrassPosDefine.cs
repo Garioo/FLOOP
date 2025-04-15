@@ -70,6 +70,15 @@ public class InstancedIndirectGrassPosDefine : MonoBehaviour
             float height = terrain.SampleHeight(new Vector3(worldX, 0, worldZ)) + terrainPos.y;
 
             Vector3 position = new Vector3(worldX, height, worldZ);
+            Vector3 camPos = Camera.main.transform.position;
+            float dist = Vector3.Distance(camPos, position);
+
+            // Distance-based density filter (linear falloff)
+            float maxSpawnDist = drawDistance; // match grass draw distance
+            float densityChance = Mathf.Pow(Mathf.Clamp01(1.2f - dist / maxSpawnDist), 2f); // quadratic falloff
+
+            if (UnityEngine.Random.value > densityChance)
+                continue; // skip this grass instance
 
             Quaternion rotation = Quaternion.identity; // always face up
             Vector3 scale = Vector3.one;
@@ -83,6 +92,8 @@ public class InstancedIndirectGrassPosDefine : MonoBehaviour
 
             positions.Add(position);
             instanceMatrices.Add(matrix);
+
+
         }
 
 
