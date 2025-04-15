@@ -25,6 +25,9 @@ public class AudioSettings : MonoBehaviour
     public float feedbackCooldown = 0.3f;
     private float nextFeedbackTime;
 
+    [Header ("Audio Listener")]
+    [SerializeField] private GameObject AudioListener;
+
     private void Start()
     {
         float masterValue = PlayerPrefs.GetFloat("MasterVolume", defaultVolume);
@@ -85,7 +88,10 @@ public class AudioSettings : MonoBehaviour
     {
         if (Time.time >= nextFeedbackTime)
         {
-            AkSoundEngine.PostEvent(eventName, gameObject);
+            if (AudioListener != null)
+                AkSoundEngine.PostEvent(eventName, AudioListener);
+            else
+                AkSoundEngine.PostEvent(eventName, gameObject);
             nextFeedbackTime = Time.time + feedbackCooldown;
         }
     }

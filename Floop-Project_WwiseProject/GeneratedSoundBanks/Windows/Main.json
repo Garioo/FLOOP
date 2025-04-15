@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{A107B4BE-8C98-4987-B42D-8CADCE960A7B}",
     "Language": "SFX",
-    "Hash": "{B2A026B7-9BB8-C3EF-BDFC-3B7F09581CFC}",
+    "Hash": "{B3FEBF59-B841-F8C0-2B47-DB9EE4C41A48}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -22,6 +22,14 @@
       "Location": "Memory",
       "ShortName": "Water, Splash, Multiple Water Splashes, Rock, River SND70699 S02.wav",
       "CachePath": "9F/{9F85985F-819A-14A7-BC0B-24F5D53DC99E}.wem"
+     },
+     {
+      "Id": "109322629",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "User Interface, Click, Button, Press, Click, Video Game, Variations SND107464 S01.wav",
+      "CachePath": "96/{96EE25FA-087E-0D53-60F6-7236212D12A8}.wem"
      },
      {
       "Id": "134075064",
@@ -160,6 +168,14 @@
       "CachePath": "97/{971186CF-7EE6-4253-E341-0F8DD470FC73}.wem"
      },
      {
+      "Id": "566968451",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Toys, Misc, Plastic Button, Press SND33338 S00.wav",
+      "CachePath": "F9/{F9B7ED9A-7DB0-D72F-F095-7BF94129D8F3}.wem"
+     },
+     {
       "Id": "613101691",
       "Language": "SFX",
       "Streaming": "false",
@@ -248,6 +264,14 @@
       "CachePath": "A9/{A927DC8A-1D1F-A1B9-9C32-265E8A5EC123}.wem"
      },
      {
+      "Id": "919251169",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "User Interface, Click, Button, Press, Click, Video Game, Variations SND107464 S01.wav",
+      "CachePath": "63/{63A0FB69-FB7E-6235-764F-68BC853CE84F}.wem"
+     },
+     {
       "Id": "954328041",
       "Language": "SFX",
       "Streaming": "false",
@@ -296,6 +320,14 @@
       "CachePath": "AA/{AAD87FAF-D17D-F07C-6DEE-B6212927CF35}.wem"
      },
      {
+      "Id": "1061922753",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "User Interface, Click, Button, Press, Click, Video Game, Variations SND107464 S01.wav",
+      "CachePath": "66/{6639F0E1-41A8-BC8D-9F4E-14F64E041AF8}.wem"
+     },
+     {
       "Id": "1070597832",
       "Language": "SFX",
       "Streaming": "false",
@@ -304,6 +336,18 @@
       "CachePath": "46/{465E3458-A68E-AEF5-3273-248EDAE019FB}.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1008402193",
+       "Name": "Low_Pass_20KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
+       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "2262267240",
@@ -526,6 +570,48 @@
       ]
      },
      {
+      "Id": "3773587107",
+      "Name": "Play_MasterSlider",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MasterSlider",
+      "GUID": "{791A35B1-4882-422F-A889-CAC0B26C2827}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.22090468",
+      "DurationMax": "0.22090468",
+      "MediaRefs": [
+       {
+        "Id": "1061922753"
+       }
+      ]
+     },
+     {
+      "Id": "2530031276",
+      "Name": "Play_MusicSlider",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MusicSlider",
+      "GUID": "{091D8145-5B18-4319-9595-5A570042C4EA}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.19992492",
+      "DurationMax": "0.19992492",
+      "MediaRefs": [
+       {
+        "Id": "919251169"
+       }
+      ]
+     },
+     {
+      "Id": "3100625848",
+      "Name": "Play_SFXSlider",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_SFXSlider",
+      "GUID": "{3292F71F-8EC9-42CD-977E-4B2B5EC912F2}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.21967058",
+      "DurationMax": "0.21967058",
+      "MediaRefs": [
+       {
+        "Id": "109322629"
+       }
+      ]
+     },
+     {
       "Id": "2844846418",
       "Name": "Play_SmallSplash",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_SmallSplash",
@@ -667,6 +753,6 @@
     ]
    }
   ],
-  "FileHash": "{0DD86228-D8CE-0EFC-4E9D-BBA1271469B1}"
+  "FileHash": "{0D01B79B-1DD0-BA0C-BCEA-02B8EE4E92BC}"
  }
 }

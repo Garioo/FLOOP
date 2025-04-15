@@ -17,6 +17,9 @@ namespace AK
         static const AkUniqueID PLAY_BIGSPLASH = 2974250173U;
         static const AkUniqueID PLAY_BIRDS = 3025897706U;
         static const AkUniqueID PLAY_GRAB = 17721092U;
+        static const AkUniqueID PLAY_MASTERSLIDER = 3773587107U;
+        static const AkUniqueID PLAY_MUSICSLIDER = 2530031276U;
+        static const AkUniqueID PLAY_SFXSLIDER = 3100625848U;
         static const AkUniqueID PLAY_SMALLSPLASH = 2844846418U;
         static const AkUniqueID PLAY_WATERFLOW = 518242827U;
     } // namespace EVENTS
