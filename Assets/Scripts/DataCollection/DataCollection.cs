@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DataCollection : MonoBehaviour
@@ -62,11 +63,7 @@ public class DataCollection : MonoBehaviour
 
      
 
-        if (gameData.shortestSession == -1f || playedTime < gameData.shortestSession)
-        {
-            gameData.shortestSession = playedTime;
-        }
-
+   
         // Create and store session report
         SessionData session = new SessionData();
         session.sessionNumber = gameData.numberOfSessions;
@@ -80,6 +77,10 @@ public class DataCollection : MonoBehaviour
             gameData.longestSession = session.sessionTime;
         }
 
+        if (gameData.shortestSession < sessionTime)
+        {
+            gameData.shortestSession = session.sessionTime;
+        }
 
         // Store the average floop count for the session
         session.averageFloopCount = averageFloopCount;
