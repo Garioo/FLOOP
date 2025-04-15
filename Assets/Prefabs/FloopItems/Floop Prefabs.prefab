@@ -105,7 +105,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  waypointParent: {fileID: 919132149155446097, guid: 7fe77b6e95259cf40b4472fd923f92be, type: 3}
+  waypointParent: {fileID: 7065844248374632771, guid: f036944e883ca5e43b80e5966d11dbb0, type: 3}
   waypointDistance: 1
 --- !u!54 &4960445333986076591
 Rigidbody:
