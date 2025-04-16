@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842c61694ba6cb64bbe07cb6333f67c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threatTarget: {fileID: 1207253820}
+  threatTag: Floop
   detectionRadius: 4.21
   flightSpeed: 5
   noiseAmount: 1
@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 1207253821}
   m_Layer: 0
   m_Name: Nigger
-  m_TagString: Untagged
+  m_TagString: Floop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
