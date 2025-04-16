@@ -2,37 +2,39 @@ using UnityEngine;
 
 public class BirdLogic : MonoBehaviour
 {
-    public Transform threatTarget; // Player or object to flee from
+    public string threatTag = "Floop"; // Tag of the object to flee from
     public float detectionRadius = 5f;
     public float flightSpeed = 5f;
     public float noiseAmount = 1f;
     public float rotationSpeed = 5f;
     public bool isFlying = false;
-    private Animator animator; // Reference to the Animator component
+    private Animator animator;
 
     private Vector3 flightDirection;
+
     void Start()
     {
-        animator = GetComponent<Animator>(); // Initialize the Animator component
+        animator = GetComponent<Animator>();
     }
 
-    
     void Update()
     {
         if (!isFlying)
         {
-            float distance = Vector3.Distance(transform.position, threatTarget.position);
-            if (distance < detectionRadius)
+            Collider[] hits = Physics.OverlapSphere(transform.position, detectionRadius);
+            foreach (Collider hit in hits)
             {
-                FlyAway();
+                if (hit.CompareTag(threatTag))
+                {
+                    FlyAway(hit.transform.position); // Pass the position of the threat
+                    break;
+                }
             }
         }
         else
         {
-            // Fly in chosen direction
             transform.position += flightDirection * flightSpeed * Time.deltaTime;
 
-            // Rotate toward flight direction
             if (flightDirection != Vector3.zero)
             {
                 Quaternion toRotation = Quaternion.LookRotation(flightDirection);
@@ -41,19 +43,19 @@ public class BirdLogic : MonoBehaviour
         }
     }
 
-    void FlyAway()
+    void FlyAway(Vector3 threatPosition)
     {
-        animator.SetTrigger("Fly"); // Trigger the fly animation
+        animator.SetTrigger("Fly");
         isFlying = true;
-       
-        // Pick a random horizontal direction with some vertical lift and noise
-        Vector3 awayDirection = (transform.position - threatTarget.position).normalized;
+
+        Vector3 awayDirection = (transform.position - threatPosition).normalized;
         Vector3 randomOffset = new Vector3(
             Random.Range(-noiseAmount, noiseAmount),
-            Random.Range(0.5f, 1.5f), // Add upward lift
+            Random.Range(0.5f, 1.5f),
             Random.Range(-noiseAmount, noiseAmount)
         );
         flightDirection = (awayDirection + randomOffset).normalized;
     }
 }
+
 
