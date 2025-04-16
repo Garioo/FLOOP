@@ -9,10 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8221238170540453234}
-  - component: {fileID: 1888201349785754847}
   - component: {fileID: 5843693578201650869}
   - component: {fileID: 1952252652384366248}
-  - component: {fileID: 3991263374892658115}
+  - component: {fileID: 7544006331773360409}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -35,31 +34,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1888201349785754847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3457261220429031008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c65e49cbac1b0406e85fc66de7fde280, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InitializationSettings: {fileID: 11400000, guid: ac48faddfffed4c2284c49de79822585, type: 2}
-  basePath: 
-  language: 
-  defaultPoolSize: 0
-  lowerPoolSize: 0
-  streamingPoolSize: 0
-  memoryCutoffThreshold: 0
-  monitorPoolSize: 0
-  monitorQueuePoolSize: 0
-  callbackManagerBufferSize: 0
-  spatialAudioPoolSize: 0
-  maxSoundPropagationDepth: 0
-  engineLogging: 0
 --- !u!114 &5843693578201650869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,7 +83,7 @@ MonoBehaviour:
   scalingFactor: 1
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &3991263374892658115
+--- !u!114 &7544006331773360409
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,27 +92,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 3457261220429031008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ae59079b4cfd4a4c915325f5e126d83, type: 3}
+  m_Script: {fileID: 11500000, guid: 19cb4aafc1dec4e7bbc6ee28d11e0ad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   triggerList: f7e1664c
   useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 0393c6bcde5ff406a9c4c1411a97a5b1, type: 2}
-  useCallbacks: 1
-  stopSoundOnDestroy: 1
-  Callbacks:
-  - Flags:
-      value: 512
-    FunctionName: OnMusicBar
-    GameObject: {fileID: 0}
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
+    WwiseObjectReference: {fileID: 11400000, guid: ec1d173df44514438b2d1b68c220957b, type: 2}
+  decodeBank: 0
+  overrideLoadSetting: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
   valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
