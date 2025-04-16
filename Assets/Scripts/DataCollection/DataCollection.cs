@@ -92,18 +92,36 @@ public class DataCollection : MonoBehaviour
         FloopBehavior[] floopBehaviors = FindObjectsOfType<FloopBehavior>();
         foreach (var floopBehavior in floopBehaviors)
         {
-            session.objectStats.Add(floopBehavior.GetObjectWaterStats());
+            if (floopBehavior.GetObjectWaterStats().enterCount > 0)
+                session.objectStats.Add(floopBehavior.GetObjectWaterStats());
         }
 
         // Add the session to gameData
         gameData.allSessions.Add(session);
 
-        // Save all object stats for next time
-        gameData.allObjectStats.Clear();
         foreach (var floopBehavior in floopBehaviors)
         {
-            gameData.allObjectStats.Add(floopBehavior.GetObjectWaterStats());
+            var newStats = floopBehavior.GetObjectWaterStats();
+
+            if (newStats.enterCount > 0)
+            {
+                // Find eksisterende entry med samme navn
+                var existing = gameData.allObjectStats.Find(stat => stat.objectName == newStats.objectName);
+
+                if (existing != null)
+                {
+                    // Tilføj de nye tal til det gamle
+                    existing.enterCount += newStats.enterCount;
+                    existing.totalTimeInWater += newStats.totalTimeInWater;
+                }
+                else
+                {
+                    // Hvis den ikke findes, tilføj som ny
+                    gameData.allObjectStats.Add(newStats);
+                }
+            }
         }
+
 
         JsonFileSystem.Save(gameData);
     }
