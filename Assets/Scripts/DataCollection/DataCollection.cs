@@ -57,13 +57,10 @@ public class DataCollection : MonoBehaviour
         gameData.playedTime = playedTime;
         gameData.numberOfSessions++;
 
-        gameData.noMusicPlaying = musicStateTracker.noMusicPlaying;
-        gameData.floopJamTime = musicStateTracker.floopJamTime;
-        gameData.marimbaShuffleTime = musicStateTracker.marimbaShuffleTime;
+        gameData.noMusicPlaying += musicStateTracker.noMusicPlaying;
+        gameData.floopJamTime += musicStateTracker.floopJamTime;
+        gameData.marimbaShuffleTime += musicStateTracker.marimbaShuffleTime;
 
-     
-
-   
         // Create and store session report
         SessionData session = new SessionData();
         session.sessionNumber = gameData.numberOfSessions;
@@ -73,14 +70,10 @@ public class DataCollection : MonoBehaviour
         session.noMusicPlaying = musicStateTracker.noMusicPlaying;
 
         if (session.sessionTime > gameData.longestSession)
-        {
             gameData.longestSession = session.sessionTime;
-        }
 
-        if (gameData.shortestSession < sessionTime)
-        {
+        if (session.sessionTime < gameData.shortestSession || gameData.shortestSession == -1)
             gameData.shortestSession = session.sessionTime;
-        }
 
         // Store the average floop count for the session
         session.averageFloopCount = averageFloopCount;
