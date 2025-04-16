@@ -7223,6 +7223,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd28f23af44f73f4a95e33435872ad15, type: 3}
+--- !u!1 &492086893 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2884744068279909024, guid: 6b2bdbebfa694467c818f6838730b2c2, type: 3}
+  m_PrefabInstance: {fileID: 509056139}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &497783199 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3766729991277413730, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
@@ -7735,7 +7740,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3646457969431532528, guid: 6b2bdbebfa694467c818f6838730b2c2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 815676304}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2884744068279909024, guid: 6b2bdbebfa694467c818f6838730b2c2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 509056142}
   m_SourcePrefab: {fileID: 100100000, guid: 6b2bdbebfa694467c818f6838730b2c2, type: 3}
 --- !u!4 &509056140 stripped
 Transform:
@@ -7747,12 +7755,26 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8783630273214805140, guid: 6b2bdbebfa694467c818f6838730b2c2, type: 3}
   m_PrefabInstance: {fileID: 509056139}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 492086893}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2df0d72f112aa53408c029d25153b127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &509056142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492086893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47ddf18fde7dd3142a72ef5fe7cf9660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bendingMaterial: {fileID: 2100000, guid: 8a264b7b0b465924abb06f8f499f1952, type: 2}
+  radius: 1.5
 --- !u!4 &513863335 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 230188849934026880, guid: e4ef2a8a3811c6c4a9149de8e9bef49b, type: 3}
@@ -14463,6 +14485,74 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4ef2a8a3811c6c4a9149de8e9bef49b, type: 3}
+--- !u!1 &982704019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 982704022}
+  - component: {fileID: 982704021}
+  - component: {fileID: 982704020}
+  m_Layer: 0
+  m_Name: GrassBender
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &982704020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982704019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47ddf18fde7dd3142a72ef5fe7cf9660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bendingMaterial: {fileID: 2100000, guid: 8a264b7b0b465924abb06f8f499f1952, type: 2}
+  radius: 1.5
+--- !u!135 &982704021
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982704019}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &982704022
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982704019}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.0681999, y: 1.3780788, z: -0.14261046}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &984033331
 GameObject:
   m_ObjectHideFlags: 0
@@ -30998,3 +31088,4 @@ SceneRoots:
   - {fileID: 1282542796}
   - {fileID: 330892160}
   - {fileID: 2058623274}
+  - {fileID: 982704022}
