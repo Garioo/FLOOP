@@ -13,7 +13,7 @@ public class FloopBehavior : ObjectBehaviorParrent
     private bool rtpcChangePending = false;
     private float pendingValue = 0f; // Stores the next RTPC value
 
-    private ObjectManager objectManager;
+   [SerializeField] private ObjectManager objectManager;
 
     // Tracking fields
     private ObjectWaterStats objectWaterStats;
@@ -22,12 +22,7 @@ public class FloopBehavior : ObjectBehaviorParrent
     private void Start()
     {
         // Find the ObjectManager in the scene
-        objectManager = FindObjectOfType<ObjectManager>();
-        if (objectManager == null)
-        {
-            Debug.LogError("[FloopBehavior] ObjectManager instance is not available in the scene!");
-        }
-
+    
         StorePosition(transform.position);
 
         // Register this FloopBehavior with the SoundManager
