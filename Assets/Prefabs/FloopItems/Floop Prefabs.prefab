@@ -59,6 +59,7 @@ MonoBehaviour:
     WwiseObjectReference: {fileID: 11400000, guid: d596106047bba4ef2bbb651c4e2fcefd, type: 2}
   MusicListener: {fileID: 0}
   rb: {fileID: 4960445333986076591}
+  objectManager: {fileID: 7323627949846190207, guid: cb708182f64fd0340a7065b6a436bd74, type: 3}
 --- !u!114 &5024480032793560812
 MonoBehaviour:
   m_ObjectHideFlags: 0
