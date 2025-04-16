@@ -22,6 +22,8 @@ public class PauseMenu : MonoBehaviour
     private Stack<string> menuHistory = new Stack<string>();
     private string currentMenu = "";
 
+    public ObjectManager objectManager;
+
     private GameObject currentMenuObject = null;
     private bool isPaused = false;
 
@@ -118,14 +120,12 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitGame()
     {
-    #if UNITY_EDITOR
+#if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
-    #else
+#else
         Application.Quit();
-    #endif
+#endif
     }
-
-
     void ParentMenuToCamera(GameObject menu)
     {
         Transform cam = Camera.main.transform;
@@ -138,6 +138,24 @@ public class PauseMenu : MonoBehaviour
         if (canvas != null)
         {
             canvas.sortingOrder = 1000;
+        }
+    }
+
+    public void ReturnAllFloopObjects()
+    {
+        GameObject[] floopObjects = GameObject.FindGameObjectsWithTag("Floop");
+
+        foreach (GameObject floop in floopObjects)
+        {
+            ObjectBehaviorParrent behavior = floop.GetComponent<ObjectBehaviorParrent>();
+
+            if (behavior != null)
+            {
+                behavior.ReturnObject();
+                behavior.PlayOff();
+
+                objectManager.floopCounter = 0;
+            }
         }
     }
 }

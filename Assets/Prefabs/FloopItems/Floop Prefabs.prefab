@@ -58,7 +58,6 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: d596106047bba4ef2bbb651c4e2fcefd, type: 2}
   MusicListener: {fileID: 0}
-  runtimeTracker: {fileID: 320149137030946474, guid: 3ee2d5a0920a9da46844ce9492946b87, type: 3}
   rb: {fileID: 4960445333986076591}
 --- !u!114 &5024480032793560812
 MonoBehaviour:
@@ -210,6 +209,18 @@ MonoBehaviour:
       - m_Target: {fileID: 8783630273214805140}
         m_TargetAssemblyTypeName: FloopBehavior, Assembly-CSharp
         m_MethodName: outlineToggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8783630273214805140}
+        m_TargetAssemblyTypeName: FloopBehavior, Assembly-CSharp
+        m_MethodName: RigidBooty
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

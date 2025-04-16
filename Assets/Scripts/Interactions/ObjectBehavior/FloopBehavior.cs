@@ -66,8 +66,6 @@ public class FloopBehavior : ObjectBehaviorParrent
     {
         if (isPlaying)
         {
-            rb.angularDamping = 0.75f;
-            rb.linearDamping = 0.175f;
 
             volume = 0f;
             rtpcChangePending = true;
@@ -148,5 +146,14 @@ public class FloopBehavior : ObjectBehaviorParrent
                 AkSoundEngine.PostEvent("Play_Grab", gameObject);
             }
         }
+    }
+
+    public void RigidBooty()
+    {
+        // Nikolaj er en idiot
+        // Mads er en idiot
+        // Simon er også en idiot
+        rb.angularDamping = 0.75f;
+        rb.linearDamping = 0.175f;
     }
 }
