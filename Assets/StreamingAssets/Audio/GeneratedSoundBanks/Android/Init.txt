@@ -1,0 +1,27 @@
+Switch Group	ID	Name			Wwise Object Path	Notes
+	4182704652	Songs_Switch			\Default Work Unit\Songs_Switch	
+
+Switch	ID	Name	Switch Group			Notes
+	1786842365	MarimbaShuffle	Songs_Switch			
+	2321764949	FloopJam	Songs_Switch			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	778469101	Songs			\Default Work Unit\Songs	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Songs			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	872532970	Environment_RTPC			\Default Work Unit\Environment_RTPC	
+	1214867155	Master_RTPC			\Default Work Unit\Master_RTPC	
+	3880838049	Melody_RTPC			\Default Work Unit\Melody_RTPC	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	1040548709	Melody			\Default Work Unit\Master Audio Bus\Melody	
+	1229948536	Environment			\Default Work Unit\Master Audio Bus\Environment	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+
