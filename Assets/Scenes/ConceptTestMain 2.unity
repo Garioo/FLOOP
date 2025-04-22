@@ -20525,6 +20525,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1613277254}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1809409967 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7002254814984613703, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
+  m_PrefabInstance: {fileID: 1900571811}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1813717207
 GameObject:
   m_ObjectHideFlags: 0
@@ -21588,6 +21593,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 196583684}
+    - target: {fileID: 947610551694606745, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 955870432869902519, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
       propertyPath: m_TranslateSpeed
       value: 4
@@ -21630,11 +21639,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 998147484517737630, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 998147484517737630, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 998147484721263477, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
       propertyPath: m_AnchorMax.y
@@ -21696,6 +21705,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2348796462883025512, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2562964260168793277, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
       propertyPath: m_LocalScale.x
       value: 4
@@ -21756,6 +21769,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VR Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 3319810072208536168, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
+      propertyPath: m_GazeTransform
+      value: 
+      objectReference: {fileID: 1809409967}
     - target: {fileID: 3766729991367009764, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
       propertyPath: m_BackGroundColor.a
       value: 1
@@ -21791,7 +21808,7 @@ PrefabInstance:
     - target: {fileID: 4130809849757603374, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
       propertyPath: m_InteractionManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 196583684}
     - target: {fileID: 4470675955455465764, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
       propertyPath: m_EnableFreeXMovement
       value: 0
@@ -21800,9 +21817,25 @@ PrefabInstance:
       propertyPath: m_BlockUIOnInteractableSelection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5890522360221612184, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890522360221612184, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
+      propertyPath: m_RightHandTurnInput.m_InputActionReference
+      value: 
+      objectReference: {fileID: -8525429354371678379, guid: c348712bda248c246b8c49b3db54643f, type: 3}
     - target: {fileID: 5919527829115733267, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
       propertyPath: m_VolumeLayerMask.m_Bits
       value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987505061270242412, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
+      propertyPath: m_GazeTransform
+      value: 
+      objectReference: {fileID: 1809409967}
+    - target: {fileID: 6298938179821757883, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6311484785676576232, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
       propertyPath: m_AnchorMax.y
@@ -21882,11 +21915,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6311484786915508412, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 6311484786915508412, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 6311484787096462069, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
       propertyPath: m_SizeDelta.x
@@ -21915,6 +21948,34 @@ PrefabInstance:
     - target: {fileID: 6311484787263202089, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7559512169364566828, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 196583684}
+    - target: {fileID: 8505473136595126770, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
+      propertyPath: m_SmoothTurnEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8850802317010048586, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8853001210128942553, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
+      propertyPath: m_Turn
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8853001210128942553, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
+      propertyPath: m_SnapTurn
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8853001210128942553, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
+      propertyPath: m_RayInteractor
+      value: 
+      objectReference: {fileID: 596535420}
+    - target: {fileID: 8853001210128942553, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
+      propertyPath: m_SmoothTurnEnabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
