@@ -82,7 +82,7 @@ public class BirdLogic : MonoBehaviour
         isReturning = false;
         angle = Random.Range(0f, Mathf.PI * 2f); // random start angle
         animator.SetBool("Flying", true);
-        Invoke(nameof(ReturnToOriginalPosition), Random.Range(8f, 15f)); // Delay before returning
+        Invoke(nameof(ReturnToOriginalPosition), Random.Range(20f, 40f)); // Delay before returning
     }
 
     void ReturnToOriginalPosition()
