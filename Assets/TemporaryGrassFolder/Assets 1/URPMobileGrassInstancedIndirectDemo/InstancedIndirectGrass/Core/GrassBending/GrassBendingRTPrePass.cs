@@ -25,11 +25,15 @@ public class GrassBendingRTPrePass : ScriptableRendererFeature
 
         public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
         {
-            if (!InstancedIndirectGrassRenderer.instance)
+            if (InstancedIndirectGrassRenderer.instance == null || !InstancedIndirectGrassRenderer.instance.enabled)
             {
-                Debug.LogWarning("InstancedIndirectGrassRenderer not found, abort GrassBendingRTPrePass's Execute");
+#if UNITY_EDITOR
+                if (Application.isPlaying)
+#endif
+                    Debug.LogWarning("InstancedIndirectGrassRenderer not ready yet. Grass bending skipped this frame.");
                 return;
             }
+
 
             CommandBuffer cmd = CommandBufferPool.Get("GrassBendingRT");
 

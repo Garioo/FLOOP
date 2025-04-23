@@ -128,7 +128,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _BendPosition: {r: -10.894693, g: 5.3383265, b: -6.234396, a: 1.5}
+    - _BendPosition: {r: 1.2131412, g: 12.204645, b: -3.1582134, a: 1.5}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
