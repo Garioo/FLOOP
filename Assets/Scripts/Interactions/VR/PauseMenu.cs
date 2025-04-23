@@ -1,143 +1,65 @@
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 [DefaultExecutionOrder(-1000)]
 public class PauseMenu : MonoBehaviour
 {
-    [System.Serializable]
-    public struct MenuEntry
-    {
-        public string name;
-        public GameObject menuObject;
-    }
-
-    public MenuEntry[] menus;
-    public InputActionReference openMenuAction;
-    public string defaultMenu = "Pause";
-
-    public float menuDistance = 4f;
-
-    private Dictionary<string, GameObject> menuDict = new Dictionary<string, GameObject>();
-    private Stack<string> menuHistory = new Stack<string>();
-    private string currentMenu = "";
+    private bool hasSaved = false;
 
     public ObjectManager objectManager;
 
-    private GameObject currentMenuObject = null;
-    private bool isPaused = false;
+    [SerializeField]
+    private DataCollection dataCollection;
 
-    void Awake()
+    static PauseMenu()
     {
-        foreach (var menu in menus)
-        {
-            menuDict[menu.name] = menu.menuObject;
-            menu.menuObject.SetActive(false);
-        }
+        Application.wantsToQuit += OnWantsToQuit;
     }
 
-    void OnEnable()
+    static bool OnWantsToQuit()
     {
-        if (openMenuAction != null)
+        PauseMenu instance = FindObjectOfType<PauseMenu>();
+        if (instance != null && !instance.hasSaved && instance.dataCollection != null)
         {
-            openMenuAction.action.Enable();
-            openMenuAction.action.performed += OnOpenMenu;
-        }
-    }
-
-    void OnDisable()
-    {
-        if (openMenuAction != null)
-        {
-            openMenuAction.action.performed -= OnOpenMenu;
-            openMenuAction.action.Disable();
-        }
-    }
-
-    private void OnOpenMenu(InputAction.CallbackContext context)
-    {
-        if (!string.IsNullOrEmpty(currentMenu))
-        {
-            Resume();
-        }
-        else if (!string.IsNullOrEmpty(defaultMenu))
-        {
-            ShowMenu(defaultMenu);
-        }
-    }
-
-    public void ShowMenu(string name)
-    {
-        if (menuDict.ContainsKey(currentMenu))
-        {
-            menuDict[currentMenu].SetActive(false);
-            if (currentMenu != name)
-                menuHistory.Push(currentMenu);
+            instance.dataCollection.SaveGameData();
+            instance.hasSaved = true;
         }
 
-        if (menuDict.ContainsKey(name))
-        {
-            menuDict[name].SetActive(true);
-            currentMenu = name;
-            currentMenuObject = menuDict[name];
-            ParentMenuToCamera(currentMenuObject);
-
-            if (!isPaused)
-            {
-                Time.timeScale = 0f;
-                isPaused = true;
-            }
-        }
-    }
-
-    public void Back()
-    {
-        if (menuHistory.Count > 0)
-        {
-            string previousMenu = menuHistory.Pop();
-            ShowMenu(previousMenu);
-        }
-    }
-
-    public void Resume()
-    {
-        if (menuDict.ContainsKey(currentMenu))
-            menuDict[currentMenu].SetActive(false);
-
-        if (currentMenuObject != null)
-            currentMenuObject.transform.SetParent(null);
-
-        currentMenu = "";
-        currentMenuObject = null;
-        menuHistory.Clear();
-
-        if (isPaused)
-        {
-            Time.timeScale = 1f;
-            isPaused = false;
-        }
+        return true; // allow quitting
     }
 
     public void QuitGame()
     {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
-    }
-    void ParentMenuToCamera(GameObject menu)
-    {
-        Transform cam = Camera.main.transform;
-
-        menu.transform.SetParent(cam);
-        menu.transform.localPosition = new Vector3(0, 0, menuDistance);
-        menu.transform.localRotation = Quaternion.identity;
-
-        Canvas canvas = menu.GetComponent<Canvas>();
-        if (canvas != null)
+        if (!hasSaved && dataCollection != null)
         {
-            canvas.sortingOrder = 1000;
+            dataCollection.SaveGameData(); // manual save
+            hasSaved = true;
+        }
+
+        // Delay quit slightly to ensure save completes
+        Invoke(nameof(PerformQuit), 0.1f);
+    }
+
+    private void PerformQuit()
+    {
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #else
+                Application.Quit();
+        #endif
+    }
+
+    private void OnApplicationQuit()
+    {
+        if (!hasSaved && dataCollection != null)
+        {
+            dataCollection.SaveGameData(); // backup save
+            hasSaved = true;
         }
     }
 
@@ -158,4 +80,25 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
+
+#if UNITY_EDITOR
+    [InitializeOnLoadMethod]
+    static void InitEditorQuitHandler()
+    {
+        UnityEditor.EditorApplication.playModeStateChanged += OnPlayModeChanged;
+    }
+
+    static void OnPlayModeChanged(UnityEditor.PlayModeStateChange state)
+    {
+        if (state == UnityEditor.PlayModeStateChange.ExitingPlayMode)
+        {
+            PauseMenu instance = FindObjectOfType<PauseMenu>();
+            if (instance != null && !instance.hasSaved && instance.dataCollection != null)
+            {
+                instance.dataCollection.SaveGameData();
+                instance.hasSaved = true;
+            }
+        }
+    }
+#endif
 }

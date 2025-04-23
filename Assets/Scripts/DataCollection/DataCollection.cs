@@ -49,8 +49,7 @@ public class DataCollection : MonoBehaviour
             averageFloopCount = weightedFloopCount / totalTimeSpent;
         }
     }
-
-    void OnApplicationQuit()
+    public void SaveGameData()
     {
         if (gameData == null) return;
 
@@ -61,7 +60,6 @@ public class DataCollection : MonoBehaviour
         gameData.floopJamTime += musicStateTracker.floopJamTime;
         gameData.marimbaShuffleTime += musicStateTracker.marimbaShuffleTime;
 
-        // Create and store session report
         SessionData session = new SessionData();
         session.sessionNumber = gameData.numberOfSessions;
         session.sessionTime = sessionTime;
@@ -75,13 +73,9 @@ public class DataCollection : MonoBehaviour
         if (session.sessionTime < gameData.shortestSession || gameData.shortestSession == -1)
             gameData.shortestSession = session.sessionTime;
 
-        // Store the average floop count for the session
         session.averageFloopCount = averageFloopCount;
-
-        // Track the session date
         session.sessionDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
-        // Collect data from all FloopBehavior instances
         FloopBehavior[] floopBehaviors = FindObjectsOfType<FloopBehavior>();
         foreach (var floopBehavior in floopBehaviors)
         {
@@ -89,7 +83,6 @@ public class DataCollection : MonoBehaviour
                 session.objectStats.Add(floopBehavior.GetObjectWaterStats());
         }
 
-        // Add the session to gameData
         gameData.allSessions.Add(session);
 
         foreach (var floopBehavior in floopBehaviors)
@@ -98,23 +91,18 @@ public class DataCollection : MonoBehaviour
 
             if (newStats.enterCount > 0)
             {
-                // Find eksisterende entry med samme navn
                 var existing = gameData.allObjectStats.Find(stat => stat.objectName == newStats.objectName);
-
                 if (existing != null)
                 {
-                    // Tilføj de nye tal til det gamle
                     existing.enterCount += newStats.enterCount;
                     existing.totalTimeInWater += newStats.totalTimeInWater;
                 }
                 else
                 {
-                    // Hvis den ikke findes, tilføj som ny
                     gameData.allObjectStats.Add(newStats);
                 }
             }
         }
-
 
         JsonFileSystem.Save(gameData);
     }
