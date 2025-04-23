@@ -6338,6 +6338,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3646457969431532528, guid: 6b2bdbebfa694467c818f6838730b2c2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 815676304}
+    - targetCorrespondingSourceObject: {fileID: 3646457969431532528, guid: 6b2bdbebfa694467c818f6838730b2c2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 841552949}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2884744068279909024, guid: 6b2bdbebfa694467c818f6838730b2c2, type: 3}
       insertIndex: -1
@@ -11066,6 +11069,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 256401543}
   m_LocalEulerAnglesHint: {x: 0, y: 21.9, z: 0}
+--- !u!1 &841552948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 841552949}
+  - component: {fileID: 841552951}
+  - component: {fileID: 841552950}
+  m_Layer: 0
+  m_Name: GrassBender
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &841552949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841552948}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.7619717, z: 0.043662164}
+  m_LocalScale: {x: 1.4084507, y: 1.4084507, z: 1.4084507}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 509056140}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &841552950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841552948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47ddf18fde7dd3142a72ef5fe7cf9660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bendingMaterial: {fileID: 2100000, guid: 8a264b7b0b465924abb06f8f499f1952, type: 2}
+  radius: 4.47
+--- !u!135 &841552951
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841552948}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &843260496 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 216885672754563808, guid: 9a7807950894d41429dc2c1d999e3e94, type: 3}
