@@ -21,24 +21,43 @@ public class WorldTooltip : MonoBehaviour
     private int currentTooltipIndex = 0;
     private bool hasShownTooltip = false;
 
-    // Removed Start method to prevent auto-showing tooltip on game start
+    private ObjectManager objectManager;
+
+    private void Start()
+    {
+        objectManager = FindObjectOfType<ObjectManager>();
+    }
+
+    void Update()
+    {
+        if (objectManager != null)
+            HideTooltipOnFloopCount(objectManager.floopCounter, 1);
+    }
 
     public void HandleTooltipShow(int index)
     {
         if (!hasShownTooltip || currentTooltipIndex != index)
             StartCoroutine(ShowTooltip(index));
     }
-    public void HandleTooltipHide(UnityEngine.XR.Interaction.Toolkit.SelectEnterEventArgs args)
+    public void HandleTooltipHide(int index)
     {
-        StartCoroutine(HideTooltip(currentTooltipIndex));
+        StartCoroutine(HideTooltip(index));
+    }
+
+    public void HideTooltipOnFloopCount(int floopCount, int tooltipIndex)
+    {
+        if (floopCount == 1)
+        {
+            StartCoroutine(HideTooltip(tooltipIndex));
+        }
     }
 
     private IEnumerator ShowTooltip(int index)
     {
         if (index < 0 || index >= tooltips.Count) yield break;
 
-        // Hide current tooltip
-        if (currentTooltipIndex < tooltips.Count)
+        // Hide current tooltip only if different from the one being shown
+        if (index != currentTooltipIndex && currentTooltipIndex < tooltips.Count)
             yield return StartCoroutine(HideTooltip(currentTooltipIndex));
 
         TooltipItem item = tooltips[index];
