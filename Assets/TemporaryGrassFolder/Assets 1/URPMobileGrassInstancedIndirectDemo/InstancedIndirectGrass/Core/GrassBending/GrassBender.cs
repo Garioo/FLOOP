@@ -1,36 +1,51 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Collider))]
+[ExecuteAlways]
 public class GrassBender : MonoBehaviour
 {
     public Material bendingMaterial;
     public float radius = 1.5f;
+    public float heightThreshold = 2f; // only bend grass if Y is below this
 
-    private void OnTriggerStay(Collider other)
+    static Mesh _quad;
+
+    private void OnEnable()
     {
-        // Only update when camera sees this area
-        if (!Camera.current || !bendingMaterial) return;
-
-        // Project into grass bending RT space
-        Vector3 center = transform.position;
-        Vector4 worldPos = new Vector4(center.x, center.y, center.z, radius);
-        bendingMaterial.SetVector("_BendPosition", worldPos);
-
-        Graphics.DrawMeshNow(CreateQuad(), Matrix4x4.TRS(center + Vector3.up * 0.01f, Quaternion.identity, Vector3.one * radius));
+        CreateQuadIfNeeded();
     }
 
-    Mesh CreateQuad()
+    void Update()
     {
-        Mesh m = new Mesh();
-        m.vertices = new Vector3[] {
+        if (bendingMaterial == null) return;
+
+        Vector3 pos = transform.position;
+
+        // Only bend if within Y height range (near ground)
+        if (pos.y > heightThreshold) return;
+
+        // Set bend position (X, ignored, Z, radius)
+        bendingMaterial.SetVector("_BendPosition", new Vector4(pos.x, 0, pos.z, radius));
+
+        // Draw bend quad into the RT
+        Graphics.DrawMeshNow(_quad, Matrix4x4.TRS(pos, Quaternion.identity, Vector3.one * radius));
+    }
+
+    void CreateQuadIfNeeded()
+    {
+        if (_quad != null) return;
+
+        _quad = new Mesh();
+        _quad.vertices = new Vector3[]
+        {
             new Vector3(-1, 0, -1), new Vector3(1, 0, -1),
             new Vector3(1, 0, 1), new Vector3(-1, 0, 1)
         };
-        m.uv = new Vector2[] {
+        _quad.uv = new Vector2[]
+        {
             new Vector2(0, 0), new Vector2(1, 0),
             new Vector2(1, 1), new Vector2(0, 1)
         };
-        m.triangles = new int[] { 0, 1, 2, 2, 3, 0 };
-        return m;
+        _quad.triangles = new int[] { 0, 1, 2, 2, 3, 0 };
     }
 }
+
