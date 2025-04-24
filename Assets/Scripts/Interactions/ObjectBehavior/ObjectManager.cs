@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectManager : MonoBehaviour
 {
     [SerializeField] public int floopCounter;
-    [SerializeField] private int maxFloop;
+    [SerializeField] public int maxFloop;
     [SerializeField] private AK.Wwise.Event smallSplashEvent;
     [SerializeField] private AK.Wwise.Event bigSplashEvent;
     [SerializeField] private float bigSplashThreshold = 4f;
