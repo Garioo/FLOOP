@@ -12721,7 +12721,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3843015836071389973, guid: ab30407458725c343a45b6028894a8a3, type: 3}
       propertyPath: drawDistance
-      value: 80
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6321967289383515273, guid: ab30407458725c343a45b6028894a8a3, type: 3}
       propertyPath: m_Name
@@ -12737,11 +12737,11 @@ PrefabInstance:
       objectReference: {fileID: 794327345}
     - target: {fileID: 6689108666626573581, guid: ab30407458725c343a45b6028894a8a3, type: 3}
       propertyPath: drawDistance
-      value: 80
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6689108666626573581, guid: ab30407458725c343a45b6028894a8a3, type: 3}
       propertyPath: instanceCount
-      value: 537961
+      value: 301206
       objectReference: {fileID: 0}
     - target: {fileID: 7499444521617435416, guid: ab30407458725c343a45b6028894a8a3, type: 3}
       propertyPath: m_LocalPosition.x
