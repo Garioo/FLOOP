@@ -1,0 +1,5 @@
+C:/Users/madsb/Documents/GitHub/FLOOP/.utmp/RelWithDebInfo/4q6j1i4z/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/madsb/Documents/GitHub/FLOOP/.utmp/RelWithDebInfo/4q6j1i4z/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Users/madsb/Documents/GitHub/FLOOP/.utmp/RelWithDebInfo/4q6j1i4z/arm64-v8a/GameActivity/CMakeFiles/game.dir
+C:/Users/madsb/Documents/GitHub/FLOOP/.utmp/RelWithDebInfo/4q6j1i4z/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+C:/Users/madsb/Documents/GitHub/FLOOP/.utmp/RelWithDebInfo/4q6j1i4z/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir

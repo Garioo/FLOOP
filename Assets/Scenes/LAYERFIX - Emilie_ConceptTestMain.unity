@@ -23848,7 +23848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4637939364778486014, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0824
+      value: 0.0009
       objectReference: {fileID: 0}
     - target: {fileID: 5725217171735776327, guid: 93121a86b5762624da3eafe6f6751587, type: 3}
       propertyPath: m_BlockUIOnInteractableSelection
