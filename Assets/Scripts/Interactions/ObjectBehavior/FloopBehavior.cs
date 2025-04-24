@@ -37,7 +37,7 @@ public class FloopBehavior : ObjectBehaviorParrent
         if (isInWater)
         {
             objectWaterStats.totalTimeInWater += Time.deltaTime;
-
+            Debug.Log($"[FloopBehavior] Object {gameObject.name} is in water. Total time in water: {objectWaterStats.totalTimeInWater} seconds.");
         }
     }
 
@@ -53,7 +53,7 @@ public class FloopBehavior : ObjectBehaviorParrent
 
             EnterWater();
 
-
+            Debug.Log($"[FloopBehavior] Object {gameObject.name} entered water. Current volume: {volume}");
         }
     }
 
@@ -93,7 +93,7 @@ public class FloopBehavior : ObjectBehaviorParrent
         if (isInWater)
         {
             isInWater = false;
-            //Debug.Log($"[FloopBehavior] Object {gameObject.name} exited water. Total time in water: {objectWaterStats.totalTimeInWater} seconds. Enter count: {objectWaterStats.enterCount}");
+            Debug.Log($"[FloopBehavior] Object {gameObject.name} exited water. Total time in water: {objectWaterStats.totalTimeInWater} seconds. Enter count: {objectWaterStats.enterCount}");
         }
     }
 
@@ -147,7 +147,7 @@ public class FloopBehavior : ObjectBehaviorParrent
     {
         // Nikolaj er en idiot
         // Mads er en idiot
-        // Simon er ogsï¿½ en idiot
+        // Simon er også en idiot
         rb.angularDamping = 0.75f;
         rb.linearDamping = 0.175f;
     }
