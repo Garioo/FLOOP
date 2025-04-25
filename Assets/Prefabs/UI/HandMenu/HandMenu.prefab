@@ -26,7 +26,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 891104309313293839}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 9.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.08470154}
+  m_AnchoredPosition: {x: 79.2, y: 94.5}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6538974292013164311
@@ -92,11 +92,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.016
-  m_fontSizeBase: 0.016
+  m_fontSize: 23.9
+  m_fontSizeBase: 1
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 23.9
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 100.02546, y: 24.961817, z: 99.92943, w: 25.018604}
+  m_margin: {x: -6.131031, y: 24.961817, z: 8.13575, w: 97.30903}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2062,17 +2062,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloopCounter
       objectReference: {fileID: 0}
+    - target: {fileID: 3678367135699767999, guid: 82bb4f57d045d974a83364384f3bf8a8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7405939049943417041, guid: 82bb4f57d045d974a83364384f3bf8a8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1600
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7405939049943417041, guid: 82bb4f57d045d974a83364384f3bf8a8, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1600
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7405939049943417041, guid: 82bb4f57d045d974a83364384f3bf8a8, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1600
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7405939049943417041, guid: 82bb4f57d045d974a83364384f3bf8a8, type: 3}
       propertyPath: m_LocalPosition.x
