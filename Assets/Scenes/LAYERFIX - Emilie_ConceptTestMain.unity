@@ -10459,148 +10459,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cd0a7ea9a41d9fd4aabebfb0facaa61c, type: 3}
   m_PrefabInstance: {fileID: 539564479}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &738523807
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 9467509581745921, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_Name
-      value: Curve Water
-      objectReference: {fileID: 0}
-    - target: {fileID: 159929260674466639, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_Name
-      value: Water Affordance
-      objectReference: {fileID: 0}
-    - target: {fileID: 594469752630625792, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_CullTransparentMesh
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 752765374609501469, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 752765374609501469, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 752765374609501469, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 752765374609501469, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 752765374609501469, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 752765374609501469, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 752765374609501469, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 752765374609501469, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 752765374609501469, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 752765374609501469, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2336559140429603921, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_Name
-      value: Water Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2936969431382843202, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_Name
-      value: WaterTooltip
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419859397692837999, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419859397692837999, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_Color.a
-      value: 0.75686276
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419859397692837999, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_Color.b
-      value: 0.78039217
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419859397692837999, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_Color.g
-      value: 0.58431375
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419859397692837999, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_Color.r
-      value: 0.30980393
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419859397692837999, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_Maskable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419859397692837999, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_FillCenter
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419859397692837999, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419859397692837999, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_PixelsPerUnitMultiplier
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 5926277248109498890, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.656
-      objectReference: {fileID: 0}
-    - target: {fileID: 7208099807694211681, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-      propertyPath: m_Name
-      value: Link Start Water
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
---- !u!1 &738523808 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2936969431382843202, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-  m_PrefabInstance: {fileID: 738523807}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &738523809 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9467509581745921, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-  m_PrefabInstance: {fileID: 738523807}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &738523810 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7208099807694211681, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-  m_PrefabInstance: {fileID: 738523807}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &738523811 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4572286243514874684, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-  m_PrefabInstance: {fileID: 738523807}
-  m_PrefabAsset: {fileID: 0}
---- !u!223 &738523812 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 6220670483787786607, guid: 5c87425db064d46e69f7e1653e42167e, type: 3}
-  m_PrefabInstance: {fileID: 738523807}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &757570012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19921,11 +19779,11 @@ MonoBehaviour:
     tooltipCanvas: {fileID: 1908515316}
     linkStart: {fileID: 1508328390}
     curve: {fileID: 1096929566}
-  - tooltipObject: {fileID: 738523808}
-    animator: {fileID: 738523811}
-    tooltipCanvas: {fileID: 738523812}
-    linkStart: {fileID: 738523810}
-    curve: {fileID: 738523809}
+  - tooltipObject: {fileID: 2936969431852885469}
+    animator: {fileID: 4572286243850617251}
+    tooltipCanvas: {fileID: 6220670483451958256}
+    linkStart: {fileID: 7208099806955712766}
+    curve: {fileID: 9467510051304862}
 --- !u!1001 &1564956905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28245,6 +28103,160 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2df0d72f112aa53408c029d25153b127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &9467510051304862 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3109480803286428948, guid: fed7cc6b06a8432409a31b9d55f82588, type: 3}
+  m_PrefabInstance: {fileID: 4800103230249205972}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1784376913948833362
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4855112770626462413}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 5.76, y: 2.54}
+  m_SizeDelta: {x: 2, y: 2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2790585812884241379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4855112770626462413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!1 &2936969431852885469 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6629011793760722696, guid: fed7cc6b06a8432409a31b9d55f82588, type: 3}
+  m_PrefabInstance: {fileID: 4800103230249205972}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3123792882709853155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4855112770626462413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 1
+--- !u!95 &4572286243850617251 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1591472125275017327, guid: fed7cc6b06a8432409a31b9d55f82588, type: 3}
+  m_PrefabInstance: {fileID: 4800103230249205972}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4800103230249205972
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1435789455373362030, guid: fed7cc6b06a8432409a31b9d55f82588, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435789455373362030, guid: fed7cc6b06a8432409a31b9d55f82588, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435789455373362030, guid: fed7cc6b06a8432409a31b9d55f82588, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435789455373362030, guid: fed7cc6b06a8432409a31b9d55f82588, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435789455373362030, guid: fed7cc6b06a8432409a31b9d55f82588, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435789455373362030, guid: fed7cc6b06a8432409a31b9d55f82588, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435789455373362030, guid: fed7cc6b06a8432409a31b9d55f82588, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435789455373362030, guid: fed7cc6b06a8432409a31b9d55f82588, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435789455373362030, guid: fed7cc6b06a8432409a31b9d55f82588, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435789455373362030, guid: fed7cc6b06a8432409a31b9d55f82588, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2576271524729659315, guid: fed7cc6b06a8432409a31b9d55f82588, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6629011793760722696, guid: fed7cc6b06a8432409a31b9d55f82588, type: 3}
+      propertyPath: m_Name
+      value: WaterTooltip
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fed7cc6b06a8432409a31b9d55f82588, type: 3}
+--- !u!1 &4855112770626462413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1784376913948833362}
+  - component: {fileID: 8804677995883109266}
+  - component: {fileID: 3123792882709853155}
+  - component: {fileID: 2790585812884241379}
+  m_Layer: 5
+  m_Name: PutItemInWater_Intro
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1001 &4876610477037299143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28306,6 +28318,39 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82bb4f57d045d974a83364384f3bf8a8, type: 3}
+--- !u!223 &6220670483451958256 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 1500975683778775478, guid: fed7cc6b06a8432409a31b9d55f82588, type: 3}
+  m_PrefabInstance: {fileID: 4800103230249205972}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7208099806955712766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6476667453507360655, guid: fed7cc6b06a8432409a31b9d55f82588, type: 3}
+  m_PrefabInstance: {fileID: 4800103230249205972}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &8804677995883109266
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4855112770626462413}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -28345,7 +28390,8 @@ SceneRoots:
   - {fileID: 1297239149}
   - {fileID: 966597170}
   - {fileID: 1962879374}
-  - {fileID: 738523807}
+  - {fileID: 1784376913948833362}
+  - {fileID: 4800103230249205972}
   - {fileID: 2074285653}
   - {fileID: 1436933355}
   - {fileID: 438593755}
