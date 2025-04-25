@@ -267,7 +267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5276b213e02ff441a84168aa6fea9f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.292
+      value: 6.321
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5276b213e02ff441a84168aa6fea9f5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -275,7 +275,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5276b213e02ff441a84168aa6fea9f5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.758
+      value: 5.695
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5276b213e02ff441a84168aa6fea9f5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1536,6 +1536,7 @@ GameObject:
   - component: {fileID: 1249617920}
   - component: {fileID: 1249617919}
   - component: {fileID: 1249617918}
+  - component: {fileID: 1249617922}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -1560,7 +1561,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -1633,6 +1634,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1249617922
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249617917}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1258459111 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6788538757290762323, guid: ad4137f595ec8e2449cacca9df7d3735, type: 3}
@@ -2618,6 +2640,7 @@ GameObject:
   - component: {fileID: 5334037118268203529}
   - component: {fileID: 4539702729442049750}
   - component: {fileID: 5334037118268203531}
+  - component: {fileID: 5334037118268203532}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -2634,7 +2657,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543450652643135474}
-  - component: {fileID: 919132148098651465}
   m_Layer: 0
   m_Name: Basket
   m_TagString: Untagged
@@ -2642,33 +2664,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &919132148098651465
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132148098651464}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!33 &3010172807928776649
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2790,6 +2785,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.020000003, y: 0.020000001, z: 0.01997833}
   m_Center: {x: 0.000000004656613, y: -0.000000007450581, z: -0.000010831745}
+--- !u!54 &5334037118268203532
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832149485252565629}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &5680519943399467040
 Transform:
   m_ObjectHideFlags: 0
@@ -2839,11 +2861,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3561116784124517668, guid: 0cafbc21f08c8b147b18fad7bf53b816, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3561116784124517668, guid: 0cafbc21f08c8b147b18fad7bf53b816, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3561116784124517668, guid: 0cafbc21f08c8b147b18fad7bf53b816, type: 3}
       propertyPath: m_LocalPosition.x
