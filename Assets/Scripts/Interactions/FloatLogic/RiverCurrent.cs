@@ -39,17 +39,29 @@ public class RiverCurrent : MonoBehaviour
        //     Debug.Log("Ball has hit water!");
             waterTriggerCount++;
 
-            // Find the closest waypoint when entering water
-            float closestDistance = float.MaxValue;
+            Vector3 forward = transform.forward;
+            float bestScore = float.MinValue;
+            int bestIndex = 0;
+
             for (int i = 0; i < waypoints.Length; i++)
             {
-                float distance = Vector3.Distance(transform.position, waypoints[i].position);
-                if (distance < closestDistance)
+                Vector3 toWaypoint = (waypoints[i].position - transform.position).normalized;
+                float dot = Vector3.Dot(forward, toWaypoint);
+
+                if (dot > 0)
                 {
-                    closestDistance = distance;
-                    currentWaypointIndex = i + 1;;
+                    float distance = Vector3.Distance(transform.position, waypoints[i].position);
+                    float score = dot * 2f - distance;
+                    if (score > bestScore)
+                    {
+                        bestScore = score;
+                        bestIndex = i;
+                    }
                 }
             }
+
+            // After finding the best forward waypoint, immediately move to the next
+            currentWaypointIndex = (bestIndex + 1) % waypoints.Length;
         }
     }
 

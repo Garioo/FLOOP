@@ -33,15 +33,17 @@ public class VRBoundaryManager : MonoBehaviour
     {
         if (boundaryCollider == null || xrOrigin == null || vrCamera == null) return;
 
-        Vector3 camPos = vrCamera.position;
+        Vector3 headWorldPos = vrCamera.position;
+        Vector3 closest = boundaryCollider.ClosestPoint(headWorldPos);
+        Vector3 offset = closest - headWorldPos;
+        Vector3 horizontalOffset = new Vector3(offset.x, 0f, offset.z);
+        float horizontalDistance = horizontalOffset.magnitude;
 
-        Vector3 closest = boundaryCollider.ClosestPoint(camPos);
-        float distance = Vector3.Distance(closest, camPos);
-
-        if (distance > clampBuffer)
+        // Allow slight movement outside before triggering fade or gentle pull
+        if (horizontalDistance > clampBuffer)
         {
-            Vector3 offset = camPos - closest;
-            xrOrigin.position -= new Vector3(offset.x, 0f, offset.z);
+            // Smooth gentle pull back toward boundary if needed
+            xrOrigin.position += horizontalOffset.normalized * (horizontalDistance - clampBuffer) * Time.deltaTime * 2f;
             StartFade(true);
         }
         else
