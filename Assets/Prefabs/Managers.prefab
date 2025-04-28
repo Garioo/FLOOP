@@ -44,14 +44,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8516c64908913b94e9f6218604717e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menus:
-  - name: Pause
-    menuObject: {fileID: 0}
-  - name: Settings
-    menuObject: {fileID: 0}
-  openMenuAction: {fileID: -6567689307730063194, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  defaultMenu: Pause
-  menuDistance: 2
+  objectManager: {fileID: 0}
+  dataCollection: {fileID: 0}
+--- !u!1 &3536062109680242436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 918662979956887634}
+  - component: {fileID: 5330199941164189455}
+  m_Layer: 0
+  m_Name: Tooltip Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &918662979956887634
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3536062109680242436}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2939396742900596162}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5330199941164189455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3536062109680242436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d19b603eb0a42dc9f98fea840470d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipToShowOnSelect: 0
+  tooltips:
+  - tooltipObject: {fileID: 0}
+    animator: {fileID: 0}
+    tooltipCanvas: {fileID: 0}
+    linkStart: {fileID: 0}
+    curve: {fileID: 0}
+  - tooltipObject: {fileID: 0}
+    animator: {fileID: 0}
+    tooltipCanvas: {fileID: 0}
+    linkStart: {fileID: 0}
+    curve: {fileID: 0}
 --- !u!1 &4982893252876093585
 GameObject:
   m_ObjectHideFlags: 0
@@ -84,6 +134,8 @@ Transform:
   - {fileID: 4022851101981930976}
   - {fileID: 8602262333903705423}
   - {fileID: 1552343349541535070}
+  - {fileID: 918662979956887634}
+  - {fileID: 396822223345105461}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6896775830761280953
@@ -154,7 +206,7 @@ MonoBehaviour:
   masterFeedbackEvent: Play_MasterSlider
   musicFeedbackEvent: Play_MusicSlider
   sfxFeedbackEvent: Play_SFXSlider
-  feedbackCooldown: 0.2
+  feedbackCooldown: 0.15
   AudioListener: {fileID: 0}
 --- !u!1 &7600634166075762444
 GameObject:
@@ -202,3 +254,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
+--- !u!1 &7732781784144880232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 396822223345105461}
+  - component: {fileID: 4948967082620140488}
+  m_Layer: 0
+  m_Name: Boundary Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &396822223345105461
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7732781784144880232}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2939396742900596162}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4948967082620140488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7732781784144880232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b26555ebdefc4dacafa5855903ca586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xrOrigin: {fileID: 0}
+  vrCamera: {fileID: 0}
+  boundaryCollider: {fileID: 0}
+  fadeCanvas: {fileID: 0}
+  fadeSpeed: 3
+  clampBuffer: 0.15
