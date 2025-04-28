@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floatForce: 18
-  waterHeight: 5
+  waterHeight: -500
   rb: {fileID: 4960445333986076591}
 --- !u!114 &6578635360429128872
 MonoBehaviour:
