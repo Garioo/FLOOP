@@ -11,12 +11,19 @@ public class SheepLogic : MonoBehaviour
     public float calmDownRate = 1f; // How quickly the sheep calms down
 
     private UnityEngine.AI.NavMeshAgent agent;
+    private Animator animator;
     private float currentSpeed;
     private bool isPanicking;
+
+    
 
     void Start()
     {
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        //get animator
+        animator = GetComponent<Animator>();
+        // Set the sheep's speed to normal speed
+       
         currentSpeed = normalSpeed;
         agent.speed = currentSpeed;
     }
@@ -30,6 +37,7 @@ public class SheepLogic : MonoBehaviour
             // Sheep gets scared
             isPanicking = true;
             agent.speed = panicSpeed;
+            animator.SetBool("isRunning", true); // Set running animation
 
             // Find closest threat
             Collider closestThreat = threats[0];
@@ -69,6 +77,7 @@ public class SheepLogic : MonoBehaviour
                 if (Mathf.Approximately(agent.speed, normalSpeed))
                 {
                     isPanicking = false;
+                    animator.SetBool("isRunning", false); // Set idle animation
                     agent.ResetPath(); // Stop moving after calm
                 }
             }
