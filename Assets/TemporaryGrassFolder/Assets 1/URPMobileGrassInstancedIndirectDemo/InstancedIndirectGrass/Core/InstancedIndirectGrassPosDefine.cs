@@ -1,13 +1,12 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-
 public class InstancedIndirectGrassPosDefine : MonoBehaviour
 {
-    [Range(1, 1000000)]
+    [Range(1, 50000000)]
     public int instanceCount = 600000;
     public float drawDistance = 125;
-    public Terrain terrain; // Reference to the Unity Terrain
+    public Terrain terrain; // Root terrain in inspector
 
     private int cacheCount = -1;
     private List<Matrix4x4> instanceMatrices = new List<Matrix4x4>();
@@ -36,54 +35,64 @@ public class InstancedIndirectGrassPosDefine : MonoBehaviour
         if (instanceCount <= cacheCount)
             return;
 
-        Debug.Log("Updating Grass Positions and Rotations for Terrain...");
+        Debug.Log("Generating grass on terrain and all children...");
 
         UnityEngine.Random.InitState(123);
-
-        TerrainData terrainData = terrain.terrainData;
-        Vector3 terrainSize = terrainData.size;
-        Vector3 terrainPos = terrain.transform.position;
 
         List<Vector3> positions = new List<Vector3>(instanceCount);
         instanceMatrices.Clear();
 
-        // === Mud filtering setup ===
-        float[,,] splatmap = terrainData.GetAlphamaps(0, 0, terrainData.alphamapWidth, terrainData.alphamapHeight);
-        int mapWidth = terrainData.alphamapWidth;
-        int mapHeight = terrainData.alphamapHeight;
-        int mudIndex = FindMudLayerIndex(terrainData.terrainLayers);
+        Terrain[] terrains = terrain.GetComponentsInChildren<Terrain>();
+        int instancesPerTerrain = instanceCount / terrains.Length;
 
-        for (int i = 0; i < instanceCount; i++)
+        foreach (Terrain t in terrains)
         {
-            float randomX = UnityEngine.Random.Range(0f, 1f);
-            float randomZ = UnityEngine.Random.Range(0f, 1f);
+            TerrainData data = t.terrainData;
+            Vector3 tPos = t.transform.position;
+            Vector3 tSize = data.size;
 
-            float worldX = randomX * terrainSize.x + terrainPos.x;
-            float worldZ = randomZ * terrainSize.z + terrainPos.z;
-            float height = terrain.SampleHeight(new Vector3(worldX, 0, worldZ)) + terrainPos.y;
+            float[,,] splatmap = data.GetAlphamaps(0, 0, data.alphamapWidth, data.alphamapHeight);
+            int mapWidth = data.alphamapWidth;
+            int mapHeight = data.alphamapHeight;
+            int mudIndex = FindMudLayerIndex(data.terrainLayers);
 
-            // === Sample splatmap to check for mud ===
-            int splatX = Mathf.Clamp((int)(randomX * mapWidth), 0, mapWidth - 1);
-            int splatZ = Mathf.Clamp((int)(randomZ * mapHeight), 0, mapHeight - 1);
-            float mudWeight = splatmap[splatZ, splatX, mudIndex];
+            int added = 0;
+            int attempts = 0;
+            int maxAttempts = instancesPerTerrain * 3;
 
-            if (mudWeight > 0.5f)
-                continue; // Skip if terrain is too muddy
+            while (added < instancesPerTerrain && attempts < maxAttempts)
+            {
+                attempts++;
 
-            // === Place grass instance ===
-            Vector3 position = new Vector3(worldX, height, worldZ);
-            positions.Add(position);
+                float normX = UnityEngine.Random.Range(0f, 1f);
+                float normZ = UnityEngine.Random.Range(0f, 1f);
 
-            Vector3 normal = terrainData.GetInterpolatedNormal(randomX, randomZ);
-            Quaternion rotation = Quaternion.FromToRotation(Vector3.up, normal);
-            Vector3 scale = Vector3.one;
-            Matrix4x4 matrix = Matrix4x4.TRS(position, rotation, scale);
-            instanceMatrices.Add(matrix);
+                float worldX = normX * tSize.x + tPos.x;
+                float worldZ = normZ * tSize.z + tPos.z;
+                float height = t.SampleHeight(new Vector3(worldX, 0, worldZ)) + tPos.y;
+
+                int splatX = Mathf.Clamp((int)(normX * mapWidth), 0, mapWidth - 1);
+                int splatZ = Mathf.Clamp((int)(normZ * mapHeight), 0, mapHeight - 1);
+                float mudWeight = splatmap[splatZ, splatX, mudIndex];
+
+                if (mudWeight > 0.5f) continue;
+
+                Vector3 pos = new Vector3(worldX, height, worldZ);
+                Vector3 normal = data.GetInterpolatedNormal(normX, normZ);
+                Quaternion rot = Quaternion.FromToRotation(Vector3.up, normal);
+                Matrix4x4 matrix = Matrix4x4.TRS(pos, rot, Vector3.one);
+
+                positions.Add(pos);
+                instanceMatrices.Add(matrix);
+                added++;
+            }
         }
 
         InstancedIndirectGrassRenderer.instance.allGrassPos = positions;
         InstancedIndirectGrassRenderer.instance.allGrassMatrices = instanceMatrices;
         cacheCount = positions.Count;
+
+        Debug.Log("Grass instances placed: " + cacheCount);
     }
 
     private int FindMudLayerIndex(TerrainLayer[] layers)
@@ -93,9 +102,9 @@ public class InstancedIndirectGrassPosDefine : MonoBehaviour
             if (layers[i].name.ToLower().Contains("mud"))
                 return i;
         }
-        return 0; // fallback if not found
+        return 0;
     }
-
+/*
     private void OnGUI()
     {
         GUI.Label(new Rect(300, 50, 200, 30), "Instance Count: " + instanceCount / 1000000 + " Million");
@@ -105,4 +114,6 @@ public class InstancedIndirectGrassPosDefine : MonoBehaviour
         drawDistance = Mathf.Max(1, (int)(GUI.HorizontalSlider(new Rect(300, 200, 200, 30), drawDistance / 25f, 1, 8)) * 25);
         InstancedIndirectGrassRenderer.instance.drawDistance = drawDistance;
     }
+*/
 }
+
